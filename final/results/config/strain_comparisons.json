@@ -1,0 +1,22 @@
+[
+  {
+    "id": "custom_gauge_example",
+    "enabled": false,
+    "mapping_confirmed": false,
+    "run": "sym/runs/REPLACE_WITH_MATCHED_RUN",
+    "reference_file": "data/figures/allouti2014/fig12b_near_defect_strain.csv",
+    "panel": "",
+    "series": "J2_Exp",
+    "requested_node": null,
+    "component": "hoop_strain",
+    "baseline_time": 2.0,
+    "pressure_axis": "y",
+    "pressure_unit": "MPa",
+    "strain_unit": "microstrain",
+    "x_unit": "microstrain",
+    "y_unit": "MPa",
+    "x_label": "Engineering strain since full withdrawal (microstrain)",
+    "y_label": "Pressure (MPa)",
+    "note": "Disabled example. Establish specimen identity, gauge direction/position and matching run before filling node ID and enabling. Allouti source strain/gauge labels contain inconsistencies."
+  }
+]

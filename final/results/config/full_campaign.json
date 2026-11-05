@@ -1,0 +1,3129 @@
+{
+  "angles_deg": [
+    0,
+    15,
+    30,
+    45,
+    60,
+    75,
+    90
+  ],
+  "orientation_combined_0": "full_zhao2021_p1_adaptive",
+  "baseline": "Zhao P1; provisional 20 mm cosine gouge width",
+  "jobs": [
+    {
+      "id": "full_allouti2012_3_percent_od_figure_curve",
+      "kind": "validation",
+      "case_file": "sym/cases/campaign/full_allouti2012_3_percent_od_figure_curve.json",
+      "case_sha256": "1e64737b138f69b933e96135588f7c84104e6ac51f86edca9b7a2591a6dcc395",
+      "run": "sym/runs/campaign/full_allouti2012_3_percent_od_figure_curve",
+      "entry": {
+        "id": "full_allouti2012_3_percent_od_figure_curve",
+        "paper": "allouti2012",
+        "specimen": "3_percent_OD",
+        "vessel": null,
+        "case_file": "sym/cases/campaign/full_allouti2012_3_percent_od_figure_curve.json",
+        "case_sha256": "1e64737b138f69b933e96135588f7c84104e6ac51f86edca9b7a2591a6dcc395",
+        "reference_file": "data/figures/allouti2012/fig10_load_displacement.csv",
+        "panel": "a",
+        "experimental_series": "dent_3_percent_OD_experimental",
+        "numerical_series": "dent_3_percent_OD_numerical",
+        "material": {
+          "source": "data/figures/allouti2012/fig09_material_curve.csv",
+          "source_sha256": "6739a65c86e70da1c282be752a593e97d2485b6374808f3ebf80f1ebbb79e8d3",
+          "interpretation": "true total strain; plastic strain = total - stress/E",
+          "interpretation_confirmed": false,
+          "initial_yield_anchor_mpa": 249.05299258691358,
+          "source_supported_plastic_strain_max": 0.1977982020291358,
+          "processing": "Preserve Figure 9 after its elastic intersection; no tabulated-yield splice. Table/figure discrepancy remains unresolved.",
+          "constant_tail_to_plastic_strain": 0.8,
+          "burst_criterion_calibrated": false
+        },
+        "assumptions": [
+          "Preliminary literature comparison; mesh/contact convergence and fixture verification outstanding.",
+          "5 MPa pressure ramp exercises the same three-stage workflow; it is not a burst validation.",
+          "Bottom-line bilateral support and friction 0.3 are modelling assumptions requiring verification.",
+          "Material constant tail is an explicit extrapolation; data-supported strain extent is audited.",
+          "Compression-only contact uses the isolated CCX 2.23 TABULAR patch; see sym/docs/contact-fix.md. Validated on the elementary coupon; each pipe response still needs checks.",
+          "Allouti Figure 9 stress/strain treated as true stress/total strain, which the figure does not explicitly confirm.",
+          "Figure 9 preserved from its approximately 249 MPa elastic intersection; Table 2 yield of 355 MPa conflicts with that curve.",
+          "Maximum imposed travel taken from experimental loading-loop maximum; this is a prescribed boundary condition, not a fitted prediction.",
+          "Figure percent-OD labels describe residual dents; they are not substituted for loaded tool travel.",
+          "PEEQ 0.8 is only a software placeholder here; Allouti uses different failure criteria. No Allouti burst error is computed.",
+          "Campaign supersedes the earlier 5 MPa workflow check; failure criterion remains study-specific/unvalidated as documented.",
+          "Frozen campaign: no force fitting or orientation-dependent material/criterion adjustment.",
+          "Pressure target is an applied load, not a predicted burst pressure. Missing criterion crossings remain missing."
+        ],
+        "validation_status": "preliminary_unvalidated",
+        "sources": {
+          "data/tables/allouti2012/text_geometry_and_intact_test.csv": "88e3a8858ade4df336f3e0f6886f69c2898c08f67d6b75b0bf9b3b314dbf9d2b",
+          "data/tables/allouti2012/table02_material.csv": "5526abfa2423f00ccfee6c10c38248e2a33231f3b800735e9a627b109e4ae259",
+          "data/figures/allouti2012/fig10_load_displacement.csv": "2a23586f869bc66a46003200761464a50e06fcc36314c6a648edc5727f4dcd9b"
+        }
+      },
+      "estimated_elements": 1496,
+      "angles": null
+    },
+    {
+      "id": "full_allouti2012_8_percent_od_figure_curve",
+      "kind": "validation",
+      "case_file": "sym/cases/campaign/full_allouti2012_8_percent_od_figure_curve.json",
+      "case_sha256": "5d657f67d761dc6d087e50abcda66b36db5379a1475702ca0845da7264b0c8f9",
+      "run": "sym/runs/campaign/full_allouti2012_8_percent_od_figure_curve",
+      "entry": {
+        "id": "full_allouti2012_8_percent_od_figure_curve",
+        "paper": "allouti2012",
+        "specimen": "8_percent_OD",
+        "vessel": null,
+        "case_file": "sym/cases/campaign/full_allouti2012_8_percent_od_figure_curve.json",
+        "case_sha256": "5d657f67d761dc6d087e50abcda66b36db5379a1475702ca0845da7264b0c8f9",
+        "reference_file": "data/figures/allouti2012/fig10_load_displacement.csv",
+        "panel": "a",
+        "experimental_series": "dent_8_percent_OD_experimental",
+        "numerical_series": "dent_8_percent_OD_numerical",
+        "material": {
+          "source": "data/figures/allouti2012/fig09_material_curve.csv",
+          "source_sha256": "6739a65c86e70da1c282be752a593e97d2485b6374808f3ebf80f1ebbb79e8d3",
+          "interpretation": "true total strain; plastic strain = total - stress/E",
+          "interpretation_confirmed": false,
+          "initial_yield_anchor_mpa": 249.05299258691358,
+          "source_supported_plastic_strain_max": 0.1977982020291358,
+          "processing": "Preserve Figure 9 after its elastic intersection; no tabulated-yield splice. Table/figure discrepancy remains unresolved.",
+          "constant_tail_to_plastic_strain": 0.8,
+          "burst_criterion_calibrated": false
+        },
+        "assumptions": [
+          "Preliminary literature comparison; mesh/contact convergence and fixture verification outstanding.",
+          "5 MPa pressure ramp exercises the same three-stage workflow; it is not a burst validation.",
+          "Bottom-line bilateral support and friction 0.3 are modelling assumptions requiring verification.",
+          "Material constant tail is an explicit extrapolation; data-supported strain extent is audited.",
+          "Compression-only contact uses the isolated CCX 2.23 TABULAR patch; see sym/docs/contact-fix.md. Validated on the elementary coupon; each pipe response still needs checks.",
+          "Allouti Figure 9 stress/strain treated as true stress/total strain, which the figure does not explicitly confirm.",
+          "Figure 9 preserved from its approximately 249 MPa elastic intersection; Table 2 yield of 355 MPa conflicts with that curve.",
+          "Maximum imposed travel taken from experimental loading-loop maximum; this is a prescribed boundary condition, not a fitted prediction.",
+          "Figure percent-OD labels describe residual dents; they are not substituted for loaded tool travel.",
+          "PEEQ 0.8 is only a software placeholder here; Allouti uses different failure criteria. No Allouti burst error is computed.",
+          "Campaign supersedes the earlier 5 MPa workflow check; failure criterion remains study-specific/unvalidated as documented.",
+          "Frozen campaign: no force fitting or orientation-dependent material/criterion adjustment.",
+          "Pressure target is an applied load, not a predicted burst pressure. Missing criterion crossings remain missing."
+        ],
+        "validation_status": "preliminary_unvalidated",
+        "sources": {
+          "data/tables/allouti2012/text_geometry_and_intact_test.csv": "88e3a8858ade4df336f3e0f6886f69c2898c08f67d6b75b0bf9b3b314dbf9d2b",
+          "data/tables/allouti2012/table02_material.csv": "5526abfa2423f00ccfee6c10c38248e2a33231f3b800735e9a627b109e4ae259",
+          "data/figures/allouti2012/fig10_load_displacement.csv": "2a23586f869bc66a46003200761464a50e06fcc36314c6a648edc5727f4dcd9b"
+        }
+      },
+      "estimated_elements": 1496,
+      "angles": null
+    },
+    {
+      "id": "full_allouti2012_10_percent_od_figure_curve",
+      "kind": "validation",
+      "case_file": "sym/cases/campaign/full_allouti2012_10_percent_od_figure_curve.json",
+      "case_sha256": "f566d27510286f24d1be7bb254581823977ded9fc3bde07ecabc631bebfddc2e",
+      "run": "sym/runs/campaign/full_allouti2012_10_percent_od_figure_curve",
+      "entry": {
+        "id": "full_allouti2012_10_percent_od_figure_curve",
+        "paper": "allouti2012",
+        "specimen": "10_percent_OD",
+        "vessel": null,
+        "case_file": "sym/cases/campaign/full_allouti2012_10_percent_od_figure_curve.json",
+        "case_sha256": "f566d27510286f24d1be7bb254581823977ded9fc3bde07ecabc631bebfddc2e",
+        "reference_file": "data/figures/allouti2012/fig10_load_displacement.csv",
+        "panel": "b",
+        "experimental_series": "dent_10_percent_OD_experimental",
+        "numerical_series": "dent_10_percent_OD_numerical",
+        "material": {
+          "source": "data/figures/allouti2012/fig09_material_curve.csv",
+          "source_sha256": "6739a65c86e70da1c282be752a593e97d2485b6374808f3ebf80f1ebbb79e8d3",
+          "interpretation": "true total strain; plastic strain = total - stress/E",
+          "interpretation_confirmed": false,
+          "initial_yield_anchor_mpa": 249.05299258691358,
+          "source_supported_plastic_strain_max": 0.1977982020291358,
+          "processing": "Preserve Figure 9 after its elastic intersection; no tabulated-yield splice. Table/figure discrepancy remains unresolved.",
+          "constant_tail_to_plastic_strain": 0.8,
+          "burst_criterion_calibrated": false
+        },
+        "assumptions": [
+          "Preliminary literature comparison; mesh/contact convergence and fixture verification outstanding.",
+          "5 MPa pressure ramp exercises the same three-stage workflow; it is not a burst validation.",
+          "Bottom-line bilateral support and friction 0.3 are modelling assumptions requiring verification.",
+          "Material constant tail is an explicit extrapolation; data-supported strain extent is audited.",
+          "Compression-only contact uses the isolated CCX 2.23 TABULAR patch; see sym/docs/contact-fix.md. Validated on the elementary coupon; each pipe response still needs checks.",
+          "Allouti Figure 9 stress/strain treated as true stress/total strain, which the figure does not explicitly confirm.",
+          "Figure 9 preserved from its approximately 249 MPa elastic intersection; Table 2 yield of 355 MPa conflicts with that curve.",
+          "Maximum imposed travel taken from experimental loading-loop maximum; this is a prescribed boundary condition, not a fitted prediction.",
+          "Figure percent-OD labels describe residual dents; they are not substituted for loaded tool travel.",
+          "PEEQ 0.8 is only a software placeholder here; Allouti uses different failure criteria. No Allouti burst error is computed.",
+          "Campaign supersedes the earlier 5 MPa workflow check; failure criterion remains study-specific/unvalidated as documented.",
+          "Frozen campaign: no force fitting or orientation-dependent material/criterion adjustment.",
+          "Pressure target is an applied load, not a predicted burst pressure. Missing criterion crossings remain missing."
+        ],
+        "validation_status": "preliminary_unvalidated",
+        "sources": {
+          "data/tables/allouti2012/text_geometry_and_intact_test.csv": "88e3a8858ade4df336f3e0f6886f69c2898c08f67d6b75b0bf9b3b314dbf9d2b",
+          "data/tables/allouti2012/table02_material.csv": "5526abfa2423f00ccfee6c10c38248e2a33231f3b800735e9a627b109e4ae259",
+          "data/figures/allouti2012/fig10_load_displacement.csv": "2a23586f869bc66a46003200761464a50e06fcc36314c6a648edc5727f4dcd9b"
+        }
+      },
+      "estimated_elements": 1496,
+      "angles": null
+    },
+    {
+      "id": "full_allouti2012_13_percent_od_figure_curve",
+      "kind": "validation",
+      "case_file": "sym/cases/campaign/full_allouti2012_13_percent_od_figure_curve.json",
+      "case_sha256": "ad53f7e2035f64bd3d989e195e5a4096a6b44b56cc8beac199fcc59477614a34",
+      "run": "sym/runs/campaign/full_allouti2012_13_percent_od_figure_curve",
+      "entry": {
+        "id": "full_allouti2012_13_percent_od_figure_curve",
+        "paper": "allouti2012",
+        "specimen": "13_percent_OD",
+        "vessel": null,
+        "case_file": "sym/cases/campaign/full_allouti2012_13_percent_od_figure_curve.json",
+        "case_sha256": "ad53f7e2035f64bd3d989e195e5a4096a6b44b56cc8beac199fcc59477614a34",
+        "reference_file": "data/figures/allouti2012/fig10_load_displacement.csv",
+        "panel": "b",
+        "experimental_series": "dent_13_percent_OD_experimental",
+        "numerical_series": "dent_13_percent_OD_numerical",
+        "material": {
+          "source": "data/figures/allouti2012/fig09_material_curve.csv",
+          "source_sha256": "6739a65c86e70da1c282be752a593e97d2485b6374808f3ebf80f1ebbb79e8d3",
+          "interpretation": "true total strain; plastic strain = total - stress/E",
+          "interpretation_confirmed": false,
+          "initial_yield_anchor_mpa": 249.05299258691358,
+          "source_supported_plastic_strain_max": 0.1977982020291358,
+          "processing": "Preserve Figure 9 after its elastic intersection; no tabulated-yield splice. Table/figure discrepancy remains unresolved.",
+          "constant_tail_to_plastic_strain": 0.8,
+          "burst_criterion_calibrated": false
+        },
+        "assumptions": [
+          "Preliminary literature comparison; mesh/contact convergence and fixture verification outstanding.",
+          "5 MPa pressure ramp exercises the same three-stage workflow; it is not a burst validation.",
+          "Bottom-line bilateral support and friction 0.3 are modelling assumptions requiring verification.",
+          "Material constant tail is an explicit extrapolation; data-supported strain extent is audited.",
+          "Compression-only contact uses the isolated CCX 2.23 TABULAR patch; see sym/docs/contact-fix.md. Validated on the elementary coupon; each pipe response still needs checks.",
+          "Allouti Figure 9 stress/strain treated as true stress/total strain, which the figure does not explicitly confirm.",
+          "Figure 9 preserved from its approximately 249 MPa elastic intersection; Table 2 yield of 355 MPa conflicts with that curve.",
+          "Maximum imposed travel taken from experimental loading-loop maximum; this is a prescribed boundary condition, not a fitted prediction.",
+          "Figure percent-OD labels describe residual dents; they are not substituted for loaded tool travel.",
+          "PEEQ 0.8 is only a software placeholder here; Allouti uses different failure criteria. No Allouti burst error is computed.",
+          "Campaign supersedes the earlier 5 MPa workflow check; failure criterion remains study-specific/unvalidated as documented.",
+          "Frozen campaign: no force fitting or orientation-dependent material/criterion adjustment.",
+          "Pressure target is an applied load, not a predicted burst pressure. Missing criterion crossings remain missing."
+        ],
+        "validation_status": "preliminary_unvalidated",
+        "sources": {
+          "data/tables/allouti2012/text_geometry_and_intact_test.csv": "88e3a8858ade4df336f3e0f6886f69c2898c08f67d6b75b0bf9b3b314dbf9d2b",
+          "data/tables/allouti2012/table02_material.csv": "5526abfa2423f00ccfee6c10c38248e2a33231f3b800735e9a627b109e4ae259",
+          "data/figures/allouti2012/fig10_load_displacement.csv": "2a23586f869bc66a46003200761464a50e06fcc36314c6a648edc5727f4dcd9b"
+        }
+      },
+      "estimated_elements": 1496,
+      "angles": null
+    },
+    {
+      "id": "full_allouti2012_16_percent_od_figure_curve",
+      "kind": "validation",
+      "case_file": "sym/cases/campaign/full_allouti2012_16_percent_od_figure_curve.json",
+      "case_sha256": "cdc8d96b3bd090d6558b8b6e8c477a7fb230db5d9a2d3eecce20b80b49b4dabe",
+      "run": "sym/runs/campaign/full_allouti2012_16_percent_od_figure_curve",
+      "entry": {
+        "id": "full_allouti2012_16_percent_od_figure_curve",
+        "paper": "allouti2012",
+        "specimen": "16_percent_OD",
+        "vessel": null,
+        "case_file": "sym/cases/campaign/full_allouti2012_16_percent_od_figure_curve.json",
+        "case_sha256": "cdc8d96b3bd090d6558b8b6e8c477a7fb230db5d9a2d3eecce20b80b49b4dabe",
+        "reference_file": "data/figures/allouti2012/fig10_load_displacement.csv",
+        "panel": "b",
+        "experimental_series": "dent_16_percent_OD_experimental",
+        "numerical_series": "dent_16_percent_OD_numerical",
+        "material": {
+          "source": "data/figures/allouti2012/fig09_material_curve.csv",
+          "source_sha256": "6739a65c86e70da1c282be752a593e97d2485b6374808f3ebf80f1ebbb79e8d3",
+          "interpretation": "true total strain; plastic strain = total - stress/E",
+          "interpretation_confirmed": false,
+          "initial_yield_anchor_mpa": 249.05299258691358,
+          "source_supported_plastic_strain_max": 0.1977982020291358,
+          "processing": "Preserve Figure 9 after its elastic intersection; no tabulated-yield splice. Table/figure discrepancy remains unresolved.",
+          "constant_tail_to_plastic_strain": 0.8,
+          "burst_criterion_calibrated": false
+        },
+        "assumptions": [
+          "Preliminary literature comparison; mesh/contact convergence and fixture verification outstanding.",
+          "5 MPa pressure ramp exercises the same three-stage workflow; it is not a burst validation.",
+          "Bottom-line bilateral support and friction 0.3 are modelling assumptions requiring verification.",
+          "Material constant tail is an explicit extrapolation; data-supported strain extent is audited.",
+          "Compression-only contact uses the isolated CCX 2.23 TABULAR patch; see sym/docs/contact-fix.md. Validated on the elementary coupon; each pipe response still needs checks.",
+          "Allouti Figure 9 stress/strain treated as true stress/total strain, which the figure does not explicitly confirm.",
+          "Figure 9 preserved from its approximately 249 MPa elastic intersection; Table 2 yield of 355 MPa conflicts with that curve.",
+          "Maximum imposed travel taken from experimental loading-loop maximum; this is a prescribed boundary condition, not a fitted prediction.",
+          "Figure percent-OD labels describe residual dents; they are not substituted for loaded tool travel.",
+          "PEEQ 0.8 is only a software placeholder here; Allouti uses different failure criteria. No Allouti burst error is computed.",
+          "Campaign supersedes the earlier 5 MPa workflow check; failure criterion remains study-specific/unvalidated as documented.",
+          "Frozen campaign: no force fitting or orientation-dependent material/criterion adjustment.",
+          "Pressure target is an applied load, not a predicted burst pressure. Missing criterion crossings remain missing."
+        ],
+        "validation_status": "preliminary_unvalidated",
+        "sources": {
+          "data/tables/allouti2012/text_geometry_and_intact_test.csv": "88e3a8858ade4df336f3e0f6886f69c2898c08f67d6b75b0bf9b3b314dbf9d2b",
+          "data/tables/allouti2012/table02_material.csv": "5526abfa2423f00ccfee6c10c38248e2a33231f3b800735e9a627b109e4ae259",
+          "data/figures/allouti2012/fig10_load_displacement.csv": "2a23586f869bc66a46003200761464a50e06fcc36314c6a648edc5727f4dcd9b"
+        }
+      },
+      "estimated_elements": 1496,
+      "angles": null
+    },
+    {
+      "id": "full_allouti2014_4_percent_od_figure_curve",
+      "kind": "validation",
+      "case_file": "sym/cases/campaign/full_allouti2014_4_percent_od_figure_curve.json",
+      "case_sha256": "d22a3150bf0cc16f92b96f21995372a50c15303cb17b33854744deecd0926dff",
+      "run": "sym/runs/campaign/full_allouti2014_4_percent_od_figure_curve",
+      "entry": {
+        "id": "full_allouti2014_4_percent_od_figure_curve",
+        "paper": "allouti2014",
+        "specimen": "4_percent_OD",
+        "vessel": "V1",
+        "case_file": "sym/cases/campaign/full_allouti2014_4_percent_od_figure_curve.json",
+        "case_sha256": "d22a3150bf0cc16f92b96f21995372a50c15303cb17b33854744deecd0926dff",
+        "reference_file": "data/figures/allouti2014/fig11_load_displacement.csv",
+        "panel": "",
+        "experimental_series": "4_percent_OD_experimental",
+        "numerical_series": "4_percent_OD_numerical",
+        "material": {
+          "source": "data/figures/allouti2012/fig09_material_curve.csv",
+          "source_sha256": "6739a65c86e70da1c282be752a593e97d2485b6374808f3ebf80f1ebbb79e8d3",
+          "interpretation": "true total strain; plastic strain = total - stress/E",
+          "interpretation_confirmed": false,
+          "initial_yield_anchor_mpa": 249.05299258691358,
+          "source_supported_plastic_strain_max": 0.1977982020291358,
+          "processing": "Preserve Figure 9 after its elastic intersection; no tabulated-yield splice. Table/figure discrepancy remains unresolved.",
+          "constant_tail_to_plastic_strain": 0.8,
+          "burst_criterion_calibrated": false
+        },
+        "assumptions": [
+          "Preliminary literature comparison; mesh/contact convergence and fixture verification outstanding.",
+          "5 MPa pressure ramp exercises the same three-stage workflow; it is not a burst validation.",
+          "Bottom-line bilateral support and friction 0.3 are modelling assumptions requiring verification.",
+          "Material constant tail is an explicit extrapolation; data-supported strain extent is audited.",
+          "Compression-only contact uses the isolated CCX 2.23 TABULAR patch; see sym/docs/contact-fix.md. Validated on the elementary coupon; each pipe response still needs checks.",
+          "Allouti Figure 9 stress/strain treated as true stress/total strain, which the figure does not explicitly confirm.",
+          "Figure 9 preserved from its approximately 249 MPa elastic intersection; Table 2 yield of 355 MPa conflicts with that curve.",
+          "Maximum imposed travel taken from experimental loading-loop maximum; this is a prescribed boundary condition, not a fitted prediction.",
+          "Figure percent-OD labels describe residual dents; they are not substituted for loaded tool travel.",
+          "PEEQ 0.8 is only a software placeholder here; Allouti uses different failure criteria. No Allouti burst error is computed.",
+          "A37 Figure 9 is borrowed from Allouti 2012; transfer to 2014 is an assumption.",
+          "Cosine gouge does not reproduce the published root radius; local strain/burst validation is not established.",
+          "Experimental dent-then-EDM sequence differs from the model gouge-then-dent sequence, as discussed by Allouti.",
+          "V1 table dent depth 9.3 mm conflicts with 4% OD; neither is silently adopted as the loaded travel.",
+          "Campaign supersedes the earlier 5 MPa workflow check; failure criterion remains study-specific/unvalidated as documented.",
+          "Frozen campaign: no force fitting or orientation-dependent material/criterion adjustment.",
+          "Pressure target is an applied load, not a predicted burst pressure. Missing criterion crossings remain missing."
+        ],
+        "validation_status": "preliminary_unvalidated",
+        "sources": {
+          "data/tables/allouti2012/text_geometry_and_intact_test.csv": "88e3a8858ade4df336f3e0f6886f69c2898c08f67d6b75b0bf9b3b314dbf9d2b",
+          "data/tables/allouti2012/table02_material.csv": "5526abfa2423f00ccfee6c10c38248e2a33231f3b800735e9a627b109e4ae259",
+          "data/tables/allouti2014/table03_burst_and_fracture.csv": "86d8e96ac438ca2e3e28fcb3cf2b472152dcb803c0cd17c8f023ff436ba028df",
+          "data/figures/allouti2014/fig11_load_displacement.csv": "064812b07a540926a0319c96ca0c96a49233731899302670377467c0e3906af5"
+        }
+      },
+      "estimated_elements": 23688,
+      "angles": null,
+      "superseded_by": "full_allouti2014_4_percent_od_figure_curve_adaptive"
+    },
+    {
+      "id": "full_allouti2014_10_percent_od_figure_curve",
+      "kind": "validation",
+      "case_file": "sym/cases/campaign/full_allouti2014_10_percent_od_figure_curve.json",
+      "case_sha256": "d5ed9c0b6193cd1426cf6e62c418a9fa763e47dcb317d4cb1b4d3fdb1d6f688f",
+      "run": "sym/runs/campaign/full_allouti2014_10_percent_od_figure_curve",
+      "entry": {
+        "id": "full_allouti2014_10_percent_od_figure_curve",
+        "paper": "allouti2014",
+        "specimen": "10_percent_OD",
+        "vessel": "V2",
+        "case_file": "sym/cases/campaign/full_allouti2014_10_percent_od_figure_curve.json",
+        "case_sha256": "d5ed9c0b6193cd1426cf6e62c418a9fa763e47dcb317d4cb1b4d3fdb1d6f688f",
+        "reference_file": "data/figures/allouti2014/fig11_load_displacement.csv",
+        "panel": "",
+        "experimental_series": "10_percent_OD_experimental",
+        "numerical_series": "10_percent_OD_numerical",
+        "material": {
+          "source": "data/figures/allouti2012/fig09_material_curve.csv",
+          "source_sha256": "6739a65c86e70da1c282be752a593e97d2485b6374808f3ebf80f1ebbb79e8d3",
+          "interpretation": "true total strain; plastic strain = total - stress/E",
+          "interpretation_confirmed": false,
+          "initial_yield_anchor_mpa": 249.05299258691358,
+          "source_supported_plastic_strain_max": 0.1977982020291358,
+          "processing": "Preserve Figure 9 after its elastic intersection; no tabulated-yield splice. Table/figure discrepancy remains unresolved.",
+          "constant_tail_to_plastic_strain": 0.8,
+          "burst_criterion_calibrated": false
+        },
+        "assumptions": [
+          "Preliminary literature comparison; mesh/contact convergence and fixture verification outstanding.",
+          "5 MPa pressure ramp exercises the same three-stage workflow; it is not a burst validation.",
+          "Bottom-line bilateral support and friction 0.3 are modelling assumptions requiring verification.",
+          "Material constant tail is an explicit extrapolation; data-supported strain extent is audited.",
+          "Compression-only contact uses the isolated CCX 2.23 TABULAR patch; see sym/docs/contact-fix.md. Validated on the elementary coupon; each pipe response still needs checks.",
+          "Allouti Figure 9 stress/strain treated as true stress/total strain, which the figure does not explicitly confirm.",
+          "Figure 9 preserved from its approximately 249 MPa elastic intersection; Table 2 yield of 355 MPa conflicts with that curve.",
+          "Maximum imposed travel taken from experimental loading-loop maximum; this is a prescribed boundary condition, not a fitted prediction.",
+          "Figure percent-OD labels describe residual dents; they are not substituted for loaded tool travel.",
+          "PEEQ 0.8 is only a software placeholder here; Allouti uses different failure criteria. No Allouti burst error is computed.",
+          "A37 Figure 9 is borrowed from Allouti 2012; transfer to 2014 is an assumption.",
+          "Cosine gouge does not reproduce the published root radius; local strain/burst validation is not established.",
+          "Experimental dent-then-EDM sequence differs from the model gouge-then-dent sequence, as discussed by Allouti.",
+          "V1 table dent depth 9.3 mm conflicts with 4% OD; neither is silently adopted as the loaded travel.",
+          "Campaign supersedes the earlier 5 MPa workflow check; failure criterion remains study-specific/unvalidated as documented.",
+          "Frozen campaign: no force fitting or orientation-dependent material/criterion adjustment.",
+          "Pressure target is an applied load, not a predicted burst pressure. Missing criterion crossings remain missing."
+        ],
+        "validation_status": "preliminary_unvalidated",
+        "sources": {
+          "data/tables/allouti2012/text_geometry_and_intact_test.csv": "88e3a8858ade4df336f3e0f6886f69c2898c08f67d6b75b0bf9b3b314dbf9d2b",
+          "data/tables/allouti2012/table02_material.csv": "5526abfa2423f00ccfee6c10c38248e2a33231f3b800735e9a627b109e4ae259",
+          "data/tables/allouti2014/table03_burst_and_fracture.csv": "86d8e96ac438ca2e3e28fcb3cf2b472152dcb803c0cd17c8f023ff436ba028df",
+          "data/figures/allouti2014/fig11_load_displacement.csv": "064812b07a540926a0319c96ca0c96a49233731899302670377467c0e3906af5"
+        }
+      },
+      "estimated_elements": 23688,
+      "angles": null,
+      "superseded_by": "full_allouti2014_10_percent_od_figure_curve_adaptive"
+    },
+    {
+      "id": "full_allouti2014_16_percent_od_figure_curve",
+      "kind": "validation",
+      "case_file": "sym/cases/campaign/full_allouti2014_16_percent_od_figure_curve.json",
+      "case_sha256": "5c8dcdaf87aa5f7818d9a10dc23f729e43613e3c9e5d4b54689d187245168c21",
+      "run": "sym/runs/campaign/full_allouti2014_16_percent_od_figure_curve",
+      "entry": {
+        "id": "full_allouti2014_16_percent_od_figure_curve",
+        "paper": "allouti2014",
+        "specimen": "16_percent_OD",
+        "vessel": "V3",
+        "case_file": "sym/cases/campaign/full_allouti2014_16_percent_od_figure_curve.json",
+        "case_sha256": "5c8dcdaf87aa5f7818d9a10dc23f729e43613e3c9e5d4b54689d187245168c21",
+        "reference_file": "data/figures/allouti2014/fig11_load_displacement.csv",
+        "panel": "",
+        "experimental_series": "16_percent_OD_experimental",
+        "numerical_series": "16_percent_OD_numerical",
+        "material": {
+          "source": "data/figures/allouti2012/fig09_material_curve.csv",
+          "source_sha256": "6739a65c86e70da1c282be752a593e97d2485b6374808f3ebf80f1ebbb79e8d3",
+          "interpretation": "true total strain; plastic strain = total - stress/E",
+          "interpretation_confirmed": false,
+          "initial_yield_anchor_mpa": 249.05299258691358,
+          "source_supported_plastic_strain_max": 0.1977982020291358,
+          "processing": "Preserve Figure 9 after its elastic intersection; no tabulated-yield splice. Table/figure discrepancy remains unresolved.",
+          "constant_tail_to_plastic_strain": 0.8,
+          "burst_criterion_calibrated": false
+        },
+        "assumptions": [
+          "Preliminary literature comparison; mesh/contact convergence and fixture verification outstanding.",
+          "5 MPa pressure ramp exercises the same three-stage workflow; it is not a burst validation.",
+          "Bottom-line bilateral support and friction 0.3 are modelling assumptions requiring verification.",
+          "Material constant tail is an explicit extrapolation; data-supported strain extent is audited.",
+          "Compression-only contact uses the isolated CCX 2.23 TABULAR patch; see sym/docs/contact-fix.md. Validated on the elementary coupon; each pipe response still needs checks.",
+          "Allouti Figure 9 stress/strain treated as true stress/total strain, which the figure does not explicitly confirm.",
+          "Figure 9 preserved from its approximately 249 MPa elastic intersection; Table 2 yield of 355 MPa conflicts with that curve.",
+          "Maximum imposed travel taken from experimental loading-loop maximum; this is a prescribed boundary condition, not a fitted prediction.",
+          "Figure percent-OD labels describe residual dents; they are not substituted for loaded tool travel.",
+          "PEEQ 0.8 is only a software placeholder here; Allouti uses different failure criteria. No Allouti burst error is computed.",
+          "A37 Figure 9 is borrowed from Allouti 2012; transfer to 2014 is an assumption.",
+          "Cosine gouge does not reproduce the published root radius; local strain/burst validation is not established.",
+          "Experimental dent-then-EDM sequence differs from the model gouge-then-dent sequence, as discussed by Allouti.",
+          "V1 table dent depth 9.3 mm conflicts with 4% OD; neither is silently adopted as the loaded travel.",
+          "Campaign supersedes the earlier 5 MPa workflow check; failure criterion remains study-specific/unvalidated as documented.",
+          "Frozen campaign: no force fitting or orientation-dependent material/criterion adjustment.",
+          "Pressure target is an applied load, not a predicted burst pressure. Missing criterion crossings remain missing."
+        ],
+        "validation_status": "preliminary_unvalidated",
+        "sources": {
+          "data/tables/allouti2012/text_geometry_and_intact_test.csv": "88e3a8858ade4df336f3e0f6886f69c2898c08f67d6b75b0bf9b3b314dbf9d2b",
+          "data/tables/allouti2012/table02_material.csv": "5526abfa2423f00ccfee6c10c38248e2a33231f3b800735e9a627b109e4ae259",
+          "data/tables/allouti2014/table03_burst_and_fracture.csv": "86d8e96ac438ca2e3e28fcb3cf2b472152dcb803c0cd17c8f023ff436ba028df",
+          "data/figures/allouti2014/fig11_load_displacement.csv": "064812b07a540926a0319c96ca0c96a49233731899302670377467c0e3906af5"
+        }
+      },
+      "estimated_elements": 23688,
+      "angles": null,
+      "superseded_by": "full_allouti2014_16_percent_od_figure_curve_adaptive"
+    },
+    {
+      "id": "full_zhao2021_p1",
+      "kind": "validation",
+      "case_file": "sym/cases/campaign/full_zhao2021_p1.json",
+      "case_sha256": "fc496b386a725047721d09fde0410c9cadc2dadcfe583f8c504198e04db6904a",
+      "run": "sym/runs/campaign/full_zhao2021_p1",
+      "entry": {
+        "id": "full_zhao2021_p1",
+        "paper": "zhao2021",
+        "specimen": "P1",
+        "vessel": "P1",
+        "case_file": "sym/cases/campaign/full_zhao2021_p1.json",
+        "case_sha256": "fc496b386a725047721d09fde0410c9cadc2dadcfe583f8c504198e04db6904a",
+        "reference_file": "data/figures/zhao2021/fig13_load_displacement.csv",
+        "panel": "P1",
+        "experimental_series": "experimental",
+        "numerical_series": "numerical",
+        "material": {
+          "source": "data/figures/zhao2021/fig11_material_curve.csv",
+          "source_sha256": "aa48e42d946ef54ceacc5ededd06da4e361105235e0588e91429bcbe2fa4e587",
+          "interpretation": "true total strain; plastic strain = total - stress/E",
+          "interpretation_confirmed": true,
+          "initial_yield_anchor_mpa": 365.0,
+          "source_supported_plastic_strain_max": 0.7910574171740384,
+          "processing": "LEGACY: yield anchored to material table; lower-stress, decreasing-stress and non-increasing-plastic-strain samples omitted. Do not treat this as the digitized curve.",
+          "constant_tail_to_plastic_strain": 0.8,
+          "burst_criterion_calibrated": false
+        },
+        "assumptions": [
+          "Preliminary literature comparison; mesh/contact convergence and fixture verification outstanding.",
+          "5 MPa pressure ramp exercises the same three-stage workflow; it is not a burst validation.",
+          "Bottom-line bilateral support and friction 0.3 are modelling assumptions requiring verification.",
+          "Material constant tail is an explicit extrapolation; data-supported strain extent is audited.",
+          "Compression-only contact uses the isolated CCX 2.23 TABULAR patch; see sym/docs/contact-fix.md. Validated on the elementary coupon; each pipe response still needs checks.",
+          "20 mm cosine-gouge width is provisional; original width/cross-section not resolved.",
+          "E=208 GPa follows constitutive-model text; Table 1 gives 209 GPa.",
+          "Digitized Figure 11 is used instead of silently choosing an inconsistent Ramberg\u2013Osgood convention.",
+          "Table dent depth interpreted as nominal loaded travel; this measurement definition still needs confirmation.",
+          "Campaign supersedes the earlier 5 MPa workflow check; failure criterion remains study-specific/unvalidated as documented.",
+          "Frozen campaign: no force fitting or orientation-dependent material/criterion adjustment.",
+          "Pressure target is an applied load, not a predicted burst pressure. Missing criterion crossings remain missing."
+        ],
+        "validation_status": "preliminary_unvalidated",
+        "sources": {
+          "data/tables/zhao2021/text_model_parameters.csv": "3e936954e3413bcde5f33f0bada8f764ba83c450f5479c0e1f4538ad8c2596b5",
+          "data/tables/zhao2021/table03_defects.csv": "bac02a25b644748f498ed8253f1482396fb4902b8008b05e9cb6199bb64467ba",
+          "data/tables/zhao2021/table01_material.csv": "1bace01df46fbd127d70791c6aa9ae5ea4d32820397b83a2c8c94ec529672e05",
+          "data/figures/zhao2021/fig13_load_displacement.csv": "ee579491bcc5a879fad2d217d0389986633f674be22040dcb5d6666ff6e0e35b"
+        }
+      },
+      "estimated_elements": 34400,
+      "angles": null,
+      "superseded_by": "full_zhao2021_p1_adaptive"
+    },
+    {
+      "id": "full_zhao2021_p2",
+      "kind": "validation",
+      "case_file": "sym/cases/campaign/full_zhao2021_p2.json",
+      "case_sha256": "89069188a781328ca213a781e87b86b8d5a3772f3b67c3336444eb705ca16db4",
+      "run": "sym/runs/campaign/full_zhao2021_p2",
+      "entry": {
+        "id": "full_zhao2021_p2",
+        "paper": "zhao2021",
+        "specimen": "P2",
+        "vessel": "P2",
+        "case_file": "sym/cases/campaign/full_zhao2021_p2.json",
+        "case_sha256": "89069188a781328ca213a781e87b86b8d5a3772f3b67c3336444eb705ca16db4",
+        "reference_file": "data/figures/zhao2021/fig13_load_displacement.csv",
+        "panel": "P2",
+        "experimental_series": "experimental",
+        "numerical_series": "numerical",
+        "material": {
+          "source": "data/figures/zhao2021/fig11_material_curve.csv",
+          "source_sha256": "aa48e42d946ef54ceacc5ededd06da4e361105235e0588e91429bcbe2fa4e587",
+          "interpretation": "true total strain; plastic strain = total - stress/E",
+          "interpretation_confirmed": true,
+          "initial_yield_anchor_mpa": 365.0,
+          "source_supported_plastic_strain_max": 0.7910574171740384,
+          "processing": "LEGACY: yield anchored to material table; lower-stress, decreasing-stress and non-increasing-plastic-strain samples omitted. Do not treat this as the digitized curve.",
+          "constant_tail_to_plastic_strain": 0.8,
+          "burst_criterion_calibrated": false
+        },
+        "assumptions": [
+          "Preliminary literature comparison; mesh/contact convergence and fixture verification outstanding.",
+          "5 MPa pressure ramp exercises the same three-stage workflow; it is not a burst validation.",
+          "Bottom-line bilateral support and friction 0.3 are modelling assumptions requiring verification.",
+          "Material constant tail is an explicit extrapolation; data-supported strain extent is audited.",
+          "Compression-only contact uses the isolated CCX 2.23 TABULAR patch; see sym/docs/contact-fix.md. Validated on the elementary coupon; each pipe response still needs checks.",
+          "20 mm cosine-gouge width is provisional; original width/cross-section not resolved.",
+          "E=208 GPa follows constitutive-model text; Table 1 gives 209 GPa.",
+          "Digitized Figure 11 is used instead of silently choosing an inconsistent Ramberg\u2013Osgood convention.",
+          "Table dent depth interpreted as nominal loaded travel; this measurement definition still needs confirmation.",
+          "Campaign supersedes the earlier 5 MPa workflow check; failure criterion remains study-specific/unvalidated as documented.",
+          "Frozen campaign: no force fitting or orientation-dependent material/criterion adjustment.",
+          "Pressure target is an applied load, not a predicted burst pressure. Missing criterion crossings remain missing."
+        ],
+        "validation_status": "preliminary_unvalidated",
+        "sources": {
+          "data/tables/zhao2021/text_model_parameters.csv": "3e936954e3413bcde5f33f0bada8f764ba83c450f5479c0e1f4538ad8c2596b5",
+          "data/tables/zhao2021/table03_defects.csv": "bac02a25b644748f498ed8253f1482396fb4902b8008b05e9cb6199bb64467ba",
+          "data/tables/zhao2021/table01_material.csv": "1bace01df46fbd127d70791c6aa9ae5ea4d32820397b83a2c8c94ec529672e05",
+          "data/figures/zhao2021/fig13_load_displacement.csv": "ee579491bcc5a879fad2d217d0389986633f674be22040dcb5d6666ff6e0e35b"
+        }
+      },
+      "estimated_elements": 34400,
+      "angles": null,
+      "superseded_by": "full_zhao2021_p2_adaptive"
+    },
+    {
+      "id": "full_zhao2021_p3",
+      "kind": "validation",
+      "case_file": "sym/cases/campaign/full_zhao2021_p3.json",
+      "case_sha256": "9dc1df974a278e74309667940493034b750649f60d574bf0e238ad010cb2b7f8",
+      "run": "sym/runs/campaign/full_zhao2021_p3",
+      "entry": {
+        "id": "full_zhao2021_p3",
+        "paper": "zhao2021",
+        "specimen": "P3",
+        "vessel": "P3",
+        "case_file": "sym/cases/campaign/full_zhao2021_p3.json",
+        "case_sha256": "9dc1df974a278e74309667940493034b750649f60d574bf0e238ad010cb2b7f8",
+        "reference_file": "data/figures/zhao2021/fig13_load_displacement.csv",
+        "panel": "P3",
+        "experimental_series": "experimental",
+        "numerical_series": "numerical",
+        "material": {
+          "source": "data/figures/zhao2021/fig11_material_curve.csv",
+          "source_sha256": "aa48e42d946ef54ceacc5ededd06da4e361105235e0588e91429bcbe2fa4e587",
+          "interpretation": "true total strain; plastic strain = total - stress/E",
+          "interpretation_confirmed": true,
+          "initial_yield_anchor_mpa": 365.0,
+          "source_supported_plastic_strain_max": 0.7910574171740384,
+          "processing": "LEGACY: yield anchored to material table; lower-stress, decreasing-stress and non-increasing-plastic-strain samples omitted. Do not treat this as the digitized curve.",
+          "constant_tail_to_plastic_strain": 0.8,
+          "burst_criterion_calibrated": false
+        },
+        "assumptions": [
+          "Preliminary literature comparison; mesh/contact convergence and fixture verification outstanding.",
+          "5 MPa pressure ramp exercises the same three-stage workflow; it is not a burst validation.",
+          "Bottom-line bilateral support and friction 0.3 are modelling assumptions requiring verification.",
+          "Material constant tail is an explicit extrapolation; data-supported strain extent is audited.",
+          "Compression-only contact uses the isolated CCX 2.23 TABULAR patch; see sym/docs/contact-fix.md. Validated on the elementary coupon; each pipe response still needs checks.",
+          "20 mm cosine-gouge width is provisional; original width/cross-section not resolved.",
+          "E=208 GPa follows constitutive-model text; Table 1 gives 209 GPa.",
+          "Digitized Figure 11 is used instead of silently choosing an inconsistent Ramberg\u2013Osgood convention.",
+          "Table dent depth interpreted as nominal loaded travel; this measurement definition still needs confirmation.",
+          "Campaign supersedes the earlier 5 MPa workflow check; failure criterion remains study-specific/unvalidated as documented.",
+          "Frozen campaign: no force fitting or orientation-dependent material/criterion adjustment.",
+          "Pressure target is an applied load, not a predicted burst pressure. Missing criterion crossings remain missing."
+        ],
+        "validation_status": "preliminary_unvalidated",
+        "sources": {
+          "data/tables/zhao2021/text_model_parameters.csv": "3e936954e3413bcde5f33f0bada8f764ba83c450f5479c0e1f4538ad8c2596b5",
+          "data/tables/zhao2021/table03_defects.csv": "bac02a25b644748f498ed8253f1482396fb4902b8008b05e9cb6199bb64467ba",
+          "data/tables/zhao2021/table01_material.csv": "1bace01df46fbd127d70791c6aa9ae5ea4d32820397b83a2c8c94ec529672e05",
+          "data/figures/zhao2021/fig13_load_displacement.csv": "ee579491bcc5a879fad2d217d0389986633f674be22040dcb5d6666ff6e0e35b"
+        }
+      },
+      "estimated_elements": 22800,
+      "angles": null,
+      "superseded_by": "full_zhao2021_p3_adaptive"
+    },
+    {
+      "id": "full_zhao2021_p4",
+      "kind": "validation",
+      "case_file": "sym/cases/campaign/full_zhao2021_p4.json",
+      "case_sha256": "830cde31ea4546feb3fe2207e978ac17598506768a77bb85ea1c25df61eb7ede",
+      "run": "sym/runs/campaign/full_zhao2021_p4",
+      "entry": {
+        "id": "full_zhao2021_p4",
+        "paper": "zhao2021",
+        "specimen": "P4",
+        "vessel": "P4",
+        "case_file": "sym/cases/campaign/full_zhao2021_p4.json",
+        "case_sha256": "830cde31ea4546feb3fe2207e978ac17598506768a77bb85ea1c25df61eb7ede",
+        "reference_file": "data/figures/zhao2021/fig13_load_displacement.csv",
+        "panel": "P4",
+        "experimental_series": "experimental",
+        "numerical_series": "numerical",
+        "material": {
+          "source": "data/figures/zhao2021/fig11_material_curve.csv",
+          "source_sha256": "aa48e42d946ef54ceacc5ededd06da4e361105235e0588e91429bcbe2fa4e587",
+          "interpretation": "true total strain; plastic strain = total - stress/E",
+          "interpretation_confirmed": true,
+          "initial_yield_anchor_mpa": 365.0,
+          "source_supported_plastic_strain_max": 0.7910574171740384,
+          "processing": "LEGACY: yield anchored to material table; lower-stress, decreasing-stress and non-increasing-plastic-strain samples omitted. Do not treat this as the digitized curve.",
+          "constant_tail_to_plastic_strain": 0.8,
+          "burst_criterion_calibrated": false
+        },
+        "assumptions": [
+          "Preliminary literature comparison; mesh/contact convergence and fixture verification outstanding.",
+          "5 MPa pressure ramp exercises the same three-stage workflow; it is not a burst validation.",
+          "Bottom-line bilateral support and friction 0.3 are modelling assumptions requiring verification.",
+          "Material constant tail is an explicit extrapolation; data-supported strain extent is audited.",
+          "Compression-only contact uses the isolated CCX 2.23 TABULAR patch; see sym/docs/contact-fix.md. Validated on the elementary coupon; each pipe response still needs checks.",
+          "20 mm cosine-gouge width is provisional; original width/cross-section not resolved.",
+          "E=208 GPa follows constitutive-model text; Table 1 gives 209 GPa.",
+          "Digitized Figure 11 is used instead of silently choosing an inconsistent Ramberg\u2013Osgood convention.",
+          "Table dent depth interpreted as nominal loaded travel; this measurement definition still needs confirmation.",
+          "Campaign supersedes the earlier 5 MPa workflow check; failure criterion remains study-specific/unvalidated as documented.",
+          "Frozen campaign: no force fitting or orientation-dependent material/criterion adjustment.",
+          "Pressure target is an applied load, not a predicted burst pressure. Missing criterion crossings remain missing."
+        ],
+        "validation_status": "preliminary_unvalidated",
+        "sources": {
+          "data/tables/zhao2021/text_model_parameters.csv": "3e936954e3413bcde5f33f0bada8f764ba83c450f5479c0e1f4538ad8c2596b5",
+          "data/tables/zhao2021/table03_defects.csv": "bac02a25b644748f498ed8253f1482396fb4902b8008b05e9cb6199bb64467ba",
+          "data/tables/zhao2021/table01_material.csv": "1bace01df46fbd127d70791c6aa9ae5ea4d32820397b83a2c8c94ec529672e05",
+          "data/figures/zhao2021/fig13_load_displacement.csv": "ee579491bcc5a879fad2d217d0389986633f674be22040dcb5d6666ff6e0e35b"
+        }
+      },
+      "estimated_elements": 34400,
+      "angles": null,
+      "superseded_by": "full_zhao2021_p4_adaptive"
+    },
+    {
+      "id": "full_shuai2018_dent",
+      "kind": "validation",
+      "case_file": "sym/cases/campaign/full_shuai2018_dent.json",
+      "case_sha256": "87707729786b0b8257cdcefd5d57f2cfecb4331c5f62c84a51b7b43856ab905c",
+      "run": "sym/runs/campaign/full_shuai2018_dent",
+      "entry": {
+        "id": "full_shuai2018_dent",
+        "paper": "shuai2018",
+        "specimen": "dented_pipe",
+        "vessel": null,
+        "comparison_kind": "pressure_strain",
+        "case_file": "sym/cases/campaign/full_shuai2018_dent.json",
+        "case_sha256": "87707729786b0b8257cdcefd5d57f2cfecb4331c5f62c84a51b7b43856ab905c",
+        "reference_file": "data/figures/shuai2018/fig15_strain_validation.csv",
+        "gauges": [
+          {
+            "panel": "a",
+            "gauge": 1,
+            "arc_mm": 0.0,
+            "axial_mm": 0.0
+          },
+          {
+            "panel": "b",
+            "gauge": 2,
+            "arc_mm": 50.0,
+            "axial_mm": 0.0
+          },
+          {
+            "panel": "c",
+            "gauge": 10,
+            "arc_mm": 100.0,
+            "axial_mm": 0.0
+          },
+          {
+            "panel": "d",
+            "gauge": 4,
+            "arc_mm": 0.0,
+            "axial_mm": -75.0
+          },
+          {
+            "panel": "e",
+            "gauge": 12,
+            "arc_mm": 0.0,
+            "axial_mm": -150.0
+          }
+        ],
+        "material": {
+          "source": "data/figures/shuai2018/fig11_material_curve.csv",
+          "source_sha256": "6603e9dfae2683edeb25267a1a2ed77d3f6e6a1fa45ad2b025d854084dbb7d24",
+          "interpretation": "true total strain; plastic strain = total - stress/E",
+          "interpretation_confirmed": true,
+          "initial_yield_anchor_mpa": 375.0,
+          "source_supported_plastic_strain_max": 0.06762301913221154,
+          "processing": "LEGACY: yield anchored to material table; lower-stress, decreasing-stress and non-increasing-plastic-strain samples omitted. Do not treat this as the digitized curve.",
+          "constant_tail_to_plastic_strain": 0.8,
+          "burst_criterion_calibrated": false
+        },
+        "assumptions": [
+          "Preliminary pressure-strain comparison, not validated.",
+          "100 mm indenter and 67 mm loaded travel from Section 2.1; 48.68 mm is the measured residual dent, not commanded travel.",
+          "True-stress/strain interpretation follows Section 3.2; digitized stresses below table yield are omitted.",
+          "Gauge strains use nearby integration points and engineering stretch relative to full withdrawal; not surface gauge-length averages.",
+          "Figure 15 panel f (point 18) excluded: coordinates not established in the extracted layout.",
+          "Bottom-line support, simplified end traction, contact stiffness and full-pipe mesh require sensitivity checks.",
+          "Material constant tail is explicit extrapolation; PEEQ 0.8 is not a calibrated Shuai failure criterion.",
+          "Compression-only contact uses the isolated CCX 2.23 TABULAR patch; this geometry has not yet been validated.",
+          "Campaign supersedes the earlier 5 MPa workflow check; failure criterion remains study-specific/unvalidated as documented.",
+          "Frozen campaign: no force fitting or orientation-dependent material/criterion adjustment.",
+          "Pressure target is an applied load, not a predicted burst pressure. Missing criterion crossings remain missing."
+        ],
+        "validation_status": "preliminary_unvalidated",
+        "sources": {
+          "data/tables/shuai2018/table01_material_geometry.csv": "b83c4a3a7bfdf40f4c838fb6143231aba5ee166260bc47ce5e2b599784fb323d",
+          "data/tables/shuai2018/fig04_gauge_layout.csv": "5f5c76ae4d693cccae181695491e377c02b4cb8ba01d85a14e1cecb67cfdfcfb",
+          "data/figures/shuai2018/fig15_strain_validation.csv": "4107ea2420a7eb902e04819025ed557096d5fb5f314827aa37b2a95f009d1dca",
+          "data/evidence/shuai2018/text.txt": "3a9bd0e69946d20027f292fd075e0bc43308c37c12b4c3f4a5fab05a7c19f6d2"
+        }
+      },
+      "estimated_elements": 13728,
+      "angles": null,
+      "superseded_by": "full_shuai2018_dent_adaptive"
+    },
+    {
+      "id": "orientation_intact_00",
+      "kind": "orientation",
+      "case_file": "sym/cases/campaign/orientation_intact_00.json",
+      "case_sha256": "9ab845a04308a4e3785735dc7def22f0e824dbd945262029dc541ac6ea80bf93",
+      "run": "sym/runs/campaign/orientation_intact_00",
+      "entry": null,
+      "estimated_elements": 6960,
+      "angles": [
+        0
+      ],
+      "superseded_by": "orientation_intact_00_adaptive"
+    },
+    {
+      "id": "orientation_dent_00",
+      "kind": "orientation",
+      "case_file": "sym/cases/campaign/orientation_dent_00.json",
+      "case_sha256": "464a9899dd2739d59276d1a821850d351c92396ae129e1cc60f29bce5c67d0bd",
+      "run": "sym/runs/campaign/orientation_dent_00",
+      "entry": null,
+      "estimated_elements": 15200,
+      "angles": [
+        0
+      ],
+      "superseded_by": "orientation_dent_00_adaptive"
+    },
+    {
+      "id": "orientation_gouge_00",
+      "kind": "orientation",
+      "case_file": "sym/cases/campaign/orientation_gouge_00.json",
+      "case_sha256": "b6d69c65d6196693935a6b910144eacf5ac399a4e89c2f7f984a80ed409abda7",
+      "run": "sym/runs/campaign/orientation_gouge_00",
+      "entry": null,
+      "estimated_elements": 23392,
+      "angles": [
+        0
+      ],
+      "superseded_by": "orientation_gouge_00_adaptive"
+    },
+    {
+      "id": "orientation_gouge_15",
+      "kind": "orientation",
+      "case_file": "sym/cases/campaign/orientation_gouge_15.json",
+      "case_sha256": "ba3320fa3ce835e31c1e3f0d83819b09370cf7aaedd6f4a5ce1c4362ccdade1c",
+      "run": "sym/runs/campaign/orientation_gouge_15",
+      "entry": null,
+      "estimated_elements": 43520,
+      "angles": [
+        15
+      ],
+      "superseded_by": "orientation_gouge_15_adaptive"
+    },
+    {
+      "id": "orientation_gouge_30",
+      "kind": "orientation",
+      "case_file": "sym/cases/campaign/orientation_gouge_30.json",
+      "case_sha256": "051321c84ccba4a75716506df3b821a69f3ef272a3dde26a0fe536bb0531eb3d",
+      "run": "sym/runs/campaign/orientation_gouge_30",
+      "entry": null,
+      "estimated_elements": 58144,
+      "angles": [
+        30
+      ],
+      "superseded_by": "orientation_gouge_30_adaptive"
+    },
+    {
+      "id": "orientation_gouge_45",
+      "kind": "orientation",
+      "case_file": "sym/cases/campaign/orientation_gouge_45.json",
+      "case_sha256": "bac342623939ecbb035f232b017ec2d6e34a5c03538318759be1c4ba403a1b92",
+      "run": "sym/runs/campaign/orientation_gouge_45",
+      "entry": null,
+      "estimated_elements": 64752,
+      "angles": [
+        45
+      ],
+      "superseded_by": "orientation_gouge_45_adaptive"
+    },
+    {
+      "id": "orientation_gouge_60",
+      "kind": "orientation",
+      "case_file": "sym/cases/campaign/orientation_gouge_60.json",
+      "case_sha256": "7c4abd2ae641cfbffb07788b753e7171d2e9377fd6177675a4be93ae7b052a67",
+      "run": "sym/runs/campaign/orientation_gouge_60",
+      "entry": null,
+      "estimated_elements": 61360,
+      "angles": [
+        60
+      ],
+      "superseded_by": "orientation_gouge_60_adaptive"
+    },
+    {
+      "id": "orientation_gouge_75",
+      "kind": "orientation",
+      "case_file": "sym/cases/campaign/orientation_gouge_75.json",
+      "case_sha256": "9bedd8914f4fc6c20640d1d854cd9cec8c7b00c4f9791defac0eefdfcb310275",
+      "run": "sym/runs/campaign/orientation_gouge_75",
+      "entry": null,
+      "estimated_elements": 52256,
+      "angles": [
+        75
+      ],
+      "superseded_by": "orientation_gouge_75_adaptive"
+    },
+    {
+      "id": "orientation_gouge_90",
+      "kind": "orientation",
+      "case_file": "sym/cases/campaign/orientation_gouge_90.json",
+      "case_sha256": "fb2ad70746fdd0c0e25f20672bb76f1c2d320d6aa9c94b5a35719148919049ee",
+      "run": "sym/runs/campaign/orientation_gouge_90",
+      "entry": null,
+      "estimated_elements": 36864,
+      "angles": [
+        90
+      ],
+      "superseded_by": "orientation_gouge_90_adaptive"
+    },
+    {
+      "id": "orientation_combined_15",
+      "kind": "orientation",
+      "case_file": "sym/cases/campaign/orientation_combined_15.json",
+      "case_sha256": "3c0b1ffbc48b86dc832e6547fd3cd2a2905c69a044b63fbcc3d231198cad0863",
+      "run": "sym/runs/campaign/orientation_combined_15",
+      "entry": null,
+      "estimated_elements": 43520,
+      "angles": [
+        15
+      ],
+      "superseded_by": "orientation_combined_15_adaptive"
+    },
+    {
+      "id": "orientation_combined_30",
+      "kind": "orientation",
+      "case_file": "sym/cases/campaign/orientation_combined_30.json",
+      "case_sha256": "0c58eb10eb4ad079c61e6738d025f7b17618d0601abd1fd8eb3531fc5c3789d3",
+      "run": "sym/runs/campaign/orientation_combined_30",
+      "entry": null,
+      "estimated_elements": 58144,
+      "angles": [
+        30
+      ],
+      "superseded_by": "orientation_combined_30_adaptive"
+    },
+    {
+      "id": "orientation_combined_45",
+      "kind": "orientation",
+      "case_file": "sym/cases/campaign/orientation_combined_45.json",
+      "case_sha256": "172c408d378ef0ed7136693f015edbe178e2ea75a28f3d7f8df8dce52b9eea39",
+      "run": "sym/runs/campaign/orientation_combined_45",
+      "entry": null,
+      "estimated_elements": 64752,
+      "angles": [
+        45
+      ],
+      "superseded_by": "orientation_combined_45_adaptive"
+    },
+    {
+      "id": "orientation_combined_60",
+      "kind": "orientation",
+      "case_file": "sym/cases/campaign/orientation_combined_60.json",
+      "case_sha256": "be1e2273399a33673a41000af2bab00a2525a19aa93e366470cb55e16776e02a",
+      "run": "sym/runs/campaign/orientation_combined_60",
+      "entry": null,
+      "estimated_elements": 61360,
+      "angles": [
+        60
+      ],
+      "superseded_by": "orientation_combined_60_adaptive"
+    },
+    {
+      "id": "orientation_combined_75",
+      "kind": "orientation",
+      "case_file": "sym/cases/campaign/orientation_combined_75.json",
+      "case_sha256": "d58d78c39f9ae7880e81c208d4f3027278e97a1fe0ff7db9b9f5c4ddd95c632f",
+      "run": "sym/runs/campaign/orientation_combined_75",
+      "entry": null,
+      "estimated_elements": 52256,
+      "angles": [
+        75
+      ],
+      "superseded_by": "orientation_combined_75_adaptive"
+    },
+    {
+      "id": "orientation_combined_90",
+      "kind": "orientation",
+      "case_file": "sym/cases/campaign/orientation_combined_90.json",
+      "case_sha256": "f8925f91f97af924cc46f771b4bdedf7bf7617d7d37341bc3f930744bdc0446a",
+      "run": "sym/runs/campaign/orientation_combined_90",
+      "entry": null,
+      "estimated_elements": 43776,
+      "angles": [
+        90
+      ],
+      "superseded_by": "orientation_combined_90_adaptive"
+    },
+    {
+      "id": "a37_refined",
+      "kind": "iteration",
+      "case_file": "sym/cases/campaign/a37_refined.json",
+      "case_sha256": "d2280e22c20f9d12cb231f6443e35500dba6bdefef54542cfa980944273dc9d3",
+      "run": "sym/runs/campaign/a37_refined",
+      "entry": {
+        "id": "a37_refined",
+        "paper": "allouti2012",
+        "specimen": "3_percent_OD",
+        "vessel": null,
+        "case_file": "sym/cases/campaign/a37_refined.json",
+        "case_sha256": "d2280e22c20f9d12cb231f6443e35500dba6bdefef54542cfa980944273dc9d3",
+        "reference_file": "data/figures/allouti2012/fig10_load_displacement.csv",
+        "panel": "a",
+        "experimental_series": "dent_3_percent_OD_experimental",
+        "numerical_series": "dent_3_percent_OD_numerical",
+        "material": {
+          "source": "data/figures/allouti2012/fig09_material_curve.csv",
+          "source_sha256": "6739a65c86e70da1c282be752a593e97d2485b6374808f3ebf80f1ebbb79e8d3",
+          "interpretation": "true total strain; plastic strain = total - stress/E",
+          "interpretation_confirmed": false,
+          "initial_yield_anchor_mpa": 249.05299258691358,
+          "source_supported_plastic_strain_max": 0.1977982020291358,
+          "processing": "Preserve Figure 9 after its elastic intersection; no tabulated-yield splice. Table/figure discrepancy remains unresolved.",
+          "constant_tail_to_plastic_strain": 0.8,
+          "burst_criterion_calibrated": false
+        },
+        "assumptions": [
+          "Preliminary literature comparison; mesh/contact convergence and fixture verification outstanding.",
+          "5 MPa pressure ramp exercises the same three-stage workflow; it is not a burst validation.",
+          "Bottom-line bilateral support and friction 0.3 are modelling assumptions requiring verification.",
+          "Material constant tail is an explicit extrapolation; data-supported strain extent is audited.",
+          "Compression-only contact uses the isolated CCX 2.23 TABULAR patch; see sym/docs/contact-fix.md. Validated on the elementary coupon; each pipe response still needs checks.",
+          "Allouti Figure 9 stress/strain treated as true stress/total strain, which the figure does not explicitly confirm.",
+          "Figure 9 preserved from its approximately 249 MPa elastic intersection; Table 2 yield of 355 MPa conflicts with that curve.",
+          "Maximum imposed travel taken from experimental loading-loop maximum; this is a prescribed boundary condition, not a fitted prediction.",
+          "Figure percent-OD labels describe residual dents; they are not substituted for loaded tool travel.",
+          "PEEQ 0.8 is only a software placeholder here; Allouti uses different failure criteria. No Allouti burst error is computed.",
+          "Controlled sensitivity, not a fitted material or a recovered fixture dimension.",
+          "Frozen campaign: no force fitting or orientation-dependent material/criterion adjustment.",
+          "Pressure target is an applied load, not a predicted burst pressure. Missing criterion crossings remain missing."
+        ],
+        "validation_status": "preliminary_unvalidated",
+        "sources": {
+          "data/tables/allouti2012/text_geometry_and_intact_test.csv": "88e3a8858ade4df336f3e0f6886f69c2898c08f67d6b75b0bf9b3b314dbf9d2b",
+          "data/tables/allouti2012/table02_material.csv": "5526abfa2423f00ccfee6c10c38248e2a33231f3b800735e9a627b109e4ae259",
+          "data/figures/allouti2012/fig10_load_displacement.csv": "2a23586f869bc66a46003200761464a50e06fcc36314c6a648edc5727f4dcd9b"
+        }
+      },
+      "estimated_elements": 10368,
+      "angles": null
+    },
+    {
+      "id": "a37_finite_support",
+      "kind": "iteration",
+      "case_file": "sym/cases/campaign/a37_finite_support.json",
+      "case_sha256": "ff57abfd59433acb6e01d1d7bd9b60ca5b7f9acf477bb1951ff20cae7548e49a",
+      "run": "sym/runs/campaign/a37_finite_support",
+      "entry": {
+        "id": "a37_finite_support",
+        "paper": "allouti2012",
+        "specimen": "3_percent_OD",
+        "vessel": null,
+        "case_file": "sym/cases/campaign/a37_finite_support.json",
+        "case_sha256": "ff57abfd59433acb6e01d1d7bd9b60ca5b7f9acf477bb1951ff20cae7548e49a",
+        "reference_file": "data/figures/allouti2012/fig10_load_displacement.csv",
+        "panel": "a",
+        "experimental_series": "dent_3_percent_OD_experimental",
+        "numerical_series": "dent_3_percent_OD_numerical",
+        "material": {
+          "source": "data/figures/allouti2012/fig09_material_curve.csv",
+          "source_sha256": "6739a65c86e70da1c282be752a593e97d2485b6374808f3ebf80f1ebbb79e8d3",
+          "interpretation": "true total strain; plastic strain = total - stress/E",
+          "interpretation_confirmed": false,
+          "initial_yield_anchor_mpa": 249.05299258691358,
+          "source_supported_plastic_strain_max": 0.1977982020291358,
+          "processing": "Preserve Figure 9 after its elastic intersection; no tabulated-yield splice. Table/figure discrepancy remains unresolved.",
+          "constant_tail_to_plastic_strain": 0.8,
+          "burst_criterion_calibrated": false
+        },
+        "assumptions": [
+          "Preliminary literature comparison; mesh/contact convergence and fixture verification outstanding.",
+          "5 MPa pressure ramp exercises the same three-stage workflow; it is not a burst validation.",
+          "Bottom-line bilateral support and friction 0.3 are modelling assumptions requiring verification.",
+          "Material constant tail is an explicit extrapolation; data-supported strain extent is audited.",
+          "Compression-only contact uses the isolated CCX 2.23 TABULAR patch; see sym/docs/contact-fix.md. Validated on the elementary coupon; each pipe response still needs checks.",
+          "Allouti Figure 9 stress/strain treated as true stress/total strain, which the figure does not explicitly confirm.",
+          "Figure 9 preserved from its approximately 249 MPa elastic intersection; Table 2 yield of 355 MPa conflicts with that curve.",
+          "Maximum imposed travel taken from experimental loading-loop maximum; this is a prescribed boundary condition, not a fitted prediction.",
+          "Figure percent-OD labels describe residual dents; they are not substituted for loaded tool travel.",
+          "PEEQ 0.8 is only a software placeholder here; Allouti uses different failure criteria. No Allouti burst error is computed.",
+          "Controlled sensitivity, not a fitted material or a recovered fixture dimension.",
+          "Frozen campaign: no force fitting or orientation-dependent material/criterion adjustment.",
+          "Pressure target is an applied load, not a predicted burst pressure. Missing criterion crossings remain missing."
+        ],
+        "validation_status": "preliminary_unvalidated",
+        "sources": {
+          "data/tables/allouti2012/text_geometry_and_intact_test.csv": "88e3a8858ade4df336f3e0f6886f69c2898c08f67d6b75b0bf9b3b314dbf9d2b",
+          "data/tables/allouti2012/table02_material.csv": "5526abfa2423f00ccfee6c10c38248e2a33231f3b800735e9a627b109e4ae259",
+          "data/figures/allouti2012/fig10_load_displacement.csv": "2a23586f869bc66a46003200761464a50e06fcc36314c6a648edc5727f4dcd9b"
+        }
+      },
+      "estimated_elements": 1496,
+      "angles": null
+    },
+    {
+      "id": "full_allouti2014_4_percent_od_figure_curve_adaptive",
+      "kind": "validation",
+      "case_file": "sym/cases/campaign/full_allouti2014_4_percent_od_figure_curve_adaptive.json",
+      "case_sha256": "4afa9a28b575363df5157e37dd1b95e77be6b522082b7f0ed2b9cb4a88cb7330",
+      "run": "sym/runs/campaign/full_allouti2014_4_percent_od_figure_curve_adaptive",
+      "entry": {
+        "id": "full_allouti2014_4_percent_od_figure_curve_adaptive",
+        "paper": "allouti2014",
+        "specimen": "4_percent_OD",
+        "vessel": "V1",
+        "case_file": "sym/cases/campaign/full_allouti2014_4_percent_od_figure_curve_adaptive.json",
+        "case_sha256": "4afa9a28b575363df5157e37dd1b95e77be6b522082b7f0ed2b9cb4a88cb7330",
+        "reference_file": "data/figures/allouti2014/fig11_load_displacement.csv",
+        "panel": "",
+        "experimental_series": "4_percent_OD_experimental",
+        "numerical_series": "4_percent_OD_numerical",
+        "material": {
+          "source": "data/figures/allouti2012/fig09_material_curve.csv",
+          "source_sha256": "6739a65c86e70da1c282be752a593e97d2485b6374808f3ebf80f1ebbb79e8d3",
+          "interpretation": "true total strain; plastic strain = total - stress/E",
+          "interpretation_confirmed": false,
+          "initial_yield_anchor_mpa": 249.05299258691358,
+          "source_supported_plastic_strain_max": 0.1977982020291358,
+          "processing": "Preserve Figure 9 after its elastic intersection; no tabulated-yield splice. Table/figure discrepancy remains unresolved.",
+          "constant_tail_to_plastic_strain": 0.8,
+          "burst_criterion_calibrated": false
+        },
+        "assumptions": [
+          "Preliminary literature comparison; mesh/contact convergence and fixture verification outstanding.",
+          "5 MPa pressure ramp exercises the same three-stage workflow; it is not a burst validation.",
+          "Bottom-line bilateral support and friction 0.3 are modelling assumptions requiring verification.",
+          "Material constant tail is an explicit extrapolation; data-supported strain extent is audited.",
+          "Compression-only contact uses the isolated CCX 2.23 TABULAR patch; see sym/docs/contact-fix.md. Validated on the elementary coupon; each pipe response still needs checks.",
+          "Allouti Figure 9 stress/strain treated as true stress/total strain, which the figure does not explicitly confirm.",
+          "Figure 9 preserved from its approximately 249 MPa elastic intersection; Table 2 yield of 355 MPa conflicts with that curve.",
+          "Maximum imposed travel taken from experimental loading-loop maximum; this is a prescribed boundary condition, not a fitted prediction.",
+          "Figure percent-OD labels describe residual dents; they are not substituted for loaded tool travel.",
+          "PEEQ 0.8 is only a software placeholder here; Allouti uses different failure criteria. No Allouti burst error is computed.",
+          "A37 Figure 9 is borrowed from Allouti 2012; transfer to 2014 is an assumption.",
+          "Cosine gouge does not reproduce the published root radius; local strain/burst validation is not established.",
+          "Experimental dent-then-EDM sequence differs from the model gouge-then-dent sequence, as discussed by Allouti.",
+          "V1 table dent depth 9.3 mm conflicts with 4% OD; neither is silently adopted as the loaded travel.",
+          "Campaign supersedes the earlier 5 MPa workflow check; failure criterion remains study-specific/unvalidated as documented.",
+          "Frozen campaign: no force fitting or orientation-dependent material/criterion adjustment.",
+          "Pressure target is an applied load, not a predicted burst pressure. Missing criterion crossings remain missing.",
+          "Adaptive all-quad surface mesh extruded through the original wall-layer count; same nominal local size and physical inputs. Structured meshes exceeded this qube memory budget. Convergence must still be checked."
+        ],
+        "validation_status": "preliminary_unvalidated",
+        "sources": {
+          "data/tables/allouti2012/text_geometry_and_intact_test.csv": "88e3a8858ade4df336f3e0f6886f69c2898c08f67d6b75b0bf9b3b314dbf9d2b",
+          "data/tables/allouti2012/table02_material.csv": "5526abfa2423f00ccfee6c10c38248e2a33231f3b800735e9a627b109e4ae259",
+          "data/tables/allouti2014/table03_burst_and_fracture.csv": "86d8e96ac438ca2e3e28fcb3cf2b472152dcb803c0cd17c8f023ff436ba028df",
+          "data/figures/allouti2014/fig11_load_displacement.csv": "064812b07a540926a0319c96ca0c96a49233731899302670377467c0e3906af5"
+        }
+      },
+      "estimated_elements": null,
+      "angles": null,
+      "structured_estimate": 23688,
+      "parent_attempt": "full_allouti2014_4_percent_od_figure_curve",
+      "superseded_by": "full_allouti2014_4_percent_od_figure_curve_adaptive_resume_20261007"
+    },
+    {
+      "id": "full_allouti2014_10_percent_od_figure_curve_adaptive",
+      "kind": "validation",
+      "case_file": "sym/cases/campaign/full_allouti2014_10_percent_od_figure_curve_adaptive.json",
+      "case_sha256": "2ce79bfab54517d60c86e7eb888d3e0c3dd285c70e52297a0f3d0023f7c02190",
+      "run": "sym/runs/campaign/full_allouti2014_10_percent_od_figure_curve_adaptive",
+      "entry": {
+        "id": "full_allouti2014_10_percent_od_figure_curve_adaptive",
+        "paper": "allouti2014",
+        "specimen": "10_percent_OD",
+        "vessel": "V2",
+        "case_file": "sym/cases/campaign/full_allouti2014_10_percent_od_figure_curve_adaptive.json",
+        "case_sha256": "2ce79bfab54517d60c86e7eb888d3e0c3dd285c70e52297a0f3d0023f7c02190",
+        "reference_file": "data/figures/allouti2014/fig11_load_displacement.csv",
+        "panel": "",
+        "experimental_series": "10_percent_OD_experimental",
+        "numerical_series": "10_percent_OD_numerical",
+        "material": {
+          "source": "data/figures/allouti2012/fig09_material_curve.csv",
+          "source_sha256": "6739a65c86e70da1c282be752a593e97d2485b6374808f3ebf80f1ebbb79e8d3",
+          "interpretation": "true total strain; plastic strain = total - stress/E",
+          "interpretation_confirmed": false,
+          "initial_yield_anchor_mpa": 249.05299258691358,
+          "source_supported_plastic_strain_max": 0.1977982020291358,
+          "processing": "Preserve Figure 9 after its elastic intersection; no tabulated-yield splice. Table/figure discrepancy remains unresolved.",
+          "constant_tail_to_plastic_strain": 0.8,
+          "burst_criterion_calibrated": false
+        },
+        "assumptions": [
+          "Preliminary literature comparison; mesh/contact convergence and fixture verification outstanding.",
+          "5 MPa pressure ramp exercises the same three-stage workflow; it is not a burst validation.",
+          "Bottom-line bilateral support and friction 0.3 are modelling assumptions requiring verification.",
+          "Material constant tail is an explicit extrapolation; data-supported strain extent is audited.",
+          "Compression-only contact uses the isolated CCX 2.23 TABULAR patch; see sym/docs/contact-fix.md. Validated on the elementary coupon; each pipe response still needs checks.",
+          "Allouti Figure 9 stress/strain treated as true stress/total strain, which the figure does not explicitly confirm.",
+          "Figure 9 preserved from its approximately 249 MPa elastic intersection; Table 2 yield of 355 MPa conflicts with that curve.",
+          "Maximum imposed travel taken from experimental loading-loop maximum; this is a prescribed boundary condition, not a fitted prediction.",
+          "Figure percent-OD labels describe residual dents; they are not substituted for loaded tool travel.",
+          "PEEQ 0.8 is only a software placeholder here; Allouti uses different failure criteria. No Allouti burst error is computed.",
+          "A37 Figure 9 is borrowed from Allouti 2012; transfer to 2014 is an assumption.",
+          "Cosine gouge does not reproduce the published root radius; local strain/burst validation is not established.",
+          "Experimental dent-then-EDM sequence differs from the model gouge-then-dent sequence, as discussed by Allouti.",
+          "V1 table dent depth 9.3 mm conflicts with 4% OD; neither is silently adopted as the loaded travel.",
+          "Campaign supersedes the earlier 5 MPa workflow check; failure criterion remains study-specific/unvalidated as documented.",
+          "Frozen campaign: no force fitting or orientation-dependent material/criterion adjustment.",
+          "Pressure target is an applied load, not a predicted burst pressure. Missing criterion crossings remain missing.",
+          "Adaptive all-quad surface mesh extruded through the original wall-layer count; same nominal local size and physical inputs. Structured meshes exceeded this qube memory budget. Convergence must still be checked."
+        ],
+        "validation_status": "preliminary_unvalidated",
+        "sources": {
+          "data/tables/allouti2012/text_geometry_and_intact_test.csv": "88e3a8858ade4df336f3e0f6886f69c2898c08f67d6b75b0bf9b3b314dbf9d2b",
+          "data/tables/allouti2012/table02_material.csv": "5526abfa2423f00ccfee6c10c38248e2a33231f3b800735e9a627b109e4ae259",
+          "data/tables/allouti2014/table03_burst_and_fracture.csv": "86d8e96ac438ca2e3e28fcb3cf2b472152dcb803c0cd17c8f023ff436ba028df",
+          "data/figures/allouti2014/fig11_load_displacement.csv": "064812b07a540926a0319c96ca0c96a49233731899302670377467c0e3906af5"
+        }
+      },
+      "estimated_elements": null,
+      "angles": null,
+      "structured_estimate": 23688,
+      "parent_attempt": "full_allouti2014_10_percent_od_figure_curve"
+    },
+    {
+      "id": "full_allouti2014_16_percent_od_figure_curve_adaptive",
+      "kind": "validation",
+      "case_file": "sym/cases/campaign/full_allouti2014_16_percent_od_figure_curve_adaptive.json",
+      "case_sha256": "2ea941b46333bd80821d683bed82e3a84896bcadec82f74bb9f247e035db0a51",
+      "run": "sym/runs/campaign/full_allouti2014_16_percent_od_figure_curve_adaptive",
+      "entry": {
+        "id": "full_allouti2014_16_percent_od_figure_curve_adaptive",
+        "paper": "allouti2014",
+        "specimen": "16_percent_OD",
+        "vessel": "V3",
+        "case_file": "sym/cases/campaign/full_allouti2014_16_percent_od_figure_curve_adaptive.json",
+        "case_sha256": "2ea941b46333bd80821d683bed82e3a84896bcadec82f74bb9f247e035db0a51",
+        "reference_file": "data/figures/allouti2014/fig11_load_displacement.csv",
+        "panel": "",
+        "experimental_series": "16_percent_OD_experimental",
+        "numerical_series": "16_percent_OD_numerical",
+        "material": {
+          "source": "data/figures/allouti2012/fig09_material_curve.csv",
+          "source_sha256": "6739a65c86e70da1c282be752a593e97d2485b6374808f3ebf80f1ebbb79e8d3",
+          "interpretation": "true total strain; plastic strain = total - stress/E",
+          "interpretation_confirmed": false,
+          "initial_yield_anchor_mpa": 249.05299258691358,
+          "source_supported_plastic_strain_max": 0.1977982020291358,
+          "processing": "Preserve Figure 9 after its elastic intersection; no tabulated-yield splice. Table/figure discrepancy remains unresolved.",
+          "constant_tail_to_plastic_strain": 0.8,
+          "burst_criterion_calibrated": false
+        },
+        "assumptions": [
+          "Preliminary literature comparison; mesh/contact convergence and fixture verification outstanding.",
+          "5 MPa pressure ramp exercises the same three-stage workflow; it is not a burst validation.",
+          "Bottom-line bilateral support and friction 0.3 are modelling assumptions requiring verification.",
+          "Material constant tail is an explicit extrapolation; data-supported strain extent is audited.",
+          "Compression-only contact uses the isolated CCX 2.23 TABULAR patch; see sym/docs/contact-fix.md. Validated on the elementary coupon; each pipe response still needs checks.",
+          "Allouti Figure 9 stress/strain treated as true stress/total strain, which the figure does not explicitly confirm.",
+          "Figure 9 preserved from its approximately 249 MPa elastic intersection; Table 2 yield of 355 MPa conflicts with that curve.",
+          "Maximum imposed travel taken from experimental loading-loop maximum; this is a prescribed boundary condition, not a fitted prediction.",
+          "Figure percent-OD labels describe residual dents; they are not substituted for loaded tool travel.",
+          "PEEQ 0.8 is only a software placeholder here; Allouti uses different failure criteria. No Allouti burst error is computed.",
+          "A37 Figure 9 is borrowed from Allouti 2012; transfer to 2014 is an assumption.",
+          "Cosine gouge does not reproduce the published root radius; local strain/burst validation is not established.",
+          "Experimental dent-then-EDM sequence differs from the model gouge-then-dent sequence, as discussed by Allouti.",
+          "V1 table dent depth 9.3 mm conflicts with 4% OD; neither is silently adopted as the loaded travel.",
+          "Campaign supersedes the earlier 5 MPa workflow check; failure criterion remains study-specific/unvalidated as documented.",
+          "Frozen campaign: no force fitting or orientation-dependent material/criterion adjustment.",
+          "Pressure target is an applied load, not a predicted burst pressure. Missing criterion crossings remain missing.",
+          "Adaptive all-quad surface mesh extruded through the original wall-layer count; same nominal local size and physical inputs. Structured meshes exceeded this qube memory budget. Convergence must still be checked."
+        ],
+        "validation_status": "preliminary_unvalidated",
+        "sources": {
+          "data/tables/allouti2012/text_geometry_and_intact_test.csv": "88e3a8858ade4df336f3e0f6886f69c2898c08f67d6b75b0bf9b3b314dbf9d2b",
+          "data/tables/allouti2012/table02_material.csv": "5526abfa2423f00ccfee6c10c38248e2a33231f3b800735e9a627b109e4ae259",
+          "data/tables/allouti2014/table03_burst_and_fracture.csv": "86d8e96ac438ca2e3e28fcb3cf2b472152dcb803c0cd17c8f023ff436ba028df",
+          "data/figures/allouti2014/fig11_load_displacement.csv": "064812b07a540926a0319c96ca0c96a49233731899302670377467c0e3906af5"
+        }
+      },
+      "estimated_elements": null,
+      "angles": null,
+      "structured_estimate": 23688,
+      "parent_attempt": "full_allouti2014_16_percent_od_figure_curve"
+    },
+    {
+      "id": "full_zhao2021_p1_adaptive",
+      "kind": "validation",
+      "case_file": "sym/cases/campaign/full_zhao2021_p1_adaptive.json",
+      "case_sha256": "17de6a7d7f686f6afa56234c2b25f90183bf2cfad982933cb90d2ae393721cad",
+      "run": "sym/runs/campaign/full_zhao2021_p1_adaptive",
+      "entry": {
+        "id": "full_zhao2021_p1_adaptive",
+        "paper": "zhao2021",
+        "specimen": "P1",
+        "vessel": "P1",
+        "case_file": "sym/cases/campaign/full_zhao2021_p1_adaptive.json",
+        "case_sha256": "17de6a7d7f686f6afa56234c2b25f90183bf2cfad982933cb90d2ae393721cad",
+        "reference_file": "data/figures/zhao2021/fig13_load_displacement.csv",
+        "panel": "P1",
+        "experimental_series": "experimental",
+        "numerical_series": "numerical",
+        "material": {
+          "source": "data/figures/zhao2021/fig11_material_curve.csv",
+          "source_sha256": "aa48e42d946ef54ceacc5ededd06da4e361105235e0588e91429bcbe2fa4e587",
+          "interpretation": "true total strain; plastic strain = total - stress/E",
+          "interpretation_confirmed": true,
+          "initial_yield_anchor_mpa": 365.0,
+          "source_supported_plastic_strain_max": 0.7910574171740384,
+          "processing": "LEGACY: yield anchored to material table; lower-stress, decreasing-stress and non-increasing-plastic-strain samples omitted. Do not treat this as the digitized curve.",
+          "constant_tail_to_plastic_strain": 0.8,
+          "burst_criterion_calibrated": false
+        },
+        "assumptions": [
+          "Preliminary literature comparison; mesh/contact convergence and fixture verification outstanding.",
+          "5 MPa pressure ramp exercises the same three-stage workflow; it is not a burst validation.",
+          "Bottom-line bilateral support and friction 0.3 are modelling assumptions requiring verification.",
+          "Material constant tail is an explicit extrapolation; data-supported strain extent is audited.",
+          "Compression-only contact uses the isolated CCX 2.23 TABULAR patch; see sym/docs/contact-fix.md. Validated on the elementary coupon; each pipe response still needs checks.",
+          "20 mm cosine-gouge width is provisional; original width/cross-section not resolved.",
+          "E=208 GPa follows constitutive-model text; Table 1 gives 209 GPa.",
+          "Digitized Figure 11 is used instead of silently choosing an inconsistent Ramberg\u2013Osgood convention.",
+          "Table dent depth interpreted as nominal loaded travel; this measurement definition still needs confirmation.",
+          "Campaign supersedes the earlier 5 MPa workflow check; failure criterion remains study-specific/unvalidated as documented.",
+          "Frozen campaign: no force fitting or orientation-dependent material/criterion adjustment.",
+          "Pressure target is an applied load, not a predicted burst pressure. Missing criterion crossings remain missing.",
+          "Adaptive all-quad surface mesh extruded through the original wall-layer count; same nominal local size and physical inputs. Structured meshes exceeded this qube memory budget. Convergence must still be checked."
+        ],
+        "validation_status": "preliminary_unvalidated",
+        "sources": {
+          "data/tables/zhao2021/text_model_parameters.csv": "3e936954e3413bcde5f33f0bada8f764ba83c450f5479c0e1f4538ad8c2596b5",
+          "data/tables/zhao2021/table03_defects.csv": "bac02a25b644748f498ed8253f1482396fb4902b8008b05e9cb6199bb64467ba",
+          "data/tables/zhao2021/table01_material.csv": "1bace01df46fbd127d70791c6aa9ae5ea4d32820397b83a2c8c94ec529672e05",
+          "data/figures/zhao2021/fig13_load_displacement.csv": "ee579491bcc5a879fad2d217d0389986633f674be22040dcb5d6666ff6e0e35b"
+        }
+      },
+      "estimated_elements": null,
+      "angles": null,
+      "structured_estimate": 34400,
+      "parent_attempt": "full_zhao2021_p1"
+    },
+    {
+      "id": "full_zhao2021_p2_adaptive",
+      "kind": "validation",
+      "case_file": "sym/cases/campaign/full_zhao2021_p2_adaptive.json",
+      "case_sha256": "ea7b3d730859247d7096141c157f8bba57d168805c18e4be6b04e64f330b81b4",
+      "run": "sym/runs/campaign/full_zhao2021_p2_adaptive",
+      "entry": {
+        "id": "full_zhao2021_p2_adaptive",
+        "paper": "zhao2021",
+        "specimen": "P2",
+        "vessel": "P2",
+        "case_file": "sym/cases/campaign/full_zhao2021_p2_adaptive.json",
+        "case_sha256": "ea7b3d730859247d7096141c157f8bba57d168805c18e4be6b04e64f330b81b4",
+        "reference_file": "data/figures/zhao2021/fig13_load_displacement.csv",
+        "panel": "P2",
+        "experimental_series": "experimental",
+        "numerical_series": "numerical",
+        "material": {
+          "source": "data/figures/zhao2021/fig11_material_curve.csv",
+          "source_sha256": "aa48e42d946ef54ceacc5ededd06da4e361105235e0588e91429bcbe2fa4e587",
+          "interpretation": "true total strain; plastic strain = total - stress/E",
+          "interpretation_confirmed": true,
+          "initial_yield_anchor_mpa": 365.0,
+          "source_supported_plastic_strain_max": 0.7910574171740384,
+          "processing": "LEGACY: yield anchored to material table; lower-stress, decreasing-stress and non-increasing-plastic-strain samples omitted. Do not treat this as the digitized curve.",
+          "constant_tail_to_plastic_strain": 0.8,
+          "burst_criterion_calibrated": false
+        },
+        "assumptions": [
+          "Preliminary literature comparison; mesh/contact convergence and fixture verification outstanding.",
+          "5 MPa pressure ramp exercises the same three-stage workflow; it is not a burst validation.",
+          "Bottom-line bilateral support and friction 0.3 are modelling assumptions requiring verification.",
+          "Material constant tail is an explicit extrapolation; data-supported strain extent is audited.",
+          "Compression-only contact uses the isolated CCX 2.23 TABULAR patch; see sym/docs/contact-fix.md. Validated on the elementary coupon; each pipe response still needs checks.",
+          "20 mm cosine-gouge width is provisional; original width/cross-section not resolved.",
+          "E=208 GPa follows constitutive-model text; Table 1 gives 209 GPa.",
+          "Digitized Figure 11 is used instead of silently choosing an inconsistent Ramberg\u2013Osgood convention.",
+          "Table dent depth interpreted as nominal loaded travel; this measurement definition still needs confirmation.",
+          "Campaign supersedes the earlier 5 MPa workflow check; failure criterion remains study-specific/unvalidated as documented.",
+          "Frozen campaign: no force fitting or orientation-dependent material/criterion adjustment.",
+          "Pressure target is an applied load, not a predicted burst pressure. Missing criterion crossings remain missing.",
+          "Adaptive all-quad surface mesh extruded through the original wall-layer count; same nominal local size and physical inputs. Structured meshes exceeded this qube memory budget. Convergence must still be checked."
+        ],
+        "validation_status": "preliminary_unvalidated",
+        "sources": {
+          "data/tables/zhao2021/text_model_parameters.csv": "3e936954e3413bcde5f33f0bada8f764ba83c450f5479c0e1f4538ad8c2596b5",
+          "data/tables/zhao2021/table03_defects.csv": "bac02a25b644748f498ed8253f1482396fb4902b8008b05e9cb6199bb64467ba",
+          "data/tables/zhao2021/table01_material.csv": "1bace01df46fbd127d70791c6aa9ae5ea4d32820397b83a2c8c94ec529672e05",
+          "data/figures/zhao2021/fig13_load_displacement.csv": "ee579491bcc5a879fad2d217d0389986633f674be22040dcb5d6666ff6e0e35b"
+        }
+      },
+      "estimated_elements": null,
+      "angles": null,
+      "structured_estimate": 34400,
+      "parent_attempt": "full_zhao2021_p2"
+    },
+    {
+      "id": "full_zhao2021_p3_adaptive",
+      "kind": "validation",
+      "case_file": "sym/cases/campaign/full_zhao2021_p3_adaptive.json",
+      "case_sha256": "200dad94481d1736ef95a0eb798c62c0c7662e050da94dace7b48792e046662c",
+      "run": "sym/runs/campaign/full_zhao2021_p3_adaptive",
+      "entry": {
+        "id": "full_zhao2021_p3_adaptive",
+        "paper": "zhao2021",
+        "specimen": "P3",
+        "vessel": "P3",
+        "case_file": "sym/cases/campaign/full_zhao2021_p3_adaptive.json",
+        "case_sha256": "200dad94481d1736ef95a0eb798c62c0c7662e050da94dace7b48792e046662c",
+        "reference_file": "data/figures/zhao2021/fig13_load_displacement.csv",
+        "panel": "P3",
+        "experimental_series": "experimental",
+        "numerical_series": "numerical",
+        "material": {
+          "source": "data/figures/zhao2021/fig11_material_curve.csv",
+          "source_sha256": "aa48e42d946ef54ceacc5ededd06da4e361105235e0588e91429bcbe2fa4e587",
+          "interpretation": "true total strain; plastic strain = total - stress/E",
+          "interpretation_confirmed": true,
+          "initial_yield_anchor_mpa": 365.0,
+          "source_supported_plastic_strain_max": 0.7910574171740384,
+          "processing": "LEGACY: yield anchored to material table; lower-stress, decreasing-stress and non-increasing-plastic-strain samples omitted. Do not treat this as the digitized curve.",
+          "constant_tail_to_plastic_strain": 0.8,
+          "burst_criterion_calibrated": false
+        },
+        "assumptions": [
+          "Preliminary literature comparison; mesh/contact convergence and fixture verification outstanding.",
+          "5 MPa pressure ramp exercises the same three-stage workflow; it is not a burst validation.",
+          "Bottom-line bilateral support and friction 0.3 are modelling assumptions requiring verification.",
+          "Material constant tail is an explicit extrapolation; data-supported strain extent is audited.",
+          "Compression-only contact uses the isolated CCX 2.23 TABULAR patch; see sym/docs/contact-fix.md. Validated on the elementary coupon; each pipe response still needs checks.",
+          "20 mm cosine-gouge width is provisional; original width/cross-section not resolved.",
+          "E=208 GPa follows constitutive-model text; Table 1 gives 209 GPa.",
+          "Digitized Figure 11 is used instead of silently choosing an inconsistent Ramberg\u2013Osgood convention.",
+          "Table dent depth interpreted as nominal loaded travel; this measurement definition still needs confirmation.",
+          "Campaign supersedes the earlier 5 MPa workflow check; failure criterion remains study-specific/unvalidated as documented.",
+          "Frozen campaign: no force fitting or orientation-dependent material/criterion adjustment.",
+          "Pressure target is an applied load, not a predicted burst pressure. Missing criterion crossings remain missing.",
+          "Adaptive all-quad surface mesh extruded through the original wall-layer count; same nominal local size and physical inputs. Structured meshes exceeded this qube memory budget. Convergence must still be checked."
+        ],
+        "validation_status": "preliminary_unvalidated",
+        "sources": {
+          "data/tables/zhao2021/text_model_parameters.csv": "3e936954e3413bcde5f33f0bada8f764ba83c450f5479c0e1f4538ad8c2596b5",
+          "data/tables/zhao2021/table03_defects.csv": "bac02a25b644748f498ed8253f1482396fb4902b8008b05e9cb6199bb64467ba",
+          "data/tables/zhao2021/table01_material.csv": "1bace01df46fbd127d70791c6aa9ae5ea4d32820397b83a2c8c94ec529672e05",
+          "data/figures/zhao2021/fig13_load_displacement.csv": "ee579491bcc5a879fad2d217d0389986633f674be22040dcb5d6666ff6e0e35b"
+        }
+      },
+      "estimated_elements": null,
+      "angles": null,
+      "structured_estimate": 22800,
+      "parent_attempt": "full_zhao2021_p3"
+    },
+    {
+      "id": "full_zhao2021_p4_adaptive",
+      "kind": "validation",
+      "case_file": "sym/cases/campaign/full_zhao2021_p4_adaptive.json",
+      "case_sha256": "ac65f0a6a1c296bb4e2ea69919646a31b3db6c47aa9407716c7c19bf7a42f179",
+      "run": "sym/runs/campaign/full_zhao2021_p4_adaptive",
+      "entry": {
+        "id": "full_zhao2021_p4_adaptive",
+        "paper": "zhao2021",
+        "specimen": "P4",
+        "vessel": "P4",
+        "case_file": "sym/cases/campaign/full_zhao2021_p4_adaptive.json",
+        "case_sha256": "ac65f0a6a1c296bb4e2ea69919646a31b3db6c47aa9407716c7c19bf7a42f179",
+        "reference_file": "data/figures/zhao2021/fig13_load_displacement.csv",
+        "panel": "P4",
+        "experimental_series": "experimental",
+        "numerical_series": "numerical",
+        "material": {
+          "source": "data/figures/zhao2021/fig11_material_curve.csv",
+          "source_sha256": "aa48e42d946ef54ceacc5ededd06da4e361105235e0588e91429bcbe2fa4e587",
+          "interpretation": "true total strain; plastic strain = total - stress/E",
+          "interpretation_confirmed": true,
+          "initial_yield_anchor_mpa": 365.0,
+          "source_supported_plastic_strain_max": 0.7910574171740384,
+          "processing": "LEGACY: yield anchored to material table; lower-stress, decreasing-stress and non-increasing-plastic-strain samples omitted. Do not treat this as the digitized curve.",
+          "constant_tail_to_plastic_strain": 0.8,
+          "burst_criterion_calibrated": false
+        },
+        "assumptions": [
+          "Preliminary literature comparison; mesh/contact convergence and fixture verification outstanding.",
+          "5 MPa pressure ramp exercises the same three-stage workflow; it is not a burst validation.",
+          "Bottom-line bilateral support and friction 0.3 are modelling assumptions requiring verification.",
+          "Material constant tail is an explicit extrapolation; data-supported strain extent is audited.",
+          "Compression-only contact uses the isolated CCX 2.23 TABULAR patch; see sym/docs/contact-fix.md. Validated on the elementary coupon; each pipe response still needs checks.",
+          "20 mm cosine-gouge width is provisional; original width/cross-section not resolved.",
+          "E=208 GPa follows constitutive-model text; Table 1 gives 209 GPa.",
+          "Digitized Figure 11 is used instead of silently choosing an inconsistent Ramberg\u2013Osgood convention.",
+          "Table dent depth interpreted as nominal loaded travel; this measurement definition still needs confirmation.",
+          "Campaign supersedes the earlier 5 MPa workflow check; failure criterion remains study-specific/unvalidated as documented.",
+          "Frozen campaign: no force fitting or orientation-dependent material/criterion adjustment.",
+          "Pressure target is an applied load, not a predicted burst pressure. Missing criterion crossings remain missing.",
+          "Adaptive all-quad surface mesh extruded through the original wall-layer count; same nominal local size and physical inputs. Structured meshes exceeded this qube memory budget. Convergence must still be checked."
+        ],
+        "validation_status": "preliminary_unvalidated",
+        "sources": {
+          "data/tables/zhao2021/text_model_parameters.csv": "3e936954e3413bcde5f33f0bada8f764ba83c450f5479c0e1f4538ad8c2596b5",
+          "data/tables/zhao2021/table03_defects.csv": "bac02a25b644748f498ed8253f1482396fb4902b8008b05e9cb6199bb64467ba",
+          "data/tables/zhao2021/table01_material.csv": "1bace01df46fbd127d70791c6aa9ae5ea4d32820397b83a2c8c94ec529672e05",
+          "data/figures/zhao2021/fig13_load_displacement.csv": "ee579491bcc5a879fad2d217d0389986633f674be22040dcb5d6666ff6e0e35b"
+        }
+      },
+      "estimated_elements": null,
+      "angles": null,
+      "structured_estimate": 34400,
+      "parent_attempt": "full_zhao2021_p4"
+    },
+    {
+      "id": "full_shuai2018_dent_adaptive",
+      "kind": "validation",
+      "case_file": "sym/cases/campaign/full_shuai2018_dent_adaptive.json",
+      "case_sha256": "cb0247433f437d07f98e5c37a88553a6399325f4bdac6a0c8eff4abb42e2dccc",
+      "run": "sym/runs/campaign/full_shuai2018_dent_adaptive",
+      "entry": {
+        "id": "full_shuai2018_dent_adaptive",
+        "paper": "shuai2018",
+        "specimen": "dented_pipe",
+        "vessel": null,
+        "comparison_kind": "pressure_strain",
+        "case_file": "sym/cases/campaign/full_shuai2018_dent_adaptive.json",
+        "case_sha256": "cb0247433f437d07f98e5c37a88553a6399325f4bdac6a0c8eff4abb42e2dccc",
+        "reference_file": "data/figures/shuai2018/fig15_strain_validation.csv",
+        "gauges": [
+          {
+            "panel": "a",
+            "gauge": 1,
+            "arc_mm": 0.0,
+            "axial_mm": 0.0
+          },
+          {
+            "panel": "b",
+            "gauge": 2,
+            "arc_mm": 50.0,
+            "axial_mm": 0.0
+          },
+          {
+            "panel": "c",
+            "gauge": 10,
+            "arc_mm": 100.0,
+            "axial_mm": 0.0
+          },
+          {
+            "panel": "d",
+            "gauge": 4,
+            "arc_mm": 0.0,
+            "axial_mm": -75.0
+          },
+          {
+            "panel": "e",
+            "gauge": 12,
+            "arc_mm": 0.0,
+            "axial_mm": -150.0
+          }
+        ],
+        "material": {
+          "source": "data/figures/shuai2018/fig11_material_curve.csv",
+          "source_sha256": "6603e9dfae2683edeb25267a1a2ed77d3f6e6a1fa45ad2b025d854084dbb7d24",
+          "interpretation": "true total strain; plastic strain = total - stress/E",
+          "interpretation_confirmed": true,
+          "initial_yield_anchor_mpa": 375.0,
+          "source_supported_plastic_strain_max": 0.06762301913221154,
+          "processing": "LEGACY: yield anchored to material table; lower-stress, decreasing-stress and non-increasing-plastic-strain samples omitted. Do not treat this as the digitized curve.",
+          "constant_tail_to_plastic_strain": 0.8,
+          "burst_criterion_calibrated": false
+        },
+        "assumptions": [
+          "Preliminary pressure-strain comparison, not validated.",
+          "100 mm indenter and 67 mm loaded travel from Section 2.1; 48.68 mm is the measured residual dent, not commanded travel.",
+          "True-stress/strain interpretation follows Section 3.2; digitized stresses below table yield are omitted.",
+          "Gauge strains use nearby integration points and engineering stretch relative to full withdrawal; not surface gauge-length averages.",
+          "Figure 15 panel f (point 18) excluded: coordinates not established in the extracted layout.",
+          "Bottom-line support, simplified end traction, contact stiffness and full-pipe mesh require sensitivity checks.",
+          "Material constant tail is explicit extrapolation; PEEQ 0.8 is not a calibrated Shuai failure criterion.",
+          "Compression-only contact uses the isolated CCX 2.23 TABULAR patch; this geometry has not yet been validated.",
+          "Campaign supersedes the earlier 5 MPa workflow check; failure criterion remains study-specific/unvalidated as documented.",
+          "Frozen campaign: no force fitting or orientation-dependent material/criterion adjustment.",
+          "Pressure target is an applied load, not a predicted burst pressure. Missing criterion crossings remain missing.",
+          "Adaptive all-quad surface mesh extruded through the original wall-layer count; same nominal local size and physical inputs. Structured meshes exceeded this qube memory budget. Convergence must still be checked."
+        ],
+        "validation_status": "preliminary_unvalidated",
+        "sources": {
+          "data/tables/shuai2018/table01_material_geometry.csv": "b83c4a3a7bfdf40f4c838fb6143231aba5ee166260bc47ce5e2b599784fb323d",
+          "data/tables/shuai2018/fig04_gauge_layout.csv": "5f5c76ae4d693cccae181695491e377c02b4cb8ba01d85a14e1cecb67cfdfcfb",
+          "data/figures/shuai2018/fig15_strain_validation.csv": "4107ea2420a7eb902e04819025ed557096d5fb5f314827aa37b2a95f009d1dca",
+          "data/evidence/shuai2018/text.txt": "3a9bd0e69946d20027f292fd075e0bc43308c37c12b4c3f4a5fab05a7c19f6d2"
+        }
+      },
+      "estimated_elements": null,
+      "angles": null,
+      "structured_estimate": 13728,
+      "parent_attempt": "full_shuai2018_dent"
+    },
+    {
+      "id": "orientation_intact_00_adaptive",
+      "kind": "orientation",
+      "case_file": "sym/cases/campaign/orientation_intact_00_adaptive.json",
+      "case_sha256": "2d0f2166b5d1f61b5fe1e7944a559c33db285bcce810f9788be1092ba4185771",
+      "run": "sym/runs/campaign/orientation_intact_00_adaptive",
+      "entry": null,
+      "estimated_elements": null,
+      "angles": [
+        0
+      ],
+      "structured_estimate": 6960,
+      "parent_attempt": "orientation_intact_00"
+    },
+    {
+      "id": "orientation_dent_00_adaptive",
+      "kind": "orientation",
+      "case_file": "sym/cases/campaign/orientation_dent_00_adaptive.json",
+      "case_sha256": "cb3d5917f62c71cbe1d89da18ae62c1346b95cf16769a2033bca9d04473613b8",
+      "run": "sym/runs/campaign/orientation_dent_00_adaptive",
+      "entry": null,
+      "estimated_elements": null,
+      "angles": [
+        0
+      ],
+      "structured_estimate": 15200,
+      "parent_attempt": "orientation_dent_00"
+    },
+    {
+      "id": "orientation_gouge_00_adaptive",
+      "kind": "orientation",
+      "case_file": "sym/cases/campaign/orientation_gouge_00_adaptive.json",
+      "case_sha256": "b0f228818df0f99794cd30e00b88f56b70b49900dee5fd48d70ece2c94a81e8b",
+      "run": "sym/runs/campaign/orientation_gouge_00_adaptive",
+      "entry": null,
+      "estimated_elements": null,
+      "angles": [
+        0
+      ],
+      "structured_estimate": 23392,
+      "parent_attempt": "orientation_gouge_00"
+    },
+    {
+      "id": "orientation_gouge_15_adaptive",
+      "kind": "orientation",
+      "case_file": "sym/cases/campaign/orientation_gouge_15_adaptive.json",
+      "case_sha256": "fd60a303a88659503ad9c5a03a9641390af4d8ab6c2f7a66dcbde82058851b7d",
+      "run": "sym/runs/campaign/orientation_gouge_15_adaptive",
+      "entry": null,
+      "estimated_elements": null,
+      "angles": [
+        15
+      ],
+      "structured_estimate": 43520,
+      "parent_attempt": "orientation_gouge_15"
+    },
+    {
+      "id": "orientation_gouge_30_adaptive",
+      "kind": "orientation",
+      "case_file": "sym/cases/campaign/orientation_gouge_30_adaptive.json",
+      "case_sha256": "dbcc23ed9f729360ab5ed5089b24d541c79aef9fe1e15895ee53db2288374a7d",
+      "run": "sym/runs/campaign/orientation_gouge_30_adaptive",
+      "entry": null,
+      "estimated_elements": null,
+      "angles": [
+        30
+      ],
+      "structured_estimate": 58144,
+      "parent_attempt": "orientation_gouge_30"
+    },
+    {
+      "id": "orientation_gouge_45_adaptive",
+      "kind": "orientation",
+      "case_file": "sym/cases/campaign/orientation_gouge_45_adaptive.json",
+      "case_sha256": "b301ea2c8f5ba9876c12dad7ff97043650bc76dfa626d344002d1625f310da07",
+      "run": "sym/runs/campaign/orientation_gouge_45_adaptive",
+      "entry": null,
+      "estimated_elements": null,
+      "angles": [
+        45
+      ],
+      "structured_estimate": 64752,
+      "parent_attempt": "orientation_gouge_45"
+    },
+    {
+      "id": "orientation_gouge_60_adaptive",
+      "kind": "orientation",
+      "case_file": "sym/cases/campaign/orientation_gouge_60_adaptive.json",
+      "case_sha256": "f8611bf72c2986ebf839d7ee33f97491be2c10ecc460e2bcb3d9fac07247f868",
+      "run": "sym/runs/campaign/orientation_gouge_60_adaptive",
+      "entry": null,
+      "estimated_elements": null,
+      "angles": [
+        60
+      ],
+      "structured_estimate": 61360,
+      "parent_attempt": "orientation_gouge_60"
+    },
+    {
+      "id": "orientation_gouge_75_adaptive",
+      "kind": "orientation",
+      "case_file": "sym/cases/campaign/orientation_gouge_75_adaptive.json",
+      "case_sha256": "7702dea8965322e1f618480c7ff0d49322661b11fc4780db2759ab5aacd7bcc9",
+      "run": "sym/runs/campaign/orientation_gouge_75_adaptive",
+      "entry": null,
+      "estimated_elements": null,
+      "angles": [
+        75
+      ],
+      "structured_estimate": 52256,
+      "parent_attempt": "orientation_gouge_75"
+    },
+    {
+      "id": "orientation_gouge_90_adaptive",
+      "kind": "orientation",
+      "case_file": "sym/cases/campaign/orientation_gouge_90_adaptive.json",
+      "case_sha256": "c7efed16f4892499b9a80a14b3bc4e552100b636ffe628a0f1f95546d3810df4",
+      "run": "sym/runs/campaign/orientation_gouge_90_adaptive",
+      "entry": null,
+      "estimated_elements": null,
+      "angles": [
+        90
+      ],
+      "structured_estimate": 36864,
+      "parent_attempt": "orientation_gouge_90"
+    },
+    {
+      "id": "orientation_combined_15_adaptive",
+      "kind": "orientation",
+      "case_file": "sym/cases/campaign/orientation_combined_15_adaptive.json",
+      "case_sha256": "78d1a281b5d0011bd2de56d0cdc9bdc4f8083932bd6e23416ab7f399384178fc",
+      "run": "sym/runs/campaign/orientation_combined_15_adaptive",
+      "entry": null,
+      "estimated_elements": null,
+      "angles": [
+        15
+      ],
+      "structured_estimate": 43520,
+      "parent_attempt": "orientation_combined_15"
+    },
+    {
+      "id": "orientation_combined_30_adaptive",
+      "kind": "orientation",
+      "case_file": "sym/cases/campaign/orientation_combined_30_adaptive.json",
+      "case_sha256": "c8aaf5acfda5afa5a5ac77edb74827685d5f0b99215e7dbc8f99bb3b9d9ca8d4",
+      "run": "sym/runs/campaign/orientation_combined_30_adaptive",
+      "entry": null,
+      "estimated_elements": null,
+      "angles": [
+        30
+      ],
+      "structured_estimate": 58144,
+      "parent_attempt": "orientation_combined_30"
+    },
+    {
+      "id": "orientation_combined_45_adaptive",
+      "kind": "orientation",
+      "case_file": "sym/cases/campaign/orientation_combined_45_adaptive.json",
+      "case_sha256": "741d74600e62a439040506f079c15a7c34996f5e668eec5b9c244b784decd4ba",
+      "run": "sym/runs/campaign/orientation_combined_45_adaptive",
+      "entry": null,
+      "estimated_elements": null,
+      "angles": [
+        45
+      ],
+      "structured_estimate": 64752,
+      "parent_attempt": "orientation_combined_45"
+    },
+    {
+      "id": "orientation_combined_60_adaptive",
+      "kind": "orientation",
+      "case_file": "sym/cases/campaign/orientation_combined_60_adaptive.json",
+      "case_sha256": "d5815134d9f8ba1ad571ec7ac50f89aaf65dadafb0e467820b400cde2be2ffc3",
+      "run": "sym/runs/campaign/orientation_combined_60_adaptive",
+      "entry": null,
+      "estimated_elements": null,
+      "angles": [
+        60
+      ],
+      "structured_estimate": 61360,
+      "parent_attempt": "orientation_combined_60"
+    },
+    {
+      "id": "orientation_combined_75_adaptive",
+      "kind": "orientation",
+      "case_file": "sym/cases/campaign/orientation_combined_75_adaptive.json",
+      "case_sha256": "7a3e72282c42a6f5f2ac2e1491c6a7ca2970c3531f3851f82a02d98c7237d487",
+      "run": "sym/runs/campaign/orientation_combined_75_adaptive",
+      "entry": null,
+      "estimated_elements": null,
+      "angles": [
+        75
+      ],
+      "structured_estimate": 52256,
+      "parent_attempt": "orientation_combined_75"
+    },
+    {
+      "id": "orientation_combined_90_adaptive",
+      "kind": "orientation",
+      "case_file": "sym/cases/campaign/orientation_combined_90_adaptive.json",
+      "case_sha256": "5c896882c72d3c2cebff6ad99d2b3aff090d2a527ae1815fcd04504685fef595",
+      "run": "sym/runs/campaign/orientation_combined_90_adaptive",
+      "entry": null,
+      "estimated_elements": null,
+      "angles": [
+        90
+      ],
+      "structured_estimate": 43776,
+      "parent_attempt": "orientation_combined_90"
+    },
+    {
+      "id": "full_allouti2014_4_percent_od_figure_curve_adaptive_resume_20261007",
+      "kind": "validation",
+      "case_file": "sym/cases/campaign/full_allouti2014_4_percent_od_figure_curve_adaptive_resume_20261007.json",
+      "case_sha256": "210a04dcbe7d2e413f1d3f4c4b3e655e420bb3c62c341b8eb02e32553983cdc7",
+      "run": "sym/runs/campaign/full_allouti2014_4_percent_od_figure_curve_adaptive_resume_20261007",
+      "entry": {
+        "id": "full_allouti2014_4_percent_od_figure_curve_adaptive_resume_20261007",
+        "paper": "allouti2014",
+        "specimen": "4_percent_OD",
+        "vessel": "V1",
+        "case_file": "sym/cases/campaign/full_allouti2014_4_percent_od_figure_curve_adaptive_resume_20261007.json",
+        "case_sha256": "210a04dcbe7d2e413f1d3f4c4b3e655e420bb3c62c341b8eb02e32553983cdc7",
+        "reference_file": "data/figures/allouti2014/fig11_load_displacement.csv",
+        "panel": "",
+        "experimental_series": "4_percent_OD_experimental",
+        "numerical_series": "4_percent_OD_numerical",
+        "material": {
+          "source": "data/figures/allouti2012/fig09_material_curve.csv",
+          "source_sha256": "6739a65c86e70da1c282be752a593e97d2485b6374808f3ebf80f1ebbb79e8d3",
+          "interpretation": "true total strain; plastic strain = total - stress/E",
+          "interpretation_confirmed": false,
+          "initial_yield_anchor_mpa": 249.05299258691358,
+          "source_supported_plastic_strain_max": 0.1977982020291358,
+          "processing": "Preserve Figure 9 after its elastic intersection; no tabulated-yield splice. Table/figure discrepancy remains unresolved.",
+          "constant_tail_to_plastic_strain": 0.8,
+          "burst_criterion_calibrated": false
+        },
+        "assumptions": [
+          "Preliminary literature comparison; mesh/contact convergence and fixture verification outstanding.",
+          "5 MPa pressure ramp exercises the same three-stage workflow; it is not a burst validation.",
+          "Bottom-line bilateral support and friction 0.3 are modelling assumptions requiring verification.",
+          "Material constant tail is an explicit extrapolation; data-supported strain extent is audited.",
+          "Compression-only contact uses the isolated CCX 2.23 TABULAR patch; see sym/docs/contact-fix.md. Validated on the elementary coupon; each pipe response still needs checks.",
+          "Allouti Figure 9 stress/strain treated as true stress/total strain, which the figure does not explicitly confirm.",
+          "Figure 9 preserved from its approximately 249 MPa elastic intersection; Table 2 yield of 355 MPa conflicts with that curve.",
+          "Maximum imposed travel taken from experimental loading-loop maximum; this is a prescribed boundary condition, not a fitted prediction.",
+          "Figure percent-OD labels describe residual dents; they are not substituted for loaded tool travel.",
+          "PEEQ 0.8 is only a software placeholder here; Allouti uses different failure criteria. No Allouti burst error is computed.",
+          "A37 Figure 9 is borrowed from Allouti 2012; transfer to 2014 is an assumption.",
+          "Cosine gouge does not reproduce the published root radius; local strain/burst validation is not established.",
+          "Experimental dent-then-EDM sequence differs from the model gouge-then-dent sequence, as discussed by Allouti.",
+          "V1 table dent depth 9.3 mm conflicts with 4% OD; neither is silently adopted as the loaded travel.",
+          "Campaign supersedes the earlier 5 MPa workflow check; failure criterion remains study-specific/unvalidated as documented.",
+          "Frozen campaign: no force fitting or orientation-dependent material/criterion adjustment.",
+          "Pressure target is an applied load, not a predicted burst pressure. Missing criterion crossings remain missing.",
+          "Adaptive all-quad surface mesh extruded through the original wall-layer count; same nominal local size and physical inputs. Structured meshes exceeded this qube memory budget. Convergence must still be checked.",
+          "Operational retry after loss of the paused process. Identical physical and numerical inputs; prior attempt and native outputs preserved. This is a fresh solve, not native restart continuation."
+        ],
+        "validation_status": "preliminary_unvalidated",
+        "sources": {
+          "data/tables/allouti2012/text_geometry_and_intact_test.csv": "88e3a8858ade4df336f3e0f6886f69c2898c08f67d6b75b0bf9b3b314dbf9d2b",
+          "data/tables/allouti2012/table02_material.csv": "5526abfa2423f00ccfee6c10c38248e2a33231f3b800735e9a627b109e4ae259",
+          "data/tables/allouti2014/table03_burst_and_fracture.csv": "86d8e96ac438ca2e3e28fcb3cf2b472152dcb803c0cd17c8f023ff436ba028df",
+          "data/figures/allouti2014/fig11_load_displacement.csv": "064812b07a540926a0319c96ca0c96a49233731899302670377467c0e3906af5"
+        }
+      },
+      "estimated_elements": null,
+      "angles": null,
+      "structured_estimate": 23688,
+      "parent_attempt": "full_allouti2014_4_percent_od_figure_curve_adaptive",
+      "retry_reason": "Paused process lost; user requested resume on 2026-10-07"
+    },
+    {
+      "id": "mesh_p1_wall6_20261010",
+      "kind": "iteration",
+      "case_file": "sym/cases/campaign/mesh_p1_wall6_20261010.json",
+      "case_sha256": "b0816beb07bd778a2385a64c73e206b27e2d895252334939ede32239594e1f77",
+      "run": "sym/runs/campaign/mesh_p1_wall6_20261010",
+      "entry": {
+        "id": "mesh_p1_wall6_20261010",
+        "paper": "zhao2021",
+        "specimen": "P1",
+        "vessel": "P1",
+        "case_file": "sym/cases/campaign/mesh_p1_wall6_20261010.json",
+        "case_sha256": "b0816beb07bd778a2385a64c73e206b27e2d895252334939ede32239594e1f77",
+        "reference_file": "data/figures/zhao2021/fig13_load_displacement.csv",
+        "panel": "P1",
+        "experimental_series": "experimental",
+        "numerical_series": "numerical",
+        "material": {
+          "source": "data/figures/zhao2021/fig11_material_curve.csv",
+          "source_sha256": "aa48e42d946ef54ceacc5ededd06da4e361105235e0588e91429bcbe2fa4e587",
+          "interpretation": "true total strain; plastic strain = total - stress/E",
+          "interpretation_confirmed": true,
+          "initial_yield_anchor_mpa": 365.0,
+          "source_supported_plastic_strain_max": 0.7910574171740384,
+          "processing": "LEGACY: yield anchored to material table; lower-stress, decreasing-stress and non-increasing-plastic-strain samples omitted. Do not treat this as the digitized curve.",
+          "constant_tail_to_plastic_strain": 0.8,
+          "burst_criterion_calibrated": false
+        },
+        "assumptions": [
+          "Preliminary literature comparison; mesh/contact convergence and fixture verification outstanding.",
+          "5 MPa pressure ramp exercises the same three-stage workflow; it is not a burst validation.",
+          "Bottom-line bilateral support and friction 0.3 are modelling assumptions requiring verification.",
+          "Material constant tail is an explicit extrapolation; data-supported strain extent is audited.",
+          "Compression-only contact uses the isolated CCX 2.23 TABULAR patch; see sym/docs/contact-fix.md. Validated on the elementary coupon; each pipe response still needs checks.",
+          "20 mm cosine-gouge width is provisional; original width/cross-section not resolved.",
+          "E=208 GPa follows constitutive-model text; Table 1 gives 209 GPa.",
+          "Digitized Figure 11 is used instead of silently choosing an inconsistent Ramberg\u2013Osgood convention.",
+          "Table dent depth interpreted as nominal loaded travel; this measurement definition still needs confirmation.",
+          "Campaign supersedes the earlier 5 MPa workflow check; failure criterion remains study-specific/unvalidated as documented.",
+          "Frozen campaign: no force fitting or orientation-dependent material/criterion adjustment.",
+          "Pressure target is an applied load, not a predicted burst pressure. Missing criterion crossings remain missing.",
+          "Adaptive all-quad surface mesh extruded through the original wall-layer count; same nominal local size and physical inputs. Structured meshes exceeded this qube memory budget. Convergence must still be checked.",
+          "Mesh sensitivity of full_zhao2021_p1_adaptive: mesh.wall_layers 4 -> 6. Physical geometry, material, contact, loading and criterion unchanged. Compare common converged history, residual dent and first criterion bracket; failure/timeout is not burst or demonstrated mesh convergence."
+        ],
+        "validation_status": "preliminary_unvalidated",
+        "sources": {
+          "data/tables/zhao2021/text_model_parameters.csv": "3e936954e3413bcde5f33f0bada8f764ba83c450f5479c0e1f4538ad8c2596b5",
+          "data/tables/zhao2021/table03_defects.csv": "bac02a25b644748f498ed8253f1482396fb4902b8008b05e9cb6199bb64467ba",
+          "data/tables/zhao2021/table01_material.csv": "1bace01df46fbd127d70791c6aa9ae5ea4d32820397b83a2c8c94ec529672e05",
+          "data/figures/zhao2021/fig13_load_displacement.csv": "ee579491bcc5a879fad2d217d0389986633f674be22040dcb5d6666ff6e0e35b"
+        }
+      },
+      "estimated_elements": null,
+      "angles": null,
+      "structured_estimate": 34400,
+      "parent_attempt": "full_zhao2021_p1_adaptive",
+      "study": "mesh_sensitivity_20261010",
+      "parameter_changes": {
+        "mesh.wall_layers": {
+          "old": 4,
+          "new": 6
+        }
+      }
+    },
+    {
+      "id": "mesh_p1_fine4_20261010",
+      "kind": "iteration",
+      "case_file": "sym/cases/campaign/mesh_p1_fine4_20261010.json",
+      "case_sha256": "3a1c34cb13717274177721d6b28d48484c42ef833f11f3e3e0de56ec14a79184",
+      "run": "sym/runs/campaign/mesh_p1_fine4_20261010",
+      "entry": {
+        "id": "mesh_p1_fine4_20261010",
+        "paper": "zhao2021",
+        "specimen": "P1",
+        "vessel": "P1",
+        "case_file": "sym/cases/campaign/mesh_p1_fine4_20261010.json",
+        "case_sha256": "3a1c34cb13717274177721d6b28d48484c42ef833f11f3e3e0de56ec14a79184",
+        "reference_file": "data/figures/zhao2021/fig13_load_displacement.csv",
+        "panel": "P1",
+        "experimental_series": "experimental",
+        "numerical_series": "numerical",
+        "material": {
+          "source": "data/figures/zhao2021/fig11_material_curve.csv",
+          "source_sha256": "aa48e42d946ef54ceacc5ededd06da4e361105235e0588e91429bcbe2fa4e587",
+          "interpretation": "true total strain; plastic strain = total - stress/E",
+          "interpretation_confirmed": true,
+          "initial_yield_anchor_mpa": 365.0,
+          "source_supported_plastic_strain_max": 0.7910574171740384,
+          "processing": "LEGACY: yield anchored to material table; lower-stress, decreasing-stress and non-increasing-plastic-strain samples omitted. Do not treat this as the digitized curve.",
+          "constant_tail_to_plastic_strain": 0.8,
+          "burst_criterion_calibrated": false
+        },
+        "assumptions": [
+          "Preliminary literature comparison; mesh/contact convergence and fixture verification outstanding.",
+          "5 MPa pressure ramp exercises the same three-stage workflow; it is not a burst validation.",
+          "Bottom-line bilateral support and friction 0.3 are modelling assumptions requiring verification.",
+          "Material constant tail is an explicit extrapolation; data-supported strain extent is audited.",
+          "Compression-only contact uses the isolated CCX 2.23 TABULAR patch; see sym/docs/contact-fix.md. Validated on the elementary coupon; each pipe response still needs checks.",
+          "20 mm cosine-gouge width is provisional; original width/cross-section not resolved.",
+          "E=208 GPa follows constitutive-model text; Table 1 gives 209 GPa.",
+          "Digitized Figure 11 is used instead of silently choosing an inconsistent Ramberg\u2013Osgood convention.",
+          "Table dent depth interpreted as nominal loaded travel; this measurement definition still needs confirmation.",
+          "Campaign supersedes the earlier 5 MPa workflow check; failure criterion remains study-specific/unvalidated as documented.",
+          "Frozen campaign: no force fitting or orientation-dependent material/criterion adjustment.",
+          "Pressure target is an applied load, not a predicted burst pressure. Missing criterion crossings remain missing.",
+          "Adaptive all-quad surface mesh extruded through the original wall-layer count; same nominal local size and physical inputs. Structured meshes exceeded this qube memory budget. Convergence must still be checked.",
+          "Mesh sensitivity of full_zhao2021_p1_adaptive: mesh.fine_size 5.0 -> 4.0. Physical geometry, material, contact, loading and criterion unchanged. Compare common converged history, residual dent and first criterion bracket; failure/timeout is not burst or demonstrated mesh convergence."
+        ],
+        "validation_status": "preliminary_unvalidated",
+        "sources": {
+          "data/tables/zhao2021/text_model_parameters.csv": "3e936954e3413bcde5f33f0bada8f764ba83c450f5479c0e1f4538ad8c2596b5",
+          "data/tables/zhao2021/table03_defects.csv": "bac02a25b644748f498ed8253f1482396fb4902b8008b05e9cb6199bb64467ba",
+          "data/tables/zhao2021/table01_material.csv": "1bace01df46fbd127d70791c6aa9ae5ea4d32820397b83a2c8c94ec529672e05",
+          "data/figures/zhao2021/fig13_load_displacement.csv": "ee579491bcc5a879fad2d217d0389986633f674be22040dcb5d6666ff6e0e35b"
+        }
+      },
+      "estimated_elements": null,
+      "angles": null,
+      "structured_estimate": 34400,
+      "parent_attempt": "full_zhao2021_p1_adaptive",
+      "study": "mesh_sensitivity_20261010",
+      "parameter_changes": {
+        "mesh.fine_size": {
+          "old": 5.0,
+          "new": 4.0
+        }
+      }
+    },
+    {
+      "id": "mesh_combined60_wall6_20261010",
+      "kind": "iteration",
+      "case_file": "sym/cases/campaign/mesh_combined60_wall6_20261010.json",
+      "case_sha256": "ac476dc701e677d95da18d675045c738f8f22cb27354ecb4a8967fdded3915f5",
+      "run": "sym/runs/campaign/mesh_combined60_wall6_20261010",
+      "entry": null,
+      "estimated_elements": null,
+      "angles": [
+        60
+      ],
+      "structured_estimate": 61360,
+      "parent_attempt": "orientation_combined_60_adaptive",
+      "study": "mesh_sensitivity_20261010",
+      "parameter_changes": {
+        "mesh.wall_layers": {
+          "old": 4,
+          "new": 6
+        }
+      }
+    },
+    {
+      "id": "mesh_combined60_fine4_20261010",
+      "kind": "iteration",
+      "case_file": "sym/cases/campaign/mesh_combined60_fine4_20261010.json",
+      "case_sha256": "40d7a66f0be77058674517b8adfaa1c7f5a24c31526cf58de828a64f1656a4f0",
+      "run": "sym/runs/campaign/mesh_combined60_fine4_20261010",
+      "entry": null,
+      "estimated_elements": null,
+      "angles": [
+        60
+      ],
+      "structured_estimate": 61360,
+      "parent_attempt": "orientation_combined_60_adaptive",
+      "study": "mesh_sensitivity_20261010",
+      "parameter_changes": {
+        "mesh.fine_size": {
+          "old": 5.0,
+          "new": 4.0
+        }
+      }
+    },
+    {
+      "id": "orientation_intact_00_adaptive_c3d8_20261019",
+      "kind": "formulation",
+      "case_file": "sym/cases/campaign/orientation_intact_00_adaptive_c3d8_20261019.json",
+      "case_sha256": "e5421e8facae7a0bf5dedcf6382d316746c6398563cae4dcf2a28eac970c2137",
+      "run": "sym/runs/campaign/orientation_intact_00_adaptive_c3d8_20261019",
+      "entry": null,
+      "estimated_elements": null,
+      "angles": [
+        0
+      ],
+      "structured_estimate": 6960,
+      "parent_attempt": "orientation_intact_00_adaptive",
+      "changes": {
+        "mesh": {
+          "order": 1
+        }
+      },
+      "description": "Production-solver C3D8 sensitivity; unchanged parent physics"
+    },
+    {
+      "id": "full_zhao2021_p1_adaptive_c3d8_20261019",
+      "kind": "validation",
+      "case_file": "sym/cases/campaign/full_zhao2021_p1_adaptive_c3d8_20261019.json",
+      "case_sha256": "4f108f75d95041e05922a7c573ba55b2dac150127934254436b309e031463994",
+      "run": "sym/runs/campaign/full_zhao2021_p1_adaptive_c3d8_20261019",
+      "entry": {
+        "id": "full_zhao2021_p1_adaptive_c3d8_20261019",
+        "paper": "zhao2021",
+        "specimen": "P1",
+        "vessel": "P1",
+        "case_file": "sym/cases/campaign/full_zhao2021_p1_adaptive_c3d8_20261019.json",
+        "case_sha256": "4f108f75d95041e05922a7c573ba55b2dac150127934254436b309e031463994",
+        "reference_file": "data/figures/zhao2021/fig13_load_displacement.csv",
+        "panel": "P1",
+        "experimental_series": "experimental",
+        "numerical_series": "numerical",
+        "material": {
+          "source": "data/figures/zhao2021/fig11_material_curve.csv",
+          "source_sha256": "aa48e42d946ef54ceacc5ededd06da4e361105235e0588e91429bcbe2fa4e587",
+          "interpretation": "true total strain; plastic strain = total - stress/E",
+          "interpretation_confirmed": true,
+          "initial_yield_anchor_mpa": 365.0,
+          "source_supported_plastic_strain_max": 0.7910574171740384,
+          "processing": "LEGACY: yield anchored to material table; lower-stress, decreasing-stress and non-increasing-plastic-strain samples omitted. Do not treat this as the digitized curve.",
+          "constant_tail_to_plastic_strain": 0.8,
+          "burst_criterion_calibrated": false
+        },
+        "assumptions": [
+          "Preliminary literature comparison; mesh/contact convergence and fixture verification outstanding.",
+          "5 MPa pressure ramp exercises the same three-stage workflow; it is not a burst validation.",
+          "Bottom-line bilateral support and friction 0.3 are modelling assumptions requiring verification.",
+          "Material constant tail is an explicit extrapolation; data-supported strain extent is audited.",
+          "Compression-only contact uses the isolated CCX 2.23 TABULAR patch; see sym/docs/contact-fix.md. Validated on the elementary coupon; each pipe response still needs checks.",
+          "20 mm cosine-gouge width is provisional; original width/cross-section not resolved.",
+          "E=208 GPa follows constitutive-model text; Table 1 gives 209 GPa.",
+          "Digitized Figure 11 is used instead of silently choosing an inconsistent Ramberg\u2013Osgood convention.",
+          "Table dent depth interpreted as nominal loaded travel; this measurement definition still needs confirmation.",
+          "Campaign supersedes the earlier 5 MPa workflow check; failure criterion remains study-specific/unvalidated as documented.",
+          "Frozen campaign: no force fitting or orientation-dependent material/criterion adjustment.",
+          "Pressure target is an applied load, not a predicted burst pressure. Missing criterion crossings remain missing.",
+          "Adaptive all-quad surface mesh extruded through the original wall-layer count; same nominal local size and physical inputs. Structured meshes exceeded this qube memory budget. Convergence must still be checked.",
+          "19 October physical-comparison trial: only pipe element order changes from C3D20R to C3D8; four wall layers, material, loads, contact, fixtures and PEEQ 0.8 criterion retained. No experimental tangent modification. C3D8 is used by Allouti, but is not the twenty-node formulation in Zhao. Mesh convergence and physical accuracy remain to be assessed."
+        ],
+        "validation_status": "preliminary_unvalidated",
+        "sources": {
+          "data/tables/zhao2021/text_model_parameters.csv": "3e936954e3413bcde5f33f0bada8f764ba83c450f5479c0e1f4538ad8c2596b5",
+          "data/tables/zhao2021/table03_defects.csv": "bac02a25b644748f498ed8253f1482396fb4902b8008b05e9cb6199bb64467ba",
+          "data/tables/zhao2021/table01_material.csv": "1bace01df46fbd127d70791c6aa9ae5ea4d32820397b83a2c8c94ec529672e05",
+          "data/figures/zhao2021/fig13_load_displacement.csv": "ee579491bcc5a879fad2d217d0389986633f674be22040dcb5d6666ff6e0e35b"
+        }
+      },
+      "estimated_elements": null,
+      "angles": null,
+      "structured_estimate": 34400,
+      "parent_attempt": "full_zhao2021_p1_adaptive",
+      "changes": {
+        "mesh": {
+          "order": 1
+        }
+      },
+      "description": "Production-solver C3D8 sensitivity; unchanged parent physics"
+    },
+    {
+      "id": "full_zhao2021_p4_adaptive_c3d8_20261019",
+      "kind": "validation",
+      "case_file": "sym/cases/campaign/full_zhao2021_p4_adaptive_c3d8_20261019.json",
+      "case_sha256": "d99598afe77187bb434dd9bea12b2be31115c64b7e9785772590737b6ad42700",
+      "run": "sym/runs/campaign/full_zhao2021_p4_adaptive_c3d8_20261019",
+      "entry": {
+        "id": "full_zhao2021_p4_adaptive_c3d8_20261019",
+        "paper": "zhao2021",
+        "specimen": "P4",
+        "vessel": "P4",
+        "case_file": "sym/cases/campaign/full_zhao2021_p4_adaptive_c3d8_20261019.json",
+        "case_sha256": "d99598afe77187bb434dd9bea12b2be31115c64b7e9785772590737b6ad42700",
+        "reference_file": "data/figures/zhao2021/fig13_load_displacement.csv",
+        "panel": "P4",
+        "experimental_series": "experimental",
+        "numerical_series": "numerical",
+        "material": {
+          "source": "data/figures/zhao2021/fig11_material_curve.csv",
+          "source_sha256": "aa48e42d946ef54ceacc5ededd06da4e361105235e0588e91429bcbe2fa4e587",
+          "interpretation": "true total strain; plastic strain = total - stress/E",
+          "interpretation_confirmed": true,
+          "initial_yield_anchor_mpa": 365.0,
+          "source_supported_plastic_strain_max": 0.7910574171740384,
+          "processing": "LEGACY: yield anchored to material table; lower-stress, decreasing-stress and non-increasing-plastic-strain samples omitted. Do not treat this as the digitized curve.",
+          "constant_tail_to_plastic_strain": 0.8,
+          "burst_criterion_calibrated": false
+        },
+        "assumptions": [
+          "Preliminary literature comparison; mesh/contact convergence and fixture verification outstanding.",
+          "5 MPa pressure ramp exercises the same three-stage workflow; it is not a burst validation.",
+          "Bottom-line bilateral support and friction 0.3 are modelling assumptions requiring verification.",
+          "Material constant tail is an explicit extrapolation; data-supported strain extent is audited.",
+          "Compression-only contact uses the isolated CCX 2.23 TABULAR patch; see sym/docs/contact-fix.md. Validated on the elementary coupon; each pipe response still needs checks.",
+          "20 mm cosine-gouge width is provisional; original width/cross-section not resolved.",
+          "E=208 GPa follows constitutive-model text; Table 1 gives 209 GPa.",
+          "Digitized Figure 11 is used instead of silently choosing an inconsistent Ramberg\u2013Osgood convention.",
+          "Table dent depth interpreted as nominal loaded travel; this measurement definition still needs confirmation.",
+          "Campaign supersedes the earlier 5 MPa workflow check; failure criterion remains study-specific/unvalidated as documented.",
+          "Frozen campaign: no force fitting or orientation-dependent material/criterion adjustment.",
+          "Pressure target is an applied load, not a predicted burst pressure. Missing criterion crossings remain missing.",
+          "Adaptive all-quad surface mesh extruded through the original wall-layer count; same nominal local size and physical inputs. Structured meshes exceeded this qube memory budget. Convergence must still be checked.",
+          "19 October C3D8 formulation transfer: same change as P1, order2to1 only. Parent material, geometry, four wall layers, contact, loading and PEEQ0.8 criterion retained. P4 physical burst22.79MPa; no usable parent crossing. Not a fitted criterion or validated prediction."
+        ],
+        "validation_status": "preliminary_unvalidated",
+        "sources": {
+          "data/tables/zhao2021/text_model_parameters.csv": "3e936954e3413bcde5f33f0bada8f764ba83c450f5479c0e1f4538ad8c2596b5",
+          "data/tables/zhao2021/table03_defects.csv": "bac02a25b644748f498ed8253f1482396fb4902b8008b05e9cb6199bb64467ba",
+          "data/tables/zhao2021/table01_material.csv": "1bace01df46fbd127d70791c6aa9ae5ea4d32820397b83a2c8c94ec529672e05",
+          "data/figures/zhao2021/fig13_load_displacement.csv": "ee579491bcc5a879fad2d217d0389986633f674be22040dcb5d6666ff6e0e35b"
+        }
+      },
+      "estimated_elements": null,
+      "angles": null,
+      "structured_estimate": 34400,
+      "parent_attempt": "full_zhao2021_p4_adaptive",
+      "changes": {
+        "mesh": {
+          "order": 1
+        }
+      },
+      "description": "P4 production-solver C3D8 formulation transfer; unchanged physical inputs"
+    },
+    {
+      "id": "full_zhao2021_p1_adaptive_c3d8_20261019_wall6",
+      "kind": "validation",
+      "case_file": "sym/cases/campaign/full_zhao2021_p1_adaptive_c3d8_20261019_wall6.json",
+      "case_sha256": "a2a7b6f99bfeca8593273de22f4ff35b69a42c4fc662ad587ef06135f76416d6",
+      "run": "sym/runs/campaign/full_zhao2021_p1_adaptive_c3d8_20261019_wall6",
+      "entry": {
+        "id": "full_zhao2021_p1_adaptive_c3d8_20261019_wall6",
+        "paper": "zhao2021",
+        "specimen": "P1",
+        "vessel": "P1",
+        "case_file": "sym/cases/campaign/full_zhao2021_p1_adaptive_c3d8_20261019_wall6.json",
+        "case_sha256": "a2a7b6f99bfeca8593273de22f4ff35b69a42c4fc662ad587ef06135f76416d6",
+        "reference_file": "data/figures/zhao2021/fig13_load_displacement.csv",
+        "panel": "P1",
+        "experimental_series": "experimental",
+        "numerical_series": "numerical",
+        "material": {
+          "source": "data/figures/zhao2021/fig11_material_curve.csv",
+          "source_sha256": "aa48e42d946ef54ceacc5ededd06da4e361105235e0588e91429bcbe2fa4e587",
+          "interpretation": "true total strain; plastic strain = total - stress/E",
+          "interpretation_confirmed": true,
+          "initial_yield_anchor_mpa": 365.0,
+          "source_supported_plastic_strain_max": 0.7910574171740384,
+          "processing": "LEGACY: yield anchored to material table; lower-stress, decreasing-stress and non-increasing-plastic-strain samples omitted. Do not treat this as the digitized curve.",
+          "constant_tail_to_plastic_strain": 0.8,
+          "burst_criterion_calibrated": false
+        },
+        "assumptions": [
+          "Preliminary literature comparison; mesh/contact convergence and fixture verification outstanding.",
+          "5 MPa pressure ramp exercises the same three-stage workflow; it is not a burst validation.",
+          "Bottom-line bilateral support and friction 0.3 are modelling assumptions requiring verification.",
+          "Material constant tail is an explicit extrapolation; data-supported strain extent is audited.",
+          "Compression-only contact uses the isolated CCX 2.23 TABULAR patch; see sym/docs/contact-fix.md. Validated on the elementary coupon; each pipe response still needs checks.",
+          "20 mm cosine-gouge width is provisional; original width/cross-section not resolved.",
+          "E=208 GPa follows constitutive-model text; Table 1 gives 209 GPa.",
+          "Digitized Figure 11 is used instead of silently choosing an inconsistent Ramberg\u2013Osgood convention.",
+          "Table dent depth interpreted as nominal loaded travel; this measurement definition still needs confirmation.",
+          "Campaign supersedes the earlier 5 MPa workflow check; failure criterion remains study-specific/unvalidated as documented.",
+          "Frozen campaign: no force fitting or orientation-dependent material/criterion adjustment.",
+          "Pressure target is an applied load, not a predicted burst pressure. Missing criterion crossings remain missing.",
+          "Adaptive all-quad surface mesh extruded through the original wall-layer count; same nominal local size and physical inputs. Structured meshes exceeded this qube memory budget. Convergence must still be checked.",
+          "19 October physical-comparison trial: only pipe element order changes from C3D20R to C3D8; four wall layers, material, loads, contact, fixtures and PEEQ 0.8 criterion retained. No experimental tangent modification. C3D8 is used by Allouti, but is not the twenty-node formulation in Zhao. Mesh convergence and physical accuracy remain to be assessed.",
+          "Controlled C3D8 wall4-to6 sensitivity, 19 October review: unchanged surface mesh, physics and PEEQ0.8. Compare full denting loop, contact/release, residual crown and common-pressure PEEQ before interpreting missing crossings. No physical validation or mesh convergence assumed."
+        ],
+        "validation_status": "preliminary_unvalidated",
+        "sources": {
+          "data/tables/zhao2021/text_model_parameters.csv": "3e936954e3413bcde5f33f0bada8f764ba83c450f5479c0e1f4538ad8c2596b5",
+          "data/tables/zhao2021/table03_defects.csv": "bac02a25b644748f498ed8253f1482396fb4902b8008b05e9cb6199bb64467ba",
+          "data/tables/zhao2021/table01_material.csv": "1bace01df46fbd127d70791c6aa9ae5ea4d32820397b83a2c8c94ec529672e05",
+          "data/figures/zhao2021/fig13_load_displacement.csv": "ee579491bcc5a879fad2d217d0389986633f674be22040dcb5d6666ff6e0e35b"
+        }
+      },
+      "estimated_elements": null,
+      "angles": null,
+      "structured_estimate": 34400,
+      "parent_attempt": "full_zhao2021_p1_adaptive_c3d8_20261019",
+      "changes": {
+        "mesh": {
+          "wall_layers": 6
+        }
+      },
+      "description": "C3D8 wall4-to6 numerical sensitivity; parent physics unchanged"
+    },
+    {
+      "id": "full_zhao2021_p4_adaptive_c3d8_20261019_wall6",
+      "kind": "validation",
+      "case_file": "sym/cases/campaign/full_zhao2021_p4_adaptive_c3d8_20261019_wall6.json",
+      "case_sha256": "e0338e3d155eaa1e351899aab6226d29723b34d316da387ef313f3dc0e6dc25b",
+      "run": "sym/runs/campaign/full_zhao2021_p4_adaptive_c3d8_20261019_wall6",
+      "entry": {
+        "id": "full_zhao2021_p4_adaptive_c3d8_20261019_wall6",
+        "paper": "zhao2021",
+        "specimen": "P4",
+        "vessel": "P4",
+        "case_file": "sym/cases/campaign/full_zhao2021_p4_adaptive_c3d8_20261019_wall6.json",
+        "case_sha256": "e0338e3d155eaa1e351899aab6226d29723b34d316da387ef313f3dc0e6dc25b",
+        "reference_file": "data/figures/zhao2021/fig13_load_displacement.csv",
+        "panel": "P4",
+        "experimental_series": "experimental",
+        "numerical_series": "numerical",
+        "material": {
+          "source": "data/figures/zhao2021/fig11_material_curve.csv",
+          "source_sha256": "aa48e42d946ef54ceacc5ededd06da4e361105235e0588e91429bcbe2fa4e587",
+          "interpretation": "true total strain; plastic strain = total - stress/E",
+          "interpretation_confirmed": true,
+          "initial_yield_anchor_mpa": 365.0,
+          "source_supported_plastic_strain_max": 0.7910574171740384,
+          "processing": "LEGACY: yield anchored to material table; lower-stress, decreasing-stress and non-increasing-plastic-strain samples omitted. Do not treat this as the digitized curve.",
+          "constant_tail_to_plastic_strain": 0.8,
+          "burst_criterion_calibrated": false
+        },
+        "assumptions": [
+          "Preliminary literature comparison; mesh/contact convergence and fixture verification outstanding.",
+          "5 MPa pressure ramp exercises the same three-stage workflow; it is not a burst validation.",
+          "Bottom-line bilateral support and friction 0.3 are modelling assumptions requiring verification.",
+          "Material constant tail is an explicit extrapolation; data-supported strain extent is audited.",
+          "Compression-only contact uses the isolated CCX 2.23 TABULAR patch; see sym/docs/contact-fix.md. Validated on the elementary coupon; each pipe response still needs checks.",
+          "20 mm cosine-gouge width is provisional; original width/cross-section not resolved.",
+          "E=208 GPa follows constitutive-model text; Table 1 gives 209 GPa.",
+          "Digitized Figure 11 is used instead of silently choosing an inconsistent Ramberg\u2013Osgood convention.",
+          "Table dent depth interpreted as nominal loaded travel; this measurement definition still needs confirmation.",
+          "Campaign supersedes the earlier 5 MPa workflow check; failure criterion remains study-specific/unvalidated as documented.",
+          "Frozen campaign: no force fitting or orientation-dependent material/criterion adjustment.",
+          "Pressure target is an applied load, not a predicted burst pressure. Missing criterion crossings remain missing.",
+          "Adaptive all-quad surface mesh extruded through the original wall-layer count; same nominal local size and physical inputs. Structured meshes exceeded this qube memory budget. Convergence must still be checked.",
+          "19 October C3D8 formulation transfer: same change as P1, order2to1 only. Parent material, geometry, four wall layers, contact, loading and PEEQ0.8 criterion retained. P4 physical burst22.79MPa; no usable parent crossing. Not a fitted criterion or validated prediction.",
+          "Controlled C3D8 wall4-to6 sensitivity, 19 October review: unchanged surface mesh, physics and PEEQ0.8. Compare full denting loop, contact/release, residual crown and common-pressure PEEQ before interpreting missing crossings. No physical validation or mesh convergence assumed."
+        ],
+        "validation_status": "preliminary_unvalidated",
+        "sources": {
+          "data/tables/zhao2021/text_model_parameters.csv": "3e936954e3413bcde5f33f0bada8f764ba83c450f5479c0e1f4538ad8c2596b5",
+          "data/tables/zhao2021/table03_defects.csv": "bac02a25b644748f498ed8253f1482396fb4902b8008b05e9cb6199bb64467ba",
+          "data/tables/zhao2021/table01_material.csv": "1bace01df46fbd127d70791c6aa9ae5ea4d32820397b83a2c8c94ec529672e05",
+          "data/figures/zhao2021/fig13_load_displacement.csv": "ee579491bcc5a879fad2d217d0389986633f674be22040dcb5d6666ff6e0e35b"
+        }
+      },
+      "estimated_elements": null,
+      "angles": null,
+      "structured_estimate": 34400,
+      "parent_attempt": "full_zhao2021_p4_adaptive_c3d8_20261019",
+      "changes": {
+        "mesh": {
+          "wall_layers": 6
+        }
+      },
+      "description": "C3D8 wall4-to6 numerical sensitivity; parent physics unchanged"
+    },
+    {
+      "id": "full_zhao2021_p1_adaptive_c3d8_20261019_fine4",
+      "kind": "validation",
+      "case_file": "sym/cases/campaign/full_zhao2021_p1_adaptive_c3d8_20261019_fine4.json",
+      "case_sha256": "70ede8b1a72cd8746cc75cd02a4663f2872532a37f817c4895def27bcf9d7753",
+      "run": "sym/runs/campaign/full_zhao2021_p1_adaptive_c3d8_20261019_fine4",
+      "entry": {
+        "id": "full_zhao2021_p1_adaptive_c3d8_20261019_fine4",
+        "paper": "zhao2021",
+        "specimen": "P1",
+        "vessel": "P1",
+        "case_file": "sym/cases/campaign/full_zhao2021_p1_adaptive_c3d8_20261019_fine4.json",
+        "case_sha256": "70ede8b1a72cd8746cc75cd02a4663f2872532a37f817c4895def27bcf9d7753",
+        "reference_file": "data/figures/zhao2021/fig13_load_displacement.csv",
+        "panel": "P1",
+        "experimental_series": "experimental",
+        "numerical_series": "numerical",
+        "material": {
+          "source": "data/figures/zhao2021/fig11_material_curve.csv",
+          "source_sha256": "aa48e42d946ef54ceacc5ededd06da4e361105235e0588e91429bcbe2fa4e587",
+          "interpretation": "true total strain; plastic strain = total - stress/E",
+          "interpretation_confirmed": true,
+          "initial_yield_anchor_mpa": 365.0,
+          "source_supported_plastic_strain_max": 0.7910574171740384,
+          "processing": "LEGACY: yield anchored to material table; lower-stress, decreasing-stress and non-increasing-plastic-strain samples omitted. Do not treat this as the digitized curve.",
+          "constant_tail_to_plastic_strain": 0.8,
+          "burst_criterion_calibrated": false
+        },
+        "assumptions": [
+          "Preliminary literature comparison; mesh/contact convergence and fixture verification outstanding.",
+          "5 MPa pressure ramp exercises the same three-stage workflow; it is not a burst validation.",
+          "Bottom-line bilateral support and friction 0.3 are modelling assumptions requiring verification.",
+          "Material constant tail is an explicit extrapolation; data-supported strain extent is audited.",
+          "Compression-only contact uses the isolated CCX 2.23 TABULAR patch; see sym/docs/contact-fix.md. Validated on the elementary coupon; each pipe response still needs checks.",
+          "20 mm cosine-gouge width is provisional; original width/cross-section not resolved.",
+          "E=208 GPa follows constitutive-model text; Table 1 gives 209 GPa.",
+          "Digitized Figure 11 is used instead of silently choosing an inconsistent Ramberg\u2013Osgood convention.",
+          "Table dent depth interpreted as nominal loaded travel; this measurement definition still needs confirmation.",
+          "Campaign supersedes the earlier 5 MPa workflow check; failure criterion remains study-specific/unvalidated as documented.",
+          "Frozen campaign: no force fitting or orientation-dependent material/criterion adjustment.",
+          "Pressure target is an applied load, not a predicted burst pressure. Missing criterion crossings remain missing.",
+          "Adaptive all-quad surface mesh extruded through the original wall-layer count; same nominal local size and physical inputs. Structured meshes exceeded this qube memory budget. Convergence must still be checked.",
+          "19 October physical-comparison trial: only pipe element order changes from C3D20R to C3D8; four wall layers, material, loads, contact, fixtures and PEEQ 0.8 criterion retained. No experimental tangent modification. C3D8 is used by Allouti, but is not the twenty-node formulation in Zhao. Mesh convergence and physical accuracy remain to be assessed.",
+          "Independent C3D8 surface sensitivity after wall6: fine_size5to4 only, retaining wall4 parent, material, contact, loading, criterion and all other mesh settings. Not a fitted physical model or burst prediction. Compare full branches, release, common-pressure PEEQ and criterion brackets; do not infer mesh convergence from one refinement."
+        ],
+        "validation_status": "preliminary_unvalidated",
+        "sources": {
+          "data/tables/zhao2021/text_model_parameters.csv": "3e936954e3413bcde5f33f0bada8f764ba83c450f5479c0e1f4538ad8c2596b5",
+          "data/tables/zhao2021/table03_defects.csv": "bac02a25b644748f498ed8253f1482396fb4902b8008b05e9cb6199bb64467ba",
+          "data/tables/zhao2021/table01_material.csv": "1bace01df46fbd127d70791c6aa9ae5ea4d32820397b83a2c8c94ec529672e05",
+          "data/figures/zhao2021/fig13_load_displacement.csv": "ee579491bcc5a879fad2d217d0389986633f674be22040dcb5d6666ff6e0e35b"
+        }
+      },
+      "estimated_elements": null,
+      "angles": null,
+      "structured_estimate": 34400,
+      "parent_attempt": "full_zhao2021_p1_adaptive_c3d8_20261019",
+      "changes": {
+        "mesh": {
+          "fine_size": 4
+        }
+      },
+      "description": "Independent C3D8 surface5to4 sensitivity; wall4 and physics unchanged"
+    },
+    {
+      "id": "full_zhao2021_p4_adaptive_c3d8_20261019_fine4",
+      "kind": "validation",
+      "case_file": "sym/cases/campaign/full_zhao2021_p4_adaptive_c3d8_20261019_fine4.json",
+      "case_sha256": "9f0d45a25ce8a81239ed040b03cc08628e1f023b1cb9f7ecaded66ae718f6734",
+      "run": "sym/runs/campaign/full_zhao2021_p4_adaptive_c3d8_20261019_fine4",
+      "entry": {
+        "id": "full_zhao2021_p4_adaptive_c3d8_20261019_fine4",
+        "paper": "zhao2021",
+        "specimen": "P4",
+        "vessel": "P4",
+        "case_file": "sym/cases/campaign/full_zhao2021_p4_adaptive_c3d8_20261019_fine4.json",
+        "case_sha256": "9f0d45a25ce8a81239ed040b03cc08628e1f023b1cb9f7ecaded66ae718f6734",
+        "reference_file": "data/figures/zhao2021/fig13_load_displacement.csv",
+        "panel": "P4",
+        "experimental_series": "experimental",
+        "numerical_series": "numerical",
+        "material": {
+          "source": "data/figures/zhao2021/fig11_material_curve.csv",
+          "source_sha256": "aa48e42d946ef54ceacc5ededd06da4e361105235e0588e91429bcbe2fa4e587",
+          "interpretation": "true total strain; plastic strain = total - stress/E",
+          "interpretation_confirmed": true,
+          "initial_yield_anchor_mpa": 365.0,
+          "source_supported_plastic_strain_max": 0.7910574171740384,
+          "processing": "LEGACY: yield anchored to material table; lower-stress, decreasing-stress and non-increasing-plastic-strain samples omitted. Do not treat this as the digitized curve.",
+          "constant_tail_to_plastic_strain": 0.8,
+          "burst_criterion_calibrated": false
+        },
+        "assumptions": [
+          "Preliminary literature comparison; mesh/contact convergence and fixture verification outstanding.",
+          "5 MPa pressure ramp exercises the same three-stage workflow; it is not a burst validation.",
+          "Bottom-line bilateral support and friction 0.3 are modelling assumptions requiring verification.",
+          "Material constant tail is an explicit extrapolation; data-supported strain extent is audited.",
+          "Compression-only contact uses the isolated CCX 2.23 TABULAR patch; see sym/docs/contact-fix.md. Validated on the elementary coupon; each pipe response still needs checks.",
+          "20 mm cosine-gouge width is provisional; original width/cross-section not resolved.",
+          "E=208 GPa follows constitutive-model text; Table 1 gives 209 GPa.",
+          "Digitized Figure 11 is used instead of silently choosing an inconsistent Ramberg\u2013Osgood convention.",
+          "Table dent depth interpreted as nominal loaded travel; this measurement definition still needs confirmation.",
+          "Campaign supersedes the earlier 5 MPa workflow check; failure criterion remains study-specific/unvalidated as documented.",
+          "Frozen campaign: no force fitting or orientation-dependent material/criterion adjustment.",
+          "Pressure target is an applied load, not a predicted burst pressure. Missing criterion crossings remain missing.",
+          "Adaptive all-quad surface mesh extruded through the original wall-layer count; same nominal local size and physical inputs. Structured meshes exceeded this qube memory budget. Convergence must still be checked.",
+          "19 October C3D8 formulation transfer: same change as P1, order2to1 only. Parent material, geometry, four wall layers, contact, loading and PEEQ0.8 criterion retained. P4 physical burst22.79MPa; no usable parent crossing. Not a fitted criterion or validated prediction.",
+          "Independent C3D8 surface sensitivity after wall6: fine_size5to4 only, retaining wall4 parent, material, contact, loading, criterion and all other mesh settings. Not a fitted physical model or burst prediction. Compare full branches, release, common-pressure PEEQ and criterion brackets; do not infer mesh convergence from one refinement."
+        ],
+        "validation_status": "preliminary_unvalidated",
+        "sources": {
+          "data/tables/zhao2021/text_model_parameters.csv": "3e936954e3413bcde5f33f0bada8f764ba83c450f5479c0e1f4538ad8c2596b5",
+          "data/tables/zhao2021/table03_defects.csv": "bac02a25b644748f498ed8253f1482396fb4902b8008b05e9cb6199bb64467ba",
+          "data/tables/zhao2021/table01_material.csv": "1bace01df46fbd127d70791c6aa9ae5ea4d32820397b83a2c8c94ec529672e05",
+          "data/figures/zhao2021/fig13_load_displacement.csv": "ee579491bcc5a879fad2d217d0389986633f674be22040dcb5d6666ff6e0e35b"
+        }
+      },
+      "estimated_elements": null,
+      "angles": null,
+      "structured_estimate": 34400,
+      "parent_attempt": "full_zhao2021_p4_adaptive_c3d8_20261019",
+      "changes": {
+        "mesh": {
+          "fine_size": 4
+        }
+      },
+      "description": "Independent C3D8 surface5to4 sensitivity; wall4 and physics unchanged"
+    },
+    {
+      "id": "orientation_gouge_00_adaptive_c3d8_20261020",
+      "kind": "orientation",
+      "case_file": "sym/cases/campaign/orientation_gouge_00_adaptive_c3d8_20261020.json",
+      "case_sha256": "649ca874121a11e64541d36b42c72805acd48d617da6e3a921a0b1b6f05200bb",
+      "run": "sym/runs/campaign/orientation_gouge_00_adaptive_c3d8_20261020",
+      "entry": null,
+      "estimated_elements": null,
+      "angles": [
+        0
+      ],
+      "structured_estimate": 23392,
+      "parent_attempt": "orientation_gouge_00_adaptive",
+      "changes": {
+        "mesh": {
+          "order": 1
+        }
+      },
+      "description": "Bounded axial gouge-only C3D8 response comparison; unchanged parent physics"
+    },
+    {
+      "id": "full_zhao2021_p1_adaptive_pressure005_20261020",
+      "kind": "validation",
+      "case_file": "sym/cases/campaign/full_zhao2021_p1_adaptive_pressure005_20261020.json",
+      "case_sha256": "b243397ace67108477eb5c016b886ea22d8ab7bcd0267f9f665a4c35c0f7c012",
+      "run": "sym/runs/campaign/full_zhao2021_p1_adaptive_pressure005_20261020",
+      "entry": {
+        "id": "full_zhao2021_p1_adaptive_pressure005_20261020",
+        "paper": "zhao2021",
+        "specimen": "P1",
+        "vessel": "P1",
+        "case_file": "sym/cases/campaign/full_zhao2021_p1_adaptive_pressure005_20261020.json",
+        "case_sha256": "b243397ace67108477eb5c016b886ea22d8ab7bcd0267f9f665a4c35c0f7c012",
+        "reference_file": "data/figures/zhao2021/fig13_load_displacement.csv",
+        "panel": "P1",
+        "experimental_series": "experimental",
+        "numerical_series": "numerical",
+        "material": {
+          "source": "data/figures/zhao2021/fig11_material_curve.csv",
+          "source_sha256": "aa48e42d946ef54ceacc5ededd06da4e361105235e0588e91429bcbe2fa4e587",
+          "interpretation": "true total strain; plastic strain = total - stress/E",
+          "interpretation_confirmed": true,
+          "initial_yield_anchor_mpa": 365.0,
+          "source_supported_plastic_strain_max": 0.7910574171740384,
+          "processing": "LEGACY: yield anchored to material table; lower-stress, decreasing-stress and non-increasing-plastic-strain samples omitted. Do not treat this as the digitized curve.",
+          "constant_tail_to_plastic_strain": 0.8,
+          "burst_criterion_calibrated": false
+        },
+        "assumptions": [
+          "Preliminary literature comparison; mesh/contact convergence and fixture verification outstanding.",
+          "5 MPa pressure ramp exercises the same three-stage workflow; it is not a burst validation.",
+          "Bottom-line bilateral support and friction 0.3 are modelling assumptions requiring verification.",
+          "Material constant tail is an explicit extrapolation; data-supported strain extent is audited.",
+          "Compression-only contact uses the isolated CCX 2.23 TABULAR patch; see sym/docs/contact-fix.md. Validated on the elementary coupon; each pipe response still needs checks.",
+          "20 mm cosine-gouge width is provisional; original width/cross-section not resolved.",
+          "E=208 GPa follows constitutive-model text; Table 1 gives 209 GPa.",
+          "Digitized Figure 11 is used instead of silently choosing an inconsistent Ramberg\u2013Osgood convention.",
+          "Table dent depth interpreted as nominal loaded travel; this measurement definition still needs confirmation.",
+          "Campaign supersedes the earlier 5 MPa workflow check; failure criterion remains study-specific/unvalidated as documented.",
+          "Frozen campaign: no force fitting or orientation-dependent material/criterion adjustment.",
+          "Pressure target is an applied load, not a predicted burst pressure. Missing criterion crossings remain missing.",
+          "Adaptive all-quad surface mesh extruded through the original wall-layer count; same nominal local size and physical inputs. Structured meshes exceeded this qube memory budget. Convergence must still be checked.",
+          "Pressure resolution only: retain frozen C3D20R mesh and original material, fixture, denting/withdrawal steps, loads and failure strain. Pressure-stage initial and maximum increments capped at0.005, equivalent to0.175MPa at35MPa target. Minimum increment and convergence tolerances unchanged. First crossing remains provisional; no new fracture calibration."
+        ],
+        "validation_status": "preliminary_unvalidated",
+        "sources": {
+          "data/tables/zhao2021/text_model_parameters.csv": "3e936954e3413bcde5f33f0bada8f764ba83c450f5479c0e1f4538ad8c2596b5",
+          "data/tables/zhao2021/table03_defects.csv": "bac02a25b644748f498ed8253f1482396fb4902b8008b05e9cb6199bb64467ba",
+          "data/tables/zhao2021/table01_material.csv": "1bace01df46fbd127d70791c6aa9ae5ea4d32820397b83a2c8c94ec529672e05",
+          "data/figures/zhao2021/fig13_load_displacement.csv": "ee579491bcc5a879fad2d217d0389986633f674be22040dcb5d6666ff6e0e35b"
+        }
+      },
+      "estimated_elements": null,
+      "angles": null,
+      "structured_estimate": 34400,
+      "parent_attempt": "full_zhao2021_p1_adaptive",
+      "changes": {
+        "analysis": {
+          "pressure_max_increment": 0.005
+        }
+      },
+      "description": "Frozen C3D20R pressure-step refinement; unchanged denting and physics"
+    },
+    {
+      "id": "full_zhao2021_p2_adaptive_pressure005_20261020",
+      "kind": "validation",
+      "case_file": "sym/cases/campaign/full_zhao2021_p2_adaptive_pressure005_20261020.json",
+      "case_sha256": "6664dd4a89a9fe1b796a01fd7755230f86fa3e10f7d6acf5bb0a3509af9e449c",
+      "run": "sym/runs/campaign/full_zhao2021_p2_adaptive_pressure005_20261020",
+      "entry": {
+        "id": "full_zhao2021_p2_adaptive_pressure005_20261020",
+        "paper": "zhao2021",
+        "specimen": "P2",
+        "vessel": "P2",
+        "case_file": "sym/cases/campaign/full_zhao2021_p2_adaptive_pressure005_20261020.json",
+        "case_sha256": "6664dd4a89a9fe1b796a01fd7755230f86fa3e10f7d6acf5bb0a3509af9e449c",
+        "reference_file": "data/figures/zhao2021/fig13_load_displacement.csv",
+        "panel": "P2",
+        "experimental_series": "experimental",
+        "numerical_series": "numerical",
+        "material": {
+          "source": "data/figures/zhao2021/fig11_material_curve.csv",
+          "source_sha256": "aa48e42d946ef54ceacc5ededd06da4e361105235e0588e91429bcbe2fa4e587",
+          "interpretation": "true total strain; plastic strain = total - stress/E",
+          "interpretation_confirmed": true,
+          "initial_yield_anchor_mpa": 365.0,
+          "source_supported_plastic_strain_max": 0.7910574171740384,
+          "processing": "LEGACY: yield anchored to material table; lower-stress, decreasing-stress and non-increasing-plastic-strain samples omitted. Do not treat this as the digitized curve.",
+          "constant_tail_to_plastic_strain": 0.8,
+          "burst_criterion_calibrated": false
+        },
+        "assumptions": [
+          "Preliminary literature comparison; mesh/contact convergence and fixture verification outstanding.",
+          "5 MPa pressure ramp exercises the same three-stage workflow; it is not a burst validation.",
+          "Bottom-line bilateral support and friction 0.3 are modelling assumptions requiring verification.",
+          "Material constant tail is an explicit extrapolation; data-supported strain extent is audited.",
+          "Compression-only contact uses the isolated CCX 2.23 TABULAR patch; see sym/docs/contact-fix.md. Validated on the elementary coupon; each pipe response still needs checks.",
+          "20 mm cosine-gouge width is provisional; original width/cross-section not resolved.",
+          "E=208 GPa follows constitutive-model text; Table 1 gives 209 GPa.",
+          "Digitized Figure 11 is used instead of silently choosing an inconsistent Ramberg\u2013Osgood convention.",
+          "Table dent depth interpreted as nominal loaded travel; this measurement definition still needs confirmation.",
+          "Campaign supersedes the earlier 5 MPa workflow check; failure criterion remains study-specific/unvalidated as documented.",
+          "Frozen campaign: no force fitting or orientation-dependent material/criterion adjustment.",
+          "Pressure target is an applied load, not a predicted burst pressure. Missing criterion crossings remain missing.",
+          "Adaptive all-quad surface mesh extruded through the original wall-layer count; same nominal local size and physical inputs. Structured meshes exceeded this qube memory budget. Convergence must still be checked.",
+          "Pressure resolution only: retain frozen C3D20R mesh and original material, fixture, denting/withdrawal steps, loads and failure strain. Pressure-stage initial and maximum increments capped at0.005, equivalent to0.175MPa at35MPa target. Minimum increment and convergence tolerances unchanged. First crossing remains provisional; no new fracture calibration."
+        ],
+        "validation_status": "preliminary_unvalidated",
+        "sources": {
+          "data/tables/zhao2021/text_model_parameters.csv": "3e936954e3413bcde5f33f0bada8f764ba83c450f5479c0e1f4538ad8c2596b5",
+          "data/tables/zhao2021/table03_defects.csv": "bac02a25b644748f498ed8253f1482396fb4902b8008b05e9cb6199bb64467ba",
+          "data/tables/zhao2021/table01_material.csv": "1bace01df46fbd127d70791c6aa9ae5ea4d32820397b83a2c8c94ec529672e05",
+          "data/figures/zhao2021/fig13_load_displacement.csv": "ee579491bcc5a879fad2d217d0389986633f674be22040dcb5d6666ff6e0e35b"
+        }
+      },
+      "estimated_elements": null,
+      "angles": null,
+      "structured_estimate": 34400,
+      "parent_attempt": "full_zhao2021_p2_adaptive",
+      "changes": {
+        "analysis": {
+          "pressure_max_increment": 0.005
+        }
+      },
+      "description": "Frozen C3D20R pressure-step refinement; unchanged denting and physics"
+    },
+    {
+      "id": "full_zhao2021_p3_adaptive_pressure005_20261020",
+      "kind": "validation",
+      "case_file": "sym/cases/campaign/full_zhao2021_p3_adaptive_pressure005_20261020.json",
+      "case_sha256": "526a57a72bb80a31c1882ea6631930fefd68a1a8fce7636b2ea24982d9d4f314",
+      "run": "sym/runs/campaign/full_zhao2021_p3_adaptive_pressure005_20261020",
+      "entry": {
+        "id": "full_zhao2021_p3_adaptive_pressure005_20261020",
+        "paper": "zhao2021",
+        "specimen": "P3",
+        "vessel": "P3",
+        "case_file": "sym/cases/campaign/full_zhao2021_p3_adaptive_pressure005_20261020.json",
+        "case_sha256": "526a57a72bb80a31c1882ea6631930fefd68a1a8fce7636b2ea24982d9d4f314",
+        "reference_file": "data/figures/zhao2021/fig13_load_displacement.csv",
+        "panel": "P3",
+        "experimental_series": "experimental",
+        "numerical_series": "numerical",
+        "material": {
+          "source": "data/figures/zhao2021/fig11_material_curve.csv",
+          "source_sha256": "aa48e42d946ef54ceacc5ededd06da4e361105235e0588e91429bcbe2fa4e587",
+          "interpretation": "true total strain; plastic strain = total - stress/E",
+          "interpretation_confirmed": true,
+          "initial_yield_anchor_mpa": 365.0,
+          "source_supported_plastic_strain_max": 0.7910574171740384,
+          "processing": "LEGACY: yield anchored to material table; lower-stress, decreasing-stress and non-increasing-plastic-strain samples omitted. Do not treat this as the digitized curve.",
+          "constant_tail_to_plastic_strain": 0.8,
+          "burst_criterion_calibrated": false
+        },
+        "assumptions": [
+          "Preliminary literature comparison; mesh/contact convergence and fixture verification outstanding.",
+          "5 MPa pressure ramp exercises the same three-stage workflow; it is not a burst validation.",
+          "Bottom-line bilateral support and friction 0.3 are modelling assumptions requiring verification.",
+          "Material constant tail is an explicit extrapolation; data-supported strain extent is audited.",
+          "Compression-only contact uses the isolated CCX 2.23 TABULAR patch; see sym/docs/contact-fix.md. Validated on the elementary coupon; each pipe response still needs checks.",
+          "20 mm cosine-gouge width is provisional; original width/cross-section not resolved.",
+          "E=208 GPa follows constitutive-model text; Table 1 gives 209 GPa.",
+          "Digitized Figure 11 is used instead of silently choosing an inconsistent Ramberg\u2013Osgood convention.",
+          "Table dent depth interpreted as nominal loaded travel; this measurement definition still needs confirmation.",
+          "Campaign supersedes the earlier 5 MPa workflow check; failure criterion remains study-specific/unvalidated as documented.",
+          "Frozen campaign: no force fitting or orientation-dependent material/criterion adjustment.",
+          "Pressure target is an applied load, not a predicted burst pressure. Missing criterion crossings remain missing.",
+          "Adaptive all-quad surface mesh extruded through the original wall-layer count; same nominal local size and physical inputs. Structured meshes exceeded this qube memory budget. Convergence must still be checked.",
+          "Pressure resolution only: retain frozen C3D20R mesh and original material, fixture, denting/withdrawal steps, loads and failure strain. Pressure-stage initial and maximum increments capped at0.005, equivalent to0.175MPa at35MPa target. Minimum increment and convergence tolerances unchanged. First crossing remains provisional; no new fracture calibration."
+        ],
+        "validation_status": "preliminary_unvalidated",
+        "sources": {
+          "data/tables/zhao2021/text_model_parameters.csv": "3e936954e3413bcde5f33f0bada8f764ba83c450f5479c0e1f4538ad8c2596b5",
+          "data/tables/zhao2021/table03_defects.csv": "bac02a25b644748f498ed8253f1482396fb4902b8008b05e9cb6199bb64467ba",
+          "data/tables/zhao2021/table01_material.csv": "1bace01df46fbd127d70791c6aa9ae5ea4d32820397b83a2c8c94ec529672e05",
+          "data/figures/zhao2021/fig13_load_displacement.csv": "ee579491bcc5a879fad2d217d0389986633f674be22040dcb5d6666ff6e0e35b"
+        }
+      },
+      "estimated_elements": null,
+      "angles": null,
+      "structured_estimate": 22800,
+      "parent_attempt": "full_zhao2021_p3_adaptive",
+      "changes": {
+        "analysis": {
+          "pressure_max_increment": 0.005
+        }
+      },
+      "description": "Frozen C3D20R pressure-step refinement; unchanged denting and physics"
+    },
+    {
+      "id": "full_zhao2021_p4_adaptive_pressure005_20261020",
+      "kind": "validation",
+      "case_file": "sym/cases/campaign/full_zhao2021_p4_adaptive_pressure005_20261020.json",
+      "case_sha256": "5c813e25c6cbaa3c9c3638dfc46e3af193f8c414ea7e1d4ff231403c94ab3324",
+      "run": "sym/runs/campaign/full_zhao2021_p4_adaptive_pressure005_20261020",
+      "entry": {
+        "id": "full_zhao2021_p4_adaptive_pressure005_20261020",
+        "paper": "zhao2021",
+        "specimen": "P4",
+        "vessel": "P4",
+        "case_file": "sym/cases/campaign/full_zhao2021_p4_adaptive_pressure005_20261020.json",
+        "case_sha256": "5c813e25c6cbaa3c9c3638dfc46e3af193f8c414ea7e1d4ff231403c94ab3324",
+        "reference_file": "data/figures/zhao2021/fig13_load_displacement.csv",
+        "panel": "P4",
+        "experimental_series": "experimental",
+        "numerical_series": "numerical",
+        "material": {
+          "source": "data/figures/zhao2021/fig11_material_curve.csv",
+          "source_sha256": "aa48e42d946ef54ceacc5ededd06da4e361105235e0588e91429bcbe2fa4e587",
+          "interpretation": "true total strain; plastic strain = total - stress/E",
+          "interpretation_confirmed": true,
+          "initial_yield_anchor_mpa": 365.0,
+          "source_supported_plastic_strain_max": 0.7910574171740384,
+          "processing": "LEGACY: yield anchored to material table; lower-stress, decreasing-stress and non-increasing-plastic-strain samples omitted. Do not treat this as the digitized curve.",
+          "constant_tail_to_plastic_strain": 0.8,
+          "burst_criterion_calibrated": false
+        },
+        "assumptions": [
+          "Preliminary literature comparison; mesh/contact convergence and fixture verification outstanding.",
+          "5 MPa pressure ramp exercises the same three-stage workflow; it is not a burst validation.",
+          "Bottom-line bilateral support and friction 0.3 are modelling assumptions requiring verification.",
+          "Material constant tail is an explicit extrapolation; data-supported strain extent is audited.",
+          "Compression-only contact uses the isolated CCX 2.23 TABULAR patch; see sym/docs/contact-fix.md. Validated on the elementary coupon; each pipe response still needs checks.",
+          "20 mm cosine-gouge width is provisional; original width/cross-section not resolved.",
+          "E=208 GPa follows constitutive-model text; Table 1 gives 209 GPa.",
+          "Digitized Figure 11 is used instead of silently choosing an inconsistent Ramberg\u2013Osgood convention.",
+          "Table dent depth interpreted as nominal loaded travel; this measurement definition still needs confirmation.",
+          "Campaign supersedes the earlier 5 MPa workflow check; failure criterion remains study-specific/unvalidated as documented.",
+          "Frozen campaign: no force fitting or orientation-dependent material/criterion adjustment.",
+          "Pressure target is an applied load, not a predicted burst pressure. Missing criterion crossings remain missing.",
+          "Adaptive all-quad surface mesh extruded through the original wall-layer count; same nominal local size and physical inputs. Structured meshes exceeded this qube memory budget. Convergence must still be checked.",
+          "Pressure resolution only: retain frozen C3D20R mesh and original material, fixture, denting/withdrawal steps, loads and failure strain. Pressure-stage initial and maximum increments capped at0.005, equivalent to0.175MPa at35MPa target. Minimum increment and convergence tolerances unchanged. First crossing remains provisional; no new fracture calibration."
+        ],
+        "validation_status": "preliminary_unvalidated",
+        "sources": {
+          "data/tables/zhao2021/text_model_parameters.csv": "3e936954e3413bcde5f33f0bada8f764ba83c450f5479c0e1f4538ad8c2596b5",
+          "data/tables/zhao2021/table03_defects.csv": "bac02a25b644748f498ed8253f1482396fb4902b8008b05e9cb6199bb64467ba",
+          "data/tables/zhao2021/table01_material.csv": "1bace01df46fbd127d70791c6aa9ae5ea4d32820397b83a2c8c94ec529672e05",
+          "data/figures/zhao2021/fig13_load_displacement.csv": "ee579491bcc5a879fad2d217d0389986633f674be22040dcb5d6666ff6e0e35b"
+        }
+      },
+      "estimated_elements": null,
+      "angles": null,
+      "structured_estimate": 34400,
+      "parent_attempt": "full_zhao2021_p4_adaptive",
+      "changes": {
+        "analysis": {
+          "pressure_max_increment": 0.005
+        }
+      },
+      "description": "Frozen C3D20R pressure-step refinement; unchanged denting and physics"
+    },
+    {
+      "id": "orientation_combined_60_adaptive_pressure005_20261020",
+      "kind": "orientation",
+      "case_file": "sym/cases/campaign/orientation_combined_60_adaptive_pressure005_20261020.json",
+      "case_sha256": "0c32ffbf07ff5edc62323f8aa663d937f06434f4fc81b1ddd6059f67b077410a",
+      "run": "sym/runs/campaign/orientation_combined_60_adaptive_pressure005_20261020",
+      "entry": null,
+      "estimated_elements": null,
+      "angles": [
+        60
+      ],
+      "structured_estimate": 61360,
+      "parent_attempt": "orientation_combined_60_adaptive",
+      "changes": {
+        "analysis": {
+          "pressure_max_increment": 0.005
+        }
+      },
+      "description": "Bounded combined60 frozen-mesh pressure-resolution control"
+    },
+    {
+      "id": "orientation_combined_45_adaptive_pressure005_20261020",
+      "kind": "orientation",
+      "case_file": "sym/cases/campaign/orientation_combined_45_adaptive_pressure005_20261020.json",
+      "case_sha256": "db2ba06e758932a1553af389282192d99ca9201bd9506c22138579b0c8ee7b5a",
+      "run": "sym/runs/campaign/orientation_combined_45_adaptive_pressure005_20261020",
+      "entry": null,
+      "estimated_elements": null,
+      "angles": [
+        45
+      ],
+      "structured_estimate": 64752,
+      "parent_attempt": "orientation_combined_45_adaptive",
+      "changes": {
+        "analysis": {
+          "pressure_max_increment": 0.005
+        }
+      },
+      "description": "Bounded combined45 frozen-mesh pressure-resolution control"
+    },
+    {
+      "id": "orientation_combined_30_adaptive_pressure005_20261020",
+      "kind": "orientation",
+      "case_file": "sym/cases/campaign/orientation_combined_30_adaptive_pressure005_20261020.json",
+      "case_sha256": "eb58d1a65669d24c641707f0155a50e6d86204bb69de6a6eb5330715cc051855",
+      "run": "sym/runs/campaign/orientation_combined_30_adaptive_pressure005_20261020",
+      "entry": null,
+      "estimated_elements": null,
+      "angles": [
+        30
+      ],
+      "structured_estimate": 58144,
+      "parent_attempt": "orientation_combined_30_adaptive",
+      "changes": {
+        "analysis": {
+          "pressure_max_increment": 0.005
+        }
+      },
+      "description": "Bounded combined30 frozen-mesh pressure-resolution control"
+    },
+    {
+      "id": "orientation_combined_15_adaptive_pressure005_20261020",
+      "kind": "orientation",
+      "case_file": "sym/cases/campaign/orientation_combined_15_adaptive_pressure005_20261020.json",
+      "case_sha256": "1dab0b6e9da01c949d4ffac74d7dc2dfe435529f0a8f4669e93a1163c1be0d70",
+      "run": "sym/runs/campaign/orientation_combined_15_adaptive_pressure005_20261020",
+      "entry": null,
+      "estimated_elements": null,
+      "angles": [
+        15
+      ],
+      "structured_estimate": 43520,
+      "parent_attempt": "orientation_combined_15_adaptive",
+      "changes": {
+        "analysis": {
+          "pressure_max_increment": 0.005
+        }
+      },
+      "description": "Bounded combined15 frozen-mesh pressure-resolution control"
+    },
+    {
+      "id": "orientation_combined_75_adaptive_pressure005_20261020",
+      "kind": "orientation",
+      "case_file": "sym/cases/campaign/orientation_combined_75_adaptive_pressure005_20261020.json",
+      "case_sha256": "0f893a7f31785341564eaa318a73e8fb0ef584ba13abb0580776ea6220d2ebfd",
+      "run": "sym/runs/campaign/orientation_combined_75_adaptive_pressure005_20261020",
+      "entry": null,
+      "estimated_elements": null,
+      "angles": [
+        75
+      ],
+      "structured_estimate": 52256,
+      "parent_attempt": "orientation_combined_75_adaptive",
+      "changes": {
+        "analysis": {
+          "pressure_max_increment": 0.005
+        }
+      },
+      "description": "Bounded combined75 frozen-mesh pressure-resolution control"
+    },
+    {
+      "id": "orientation_combined_90_adaptive_pressure005_20261020",
+      "kind": "orientation",
+      "case_file": "sym/cases/campaign/orientation_combined_90_adaptive_pressure005_20261020.json",
+      "case_sha256": "c1d0dc6792129f8710d30d5f442a66463e8b853fc928d4c3e0b7cbaad2cebe21",
+      "run": "sym/runs/campaign/orientation_combined_90_adaptive_pressure005_20261020",
+      "entry": null,
+      "estimated_elements": null,
+      "angles": [
+        90
+      ],
+      "structured_estimate": 43776,
+      "parent_attempt": "orientation_combined_90_adaptive",
+      "changes": {
+        "analysis": {
+          "pressure_max_increment": 0.005
+        }
+      },
+      "description": "Bounded combined90 frozen-mesh pressure-resolution control"
+    },
+    {
+      "id": "orientation_combined_90_pressure005_it120_20261022",
+      "kind": "orientation",
+      "case_file": "sym/cases/campaign/orientation_combined_90_pressure005_it120_20261022.json",
+      "case_sha256": "f43fe8b03fac62c39ce12601dab8f64a056f6c43ad6c659625bdd8203b61ba84",
+      "run": "sym/runs/campaign/orientation_combined_90_pressure005_it120_20261022",
+      "entry": null,
+      "estimated_elements": null,
+      "angles": [
+        90
+      ],
+      "structured_estimate": 43776,
+      "parent_attempt": "orientation_combined_90_adaptive_pressure005_20261020",
+      "changes": {
+        "analysis": {
+          "pressure_contact_iterations": 120
+        }
+      },
+      "description": "Bounded pressure-only CONTACT iteration-cap120 trial"
+    },
+    {
+      "id": "orientation90_restart_seed_20261022",
+      "kind": "iteration",
+      "case_file": "sym/cases/campaign/orientation90_restart_seed_20261022.json",
+      "case_sha256": "1ced130054364e13d7b7c316bf341991671a5a2486c0b9a38b3bcb2e58416bf2",
+      "run": "sym/runs/campaign/orientation90_restart_seed_20261022",
+      "entry": null,
+      "estimated_elements": null,
+      "angles": [
+        90
+      ],
+      "structured_estimate": 43776,
+      "parent_attempt": "orientation_combined_90_pressure005_it120_20261022",
+      "changes": {
+        "continuation": {
+          "kind": "seed",
+          "duration_seconds": 2.0,
+          "target_pressure_mpa": 0.0,
+          "physical_density_tonne_mm3": 7.85e-09,
+          "inherited_total_time": 0.0,
+          "checkpoint_source": "sym/runs/campaign/orientation90_restart_seed_20261022/job.rout",
+          "pressure_mapping": "linear",
+          "numerical_damping": "HHT alpha=-0.05 only; no Rayleigh damping or mass scaling",
+          "validation_status": "unvalidated; rate/energy checks are numerical screening, not physical burst validation"
+        }
+      },
+      "description": "Restart/dynamic90 seed"
+    },
+    {
+      "id": "orientation90_restart_probe_20261022",
+      "kind": "iteration",
+      "case_file": "sym/cases/campaign/orientation90_restart_probe_20261022.json",
+      "case_sha256": "2a16c8e080168a5c72704104e871b3cfa1bd5e32245cb92dc8fa2f4acaff1284",
+      "run": "sym/runs/campaign/orientation90_restart_probe_20261022",
+      "entry": null,
+      "estimated_elements": null,
+      "angles": [
+        90
+      ],
+      "structured_estimate": 43776,
+      "parent_attempt": "orientation_combined_90_pressure005_it120_20261022",
+      "changes": {
+        "continuation": {
+          "kind": "static_probe",
+          "duration_seconds": 1.0,
+          "target_pressure_mpa": 1.75,
+          "physical_density_tonne_mm3": 7.85e-09,
+          "inherited_total_time": 2.0,
+          "checkpoint_source": "sym/runs/campaign/orientation90_restart_seed_20261022/job.rout",
+          "pressure_mapping": "linear",
+          "numerical_damping": "HHT alpha=-0.05 only; no Rayleigh damping or mass scaling",
+          "validation_status": "unvalidated; rate/energy checks are numerical screening, not physical burst validation"
+        }
+      },
+      "description": "Restart/dynamic90 probe"
+    },
+    {
+      "id": "orientation90_restart_dynamic1s_20261022",
+      "kind": "iteration",
+      "case_file": "sym/cases/campaign/orientation90_restart_dynamic1s_20261022.json",
+      "case_sha256": "5f46f799e15baf3932c2159fee59181dcdd4816601ce8ad49d256059904bc881",
+      "run": "sym/runs/campaign/orientation90_restart_dynamic1s_20261022",
+      "entry": null,
+      "estimated_elements": null,
+      "angles": [
+        90
+      ],
+      "structured_estimate": 43776,
+      "parent_attempt": "orientation_combined_90_pressure005_it120_20261022",
+      "changes": {
+        "continuation": {
+          "kind": "dynamic",
+          "duration_seconds": 1.0,
+          "target_pressure_mpa": 35.0,
+          "alpha": -0.05,
+          "physical_density_tonne_mm3": 7.85e-09,
+          "inherited_total_time": 2.0,
+          "checkpoint_source": "sym/runs/campaign/orientation90_restart_seed_20261022/job.rout",
+          "pressure_mapping": "quintic smoothstep tabulated401points",
+          "numerical_damping": "HHT alpha=-0.05 only; no Rayleigh damping or mass scaling",
+          "validation_status": "unvalidated; rate/energy checks are numerical screening, not physical burst validation"
+        }
+      },
+      "description": "Restart/dynamic90 dynamic1s"
+    },
+    {
+      "id": "orientation90_restart_dynamic2s_20261022",
+      "kind": "iteration",
+      "case_file": "sym/cases/campaign/orientation90_restart_dynamic2s_20261022.json",
+      "case_sha256": "19f5ad5fbdb18c28f1e944ffbe644f2c5ffa76ab97c3f7cceaaba062819fa84f",
+      "run": "sym/runs/campaign/orientation90_restart_dynamic2s_20261022",
+      "entry": null,
+      "estimated_elements": null,
+      "angles": [
+        90
+      ],
+      "structured_estimate": 43776,
+      "parent_attempt": "orientation_combined_90_pressure005_it120_20261022",
+      "changes": {
+        "continuation": {
+          "kind": "dynamic",
+          "duration_seconds": 2.0,
+          "target_pressure_mpa": 35.0,
+          "alpha": -0.05,
+          "physical_density_tonne_mm3": 7.85e-09,
+          "inherited_total_time": 2.0,
+          "checkpoint_source": "sym/runs/campaign/orientation90_restart_seed_20261022/job.rout",
+          "pressure_mapping": "quintic smoothstep tabulated401points",
+          "numerical_damping": "HHT alpha=-0.05 only; no Rayleigh damping or mass scaling",
+          "validation_status": "unvalidated; rate/energy checks are numerical screening, not physical burst validation"
+        }
+      },
+      "description": "Restart/dynamic90 dynamic2s"
+    },
+    {
+      "id": "orientation_gouge_45_adaptive_pressure005_20261031",
+      "kind": "orientation",
+      "case_file": "sym/cases/campaign/orientation_gouge_45_adaptive_pressure005_20261031.json",
+      "case_sha256": "c85613a39df1663ccc97dfd68d7a5e2c2cdd09f5037af7e0f076187efa5680ac",
+      "run": "sym/runs/campaign/orientation_gouge_45_adaptive_pressure005_20261031",
+      "entry": null,
+      "estimated_elements": null,
+      "angles": [
+        45
+      ],
+      "structured_estimate": 64752,
+      "parent_attempt": "orientation_gouge_45_adaptive",
+      "changes": {
+        "analysis": {
+          "pressure_max_increment": 0.005
+        }
+      },
+      "description": "Gouge-only exact-parent-mesh pressure-step refinement"
+    },
+    {
+      "id": "orientation_gouge_15_adaptive_pressure005_20261031",
+      "kind": "orientation",
+      "case_file": "sym/cases/campaign/orientation_gouge_15_adaptive_pressure005_20261031.json",
+      "case_sha256": "deb18f7afc62bfeacc9cb988473ab32a50a8e1aee08e7f3672232388e3e9bcd0",
+      "run": "sym/runs/campaign/orientation_gouge_15_adaptive_pressure005_20261031",
+      "entry": null,
+      "estimated_elements": null,
+      "angles": [
+        15
+      ],
+      "structured_estimate": 43520,
+      "parent_attempt": "orientation_gouge_15_adaptive",
+      "changes": {
+        "analysis": {
+          "pressure_max_increment": 0.005
+        }
+      },
+      "description": "Gouge-only exact-parent-mesh pressure-step refinement"
+    },
+    {
+      "id": "orientation_gouge_30_adaptive_pressure005_20261031",
+      "kind": "orientation",
+      "case_file": "sym/cases/campaign/orientation_gouge_30_adaptive_pressure005_20261031.json",
+      "case_sha256": "f83ecc37dd8d15a7814633f6a63a2f9f42ee98d5b7a9a2e5deb0418cf9eecf44",
+      "run": "sym/runs/campaign/orientation_gouge_30_adaptive_pressure005_20261031",
+      "entry": null,
+      "estimated_elements": null,
+      "angles": [
+        30
+      ],
+      "structured_estimate": 58144,
+      "parent_attempt": "orientation_gouge_30_adaptive",
+      "changes": {
+        "analysis": {
+          "pressure_max_increment": 0.005
+        }
+      },
+      "description": "Gouge-only exact-parent-mesh pressure-step refinement"
+    },
+    {
+      "id": "orientation_gouge_00_adaptive_pressure005_20261031",
+      "kind": "orientation",
+      "case_file": "sym/cases/campaign/orientation_gouge_00_adaptive_pressure005_20261031.json",
+      "case_sha256": "bcdb3fbf7727bdac9d3bdb3fcc9ba24cdaaddc49481a17dea92c6f59961c5561",
+      "run": "sym/runs/campaign/orientation_gouge_00_adaptive_pressure005_20261031",
+      "entry": null,
+      "estimated_elements": null,
+      "angles": [
+        0
+      ],
+      "structured_estimate": 23392,
+      "parent_attempt": "orientation_gouge_00_adaptive",
+      "changes": {
+        "analysis": {
+          "pressure_max_increment": 0.005
+        }
+      },
+      "description": "Gouge-only exact-parent-mesh pressure-step refinement"
+    },
+    {
+      "id": "orientation_gouge_75_adaptive_pressure005_20261031",
+      "kind": "orientation",
+      "case_file": "sym/cases/campaign/orientation_gouge_75_adaptive_pressure005_20261031.json",
+      "case_sha256": "4a4ef1bb23be3db5973b5746f4f2a89e07d3f7cc55ef01bedaa2455be577ee62",
+      "run": "sym/runs/campaign/orientation_gouge_75_adaptive_pressure005_20261031",
+      "entry": null,
+      "estimated_elements": null,
+      "angles": [
+        75
+      ],
+      "structured_estimate": 52256,
+      "parent_attempt": "orientation_gouge_75_adaptive",
+      "changes": {
+        "analysis": {
+          "pressure_max_increment": 0.005
+        }
+      },
+      "description": "Gouge-only exact-parent-mesh pressure-step refinement"
+    },
+    {
+      "id": "orientation_gouge_90_adaptive_pressure005_20261031",
+      "kind": "orientation",
+      "case_file": "sym/cases/campaign/orientation_gouge_90_adaptive_pressure005_20261031.json",
+      "case_sha256": "8ac4ffd25d8127b396dfda61adec7eaaa6a2c95bab6e9bb6b25b90e542cc15b0",
+      "run": "sym/runs/campaign/orientation_gouge_90_adaptive_pressure005_20261031",
+      "entry": null,
+      "estimated_elements": null,
+      "angles": [
+        90
+      ],
+      "structured_estimate": 36864,
+      "parent_attempt": "orientation_gouge_90_adaptive",
+      "changes": {
+        "analysis": {
+          "pressure_max_increment": 0.005
+        }
+      },
+      "description": "Gouge-only exact-parent-mesh pressure-step refinement"
+    },
+    {
+      "id": "orientation_gouge_60_adaptive_pressure005_20261031",
+      "kind": "orientation",
+      "case_file": "sym/cases/campaign/orientation_gouge_60_adaptive_pressure005_20261031.json",
+      "case_sha256": "aff1cfe343027e70ca6e242c1fccc1a45ae234e29be16835d34de6dbb2a8f4b5",
+      "run": "sym/runs/campaign/orientation_gouge_60_adaptive_pressure005_20261031",
+      "entry": null,
+      "estimated_elements": null,
+      "angles": [
+        60
+      ],
+      "structured_estimate": 61360,
+      "parent_attempt": "orientation_gouge_60_adaptive",
+      "changes": {
+        "analysis": {
+          "pressure_max_increment": 0.005
+        }
+      },
+      "description": "Gouge-only exact-parent-mesh pressure-step refinement"
+    }
+  ],
+  "solver_build": {
+    "executable": "final/sym/vendor/ccx_pardiso/ccx_2.23_pardiso",
+    "solver_sha256": "0f974d82f4355a93006fcc4f4bcabcd93da3631013b6ba33934648c41f1fa72b",
+    "contact_patch_build": {
+      "base_solver_sha256": "8a54f87623308c8d1ad8c233264a7c933b4230686f4d800e97ba3153fb879cd8",
+      "changes": {
+        "springforc_f2f.f": {
+          "original_sha256": "3be67688eb16a95739e09990c34ae0d2614acff216b254ea474bbf7c4d9e1ba4",
+          "modified_sha256": "19ba2a5e9236dc4cb7a60e1d38b0794982631bfac340ab5ce27bc3c57b55d4aa"
+        },
+        "springstiff_f2f.f": {
+          "original_sha256": "bfa17fa023dc806f3c0776a965c72497590edb72cdfbc48f67ee16ed3d75da2a",
+          "modified_sha256": "d3392d00c6012a3f0b78afff853e6a6df264de069e0b652ab0f369018e751137"
+        }
+      },
+      "executable": "final/sym/vendor/ccx_tabular_fix/ccx_2.23_tabularfix",
+      "solver_sha256": "da09ec22796a0f0640d77b04e98e7716aa030f730a34fe15f752fbbeb599d794",
+      "patch_sha256": "cca87731bcff90cd09e3286a3325fa473864bc0746360349db38b19901c290ff"
+    },
+    "mkl_runtime_sha256": "b9654b41962165362a85fea0611670813270da873d52fd3adc6a713f9e2e214f",
+    "compiled_sources": {
+      "feasibledirection.c": "a5a45134ae594ae3feae286db5525796b9bb1798007376d603c9dfa9f542c9be",
+      "robustdesign.c": "8ed6d492d6a57058d71ff0637487e25bcfb8c075e6e09a1dd42c9a6f691995a4",
+      "steadystate.c": "3a34835d2295bbeca6eff6a441e5fd4d07acfbaee09fd708f0e4361cd9b3e29d",
+      "randomfieldmain.c": "fac920caa2f75355f748646adbdee7a5544e74e574cb74884f8d5e8b4fc55841",
+      "massless.c": "ed523a2abf49842b2e405c93e83ca637598e45e1ade15a6e90c81beb76d91858",
+      "objectivemain_se.c": "17bb442e626ad97aec16f97394854d53c71f6357be75af60ab6030576995c411",
+      "pastix.c": "c7b62620350f7bb8bbb1b32a8fb2917be049d0ace09ddbc19ec5705eea9e343d",
+      "dynboun.c": "fc499969812919919e8d49360535b2073eeebe2f5f34dcc7727af0a56009ccaf",
+      "arpack.c": "b0640e93347badb257c4c9e6b952043a5b51a39893abbee54605d115656f3c3e",
+      "pardiso.c": "9499839bf863ae016251c778b0af1218fafd5bb154691233564d405a1e50e8a2",
+      "radflowload.c": "bc73c24eba08a47543850999c98f4682b16682623c448e3400fe3b88381a4d7a",
+      "compfluidfem.c": "2fbe27cc76be69cfc36fc1b4b712b324ac9c846f5bd1e4e73865d2b40afc0ee2",
+      "electromagnetics.c": "b517533a198efe807e11c555b7950726439b4466ed0c2907634c87a13cbcd3da",
+      "nonlingeo.c": "8684bb6d7fa7097c0a854db5a45eb9e2d11adfde574e688184ecbbbad56ff83f",
+      "arpackbu.c": "a95659be16f42c3c056c8f33402cfd3add551613e5d49900451d430a226cb460",
+      "gradientprojection.c": "eadbf60f1720a196d01439ee321b6a494a1a0fb47484844c75a4f3efedec6e07",
+      "dudsmain.c": "edf0cd4dc6b4eaaa5a23806a9d1d4bbef785a783d79555ab8bff1c2e4253d915",
+      "pardiso_cp.c": "541bf6d6275095ff20c4bb17237e253c1d55099c1cb5fa31a4057be4093a68d2",
+      "ini_cal.c": "32890f8333e36f8618a251f372d5661481bd92daf8d62bcb37bf91d5f6642c25",
+      "dyna.c": "308d4044b594198e3d33af94cc387712257c552398ef3e8f1e3caae8d740ac29",
+      "filterbackwardmain.c": "7971e362bb03637049d3a348fc7068479942ee805ee77468dca3fc5d49855abb",
+      "linstatic.c": "5fb7bca07b59886a35ff203ed7859c96a372f803477576320f0766d9b4e85fc8",
+      "arpackcs.c": "f1682f681f23d1906397f58b00ed81c1047a642f55ce20311633af343f710f76",
+      "filterforwardmain.c": "1ced62e4d5ec737707a65cf0010a096e551729970406a159c6a185217bde79b7"
+    },
+    "uv_lock_sha256": "9ea65bd671490c8c94cc0ee9d02e5f6ba01bfe3c93815e1bd6ad5e63895f9892",
+    "verified": true,
+    "verification": [
+      {
+        "case": "contact",
+        "max_normalized_output_difference": 0.0,
+        "blocks": 40
+      },
+      {
+        "case": "material",
+        "max_normalized_output_difference": 8.500000000001697e-11,
+        "blocks": 160
+      },
+      {
+        "case": "elastic",
+        "max_normalized_output_difference": 2.1451716e-11,
+        "blocks": 65
+      }
+    ],
+    "verification_directory": "final/sym/runs/backend_checks_20261004_092127"
+  },
+  "mesh_revision": "Adaptive variants preserve original attempts; no material, geometry or failure criterion fitting."
+}

@@ -1,0 +1,84 @@
+"""Dynamic native results/assembly capture; single-element verification before pipe use."""
+import gdb,json,os,re,struct
+from pathlib import Path
+records=[]; selected=False; cycle=0; snapshot={}; ips=[]
+def read(a,n,c):return [] if n==0 else list(struct.unpack('<'+c*n,gdb.selected_inferior().read_memory(a,struct.calcsize(c)*n).tobytes()))
+def reg(s):return int(gdb.parse_and_eval(s))
+def args():
+    stack=reg('$rsp')
+    return lambda i: reg(['$rdi','$rsi','$rdx','$rcx','$r8','$r9'][i-1]) if i<=6 else read(stack+8*(i-6),1,'Q')[0]
+class ResultsDone(gdb.FinishBreakpoint):
+    def __init__(self,p):
+        super().__init__(gdb.newest_frame(),internal=True)
+        self.p={i:p(i) for i in (7,10,29,33,34,63,65)}
+    def stop(self):
+        p=self.p
+        snapshot.update(displacement_after=read(p[7],snapshot['nodal_count'],'d'),stress=read(p[10],snapshot['stress_count'],'d'),strain=read(p[29],snapshot['stress_count'],'d'),internal=read(p[33],snapshot['neq'],'d'),nodal_internal=read(p[34],snapshot['nodal_count'],'d'),current_state=read(p[65],snapshot['state_count'],'d'),ips=ips)
+        return False
+class Results(gdb.Breakpoint):
+    def stop(self):
+        global selected,cycle
+        p=args()
+        if read(p(36),1,'i')[0]!=-1:return False
+        this=cycle;cycle+=1
+        if this!=int(os.environ['THESIS_CYCLE']):return False
+        selected=True
+        nk=read(p(2),1,'i')[0];ne=read(p(6),1,'i')[0];mi=read(p(69),3,'i');ns=read(p(73),1,'i')[0]
+        assert nk in (8,20) and ne==1 and mi[0]==8
+        nodal_count=4*nk;stress_count=6*mi[0]*ne;state_count=ns*mi[0]*ne
+        snapshot.update(nk=nk,ne=ne,mi=mi,nodal_count=nodal_count,stress_count=stress_count)
+        mapping=read(p(35),nodal_count,'i');neq=read(p(51),1,'i')[0]
+        before=read(p(7),nodal_count,'d');direction=json.loads(os.environ['THESIS_DIRECTION']);h=float(os.environ['THESIS_AMPLITUDE'])
+        changed=[u+h*direction[m-1] if m>0 else u for u,m in zip(before,mapping)]
+        gdb.selected_inferior().write_memory(p(7),struct.pack('<'+str(nodal_count)+'d',*changed))
+        snapshot.update(cycle=this,time=read(p(57),1,'d')[0],ttime=read(p(58),1,'d')[0],mapping=mapping,neq=neq,displacement_before=before,displacement_imposed=changed,state_count=state_count,previous_state=read(p(63),state_count,'d'),previous_stress=read(p(74),stress_count,'d'))
+        ResultsDone(p)
+        return False
+class IPDone(gdb.FinishBreakpoint):
+    def __init__(self,r,p):
+        super().__init__(gdb.newest_frame(),internal=True);self.r=r;self.p={i:p(i) for i in (3,5,10)}
+    def stop(self):
+        self.r.update(stress=read(self.p[10],6,'d'),stiffness=read(self.p[5],21,'d'));ips.append(self.r);return False
+class IP(gdb.Breakpoint):
+    def stop(self):
+        if not selected:return False
+        p=args();ns=read(p(21),1,'i')[0]
+        ip=read(p(20),1,'i')[0];element=read(p(19),1,'i')[0];mi=read(p(22),3,'i')
+        offset=ns*((element-1)*mi[0]+ip-1)
+        IPDone(dict(element=element,ip=ip,icmd=read(p(8),1,'i')[0],previous=read(p(4)+8*offset,ns,'d'),strain=read(p(6),6,'d')),p)
+        return False
+source=Path(os.environ['THESIS_ELEMENT_SOURCE']).read_text()
+names=re.sub(r'\s|&','',source.split('subroutine e_c3d(',1)[1].split(')',1)[0]).split(',')
+class ElementDone(gdb.FinishBreakpoint):
+    def __init__(self,a):super().__init__(gdb.newest_frame(),internal=True);self.a=a
+    def stop(self):snapshot['element_matrix']=read(self.a,3600,'d');return False
+class Element(gdb.Breakpoint):
+    def stop(self):
+        if not selected:return False
+        p=args();snapshot['assembly_displacement']=read(p(names.index('vold')+1),snapshot['nodal_count'],'d');snapshot['assembly_stress']=read(p(names.index('sti')+1),snapshot['stress_count'],'d')
+        ElementDone(p(9));return False
+class ResidualDone(gdb.FinishBreakpoint):
+    def __init__(self,address):
+        super().__init__(gdb.newest_frame(),internal=True);self.address=address
+    def stop(self):
+        snapshot['residual']['b']=read(self.address,snapshot['neq'],'d');return False
+class Residual(gdb.Breakpoint):
+    def stop(self):
+        if not selected:return False
+        p=args();n=snapshot['neq']
+        snapshot['residual']=dict(nmethod=read(p(1),1,'i')[0],fext=read(p(4),n,'d'),internal=read(p(5),n,'d'),displacement=read(p(9),snapshot['nodal_count'],'d'))
+        ResidualDone(p(3));return False
+class Solver(gdb.Breakpoint):
+    def stop(self):
+        if not selected or 'element_matrix' not in snapshot:return False
+        p=args();n=read(p(9),1,'i')[0];nz=read(p(10),1,'i')[0]
+        assert n==snapshot['neq'] and 0<nz<n*n
+        snapshot['global_matrix']=dict(neq=n,nzs=nz,ad=read(p(1),n,'d'),au=read(p(2),nz,'d'),rhs=read(p(6),n,'d'),irow=read(p(8),nz,'i'),jq=read(p(13),n+1,'i'),symmetryflag=read(p(11),1,'i')[0],inputformat=read(p(12),1,'i')[0])
+        return True
+Results('*results',internal=True);IP('*incplas_',internal=True);Element('*e_c3d_',internal=True)
+Residual('*calcresidual',internal=True);Solver('*pardiso_main',internal=True)
+gdb.execute('run')
+assert selected and 'global_matrix' in snapshot and len(ips) in (0,8)
+assert 'b' in snapshot['residual']
+gdb.execute('kill')
+Path(os.environ['THESIS_OUTPUT']).write_text(json.dumps(snapshot,indent=2)+'\n')

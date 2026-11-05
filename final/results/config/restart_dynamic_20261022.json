@@ -1,0 +1,29 @@
+{
+  "created_utc": "2026-10-22T09:38:56.281291+00:00",
+  "parent": "orientation_combined_90_pressure005_it120_20261022",
+  "jobs": [
+    {
+      "phase": "seed",
+      "run": "sym/runs/campaign/orientation90_restart_seed_20261022",
+      "service": "thesis-restart90-seed-20261022.service"
+    },
+    {
+      "phase": "probe",
+      "run": "sym/runs/campaign/orientation90_restart_probe_20261022",
+      "service": "thesis-restart90-probe-20261022.service"
+    },
+    {
+      "phase": "dynamic1s",
+      "run": "sym/runs/campaign/orientation90_restart_dynamic1s_20261022",
+      "service": "thesis-restart90-dynamic1s-20261022.service"
+    },
+    {
+      "phase": "dynamic2s",
+      "run": "sym/runs/campaign/orientation90_restart_dynamic2s_20261022",
+      "service": "thesis-restart90-dynamic2s-20261022.service"
+    }
+  ],
+  "policy": "Sequential gates. No dynamic launch before seed and static probe pass. 2s rate check only after1s pilot exceeds parent endpoint with finite energy histories. Eight hours per native solve,10hour per-phase service,40GiB admission. No automatic retries.",
+  "density_reference": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/code-and-design-manuals/suos2011/SUOS2011_section_12.pdf",
+  "screening": "KE/abs(internal energy)<=1percent reported; also report KE/absolute pressure-induced energy change. Rate sensitivity reported, never automatic physical validation. Damping sensitivity remains pending."
+}

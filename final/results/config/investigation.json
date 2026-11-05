@@ -1,0 +1,698 @@
+{
+  "source_curve_sha256": "6739a65c86e70da1c282be752a593e97d2485b6374808f3ebf80f1ebbb79e8d3",
+  "elastic_intersection_stress_mpa": 249.05299258691358,
+  "source_supported_plastic_strain_max": 0.1977982020291358,
+  "jobs": [
+    {
+      "id": "a37_curve_only",
+      "base_id": "allouti2012_3_percent_od",
+      "description": "Material only: preserve Figure 9 and use its elastic intersection.",
+      "case_file": "sym/cases/investigation/a37_curve_only.json",
+      "case_sha256": "25b3d6c053b2d4d51181b9f3749c5b94fab0c441bf56552eba54394b61107fec",
+      "entry": {
+        "id": "a37_curve_only",
+        "paper": "allouti2012",
+        "specimen": "3_percent_OD",
+        "vessel": null,
+        "case_file": "sym/cases/investigation/a37_curve_only.json",
+        "case_sha256": "25b3d6c053b2d4d51181b9f3749c5b94fab0c441bf56552eba54394b61107fec",
+        "reference_file": "data/figures/allouti2012/fig10_load_displacement.csv",
+        "panel": "a",
+        "experimental_series": "dent_3_percent_OD_experimental",
+        "numerical_series": "dent_3_percent_OD_numerical",
+        "material": {
+          "source": "data/figures/allouti2012/fig09_material_curve.csv",
+          "source_sha256": "6739a65c86e70da1c282be752a593e97d2485b6374808f3ebf80f1ebbb79e8d3",
+          "interpretation": "true total strain; plastic strain = total - stress/E",
+          "interpretation_confirmed": false,
+          "initial_yield_anchor_mpa": 249.05299258691358,
+          "source_supported_plastic_strain_max": 0.1977982020291358,
+          "processing": "Curve-preserving elastic intersection; no table-yield splice.",
+          "constant_tail_to_plastic_strain": 0.8,
+          "burst_criterion_calibrated": false
+        },
+        "assumptions": [
+          "Preliminary literature comparison; mesh/contact convergence and fixture verification outstanding.",
+          "5 MPa pressure ramp exercises the same three-stage workflow; it is not a burst validation.",
+          "Bottom-line bilateral support and friction 0.3 are modelling assumptions requiring verification.",
+          "Material constant tail is an explicit extrapolation; data-supported strain extent is audited.",
+          "Allouti Figure 9 stress/strain treated as true stress/total strain, which the figure does not explicitly confirm.",
+          "355 MPa initial yield anchored to the table despite the digitized curve extending below it.",
+          "Maximum imposed travel taken from experimental loading-loop maximum; this is a prescribed boundary condition, not a fitted prediction.",
+          "Figure percent-OD labels describe residual dents; they are not substituted for loaded tool travel.",
+          "PEEQ 0.8 is only a software placeholder here; Allouti uses different failure criteria. No Allouti burst error is computed.",
+          "Controlled investigation: Material only: preserve Figure 9 and use its elastic intersection.",
+          "The earlier table-yield note describes the archived baseline only. This case follows Figure 9."
+        ],
+        "validation_status": "preliminary_unvalidated",
+        "sources": {
+          "data/tables/allouti2012/text_geometry_and_intact_test.csv": "88e3a8858ade4df336f3e0f6886f69c2898c08f67d6b75b0bf9b3b314dbf9d2b",
+          "data/tables/allouti2012/table02_material.csv": "5526abfa2423f00ccfee6c10c38248e2a33231f3b800735e9a627b109e4ae259",
+          "data/figures/allouti2012/fig10_load_displacement.csv": "2a23586f869bc66a46003200761464a50e06fcc36314c6a648edc5727f4dcd9b"
+        }
+      },
+      "run": "sym/runs/investigation/a37_curve_only",
+      "changes": {},
+      "curve_material": true
+    },
+    {
+      "id": "a37_mesh_only",
+      "base_id": "allouti2012_3_percent_od",
+      "description": "Numerical mesh only: surface size 6 to 4 mm; wall layers 2 to 3.",
+      "case_file": "sym/cases/investigation/a37_mesh_only.json",
+      "case_sha256": "a0e479d4dcc660a8cee93f3fcb25b07f369d083d19aff8b11d4a9a323231e30b",
+      "entry": {
+        "id": "a37_mesh_only",
+        "paper": "allouti2012",
+        "specimen": "3_percent_OD",
+        "vessel": null,
+        "case_file": "sym/cases/investigation/a37_mesh_only.json",
+        "case_sha256": "a0e479d4dcc660a8cee93f3fcb25b07f369d083d19aff8b11d4a9a323231e30b",
+        "reference_file": "data/figures/allouti2012/fig10_load_displacement.csv",
+        "panel": "a",
+        "experimental_series": "dent_3_percent_OD_experimental",
+        "numerical_series": "dent_3_percent_OD_numerical",
+        "material": {
+          "source": "data/figures/allouti2012/fig09_material_curve.csv",
+          "source_sha256": "6739a65c86e70da1c282be752a593e97d2485b6374808f3ebf80f1ebbb79e8d3",
+          "interpretation": "true total strain; plastic strain = total - stress/E",
+          "interpretation_confirmed": false,
+          "initial_yield_anchor_mpa": 355.0,
+          "source_supported_plastic_strain_max": 0.1977982020291358,
+          "processing": "Yield anchored to material table; lower-stress, decreasing-stress and non-increasing-plastic-strain samples omitted in original order.",
+          "constant_tail_to_plastic_strain": 0.8,
+          "burst_criterion_calibrated": false
+        },
+        "assumptions": [
+          "Preliminary literature comparison; mesh/contact convergence and fixture verification outstanding.",
+          "5 MPa pressure ramp exercises the same three-stage workflow; it is not a burst validation.",
+          "Bottom-line bilateral support and friction 0.3 are modelling assumptions requiring verification.",
+          "Material constant tail is an explicit extrapolation; data-supported strain extent is audited.",
+          "Allouti Figure 9 stress/strain treated as true stress/total strain, which the figure does not explicitly confirm.",
+          "355 MPa initial yield anchored to the table despite the digitized curve extending below it.",
+          "Maximum imposed travel taken from experimental loading-loop maximum; this is a prescribed boundary condition, not a fitted prediction.",
+          "Figure percent-OD labels describe residual dents; they are not substituted for loaded tool travel.",
+          "PEEQ 0.8 is only a software placeholder here; Allouti uses different failure criteria. No Allouti burst error is computed.",
+          "Controlled investigation: Numerical mesh only: surface size 6 to 4 mm; wall layers 2 to 3."
+        ],
+        "validation_status": "preliminary_unvalidated",
+        "sources": {
+          "data/tables/allouti2012/text_geometry_and_intact_test.csv": "88e3a8858ade4df336f3e0f6886f69c2898c08f67d6b75b0bf9b3b314dbf9d2b",
+          "data/tables/allouti2012/table02_material.csv": "5526abfa2423f00ccfee6c10c38248e2a33231f3b800735e9a627b109e4ae259",
+          "data/figures/allouti2012/fig10_load_displacement.csv": "2a23586f869bc66a46003200761464a50e06fcc36314c6a648edc5727f4dcd9b"
+        }
+      },
+      "run": "sym/runs/investigation/a37_mesh_only",
+      "changes": {
+        "mesh": {
+          "fine_size": 4.0,
+          "wall_layers": 3
+        }
+      },
+      "curve_material": false
+    },
+    {
+      "id": "a37_tool_only",
+      "base_id": "allouti2012_3_percent_od",
+      "description": "Indenter surface resolution only: 4 to 2 mm.",
+      "case_file": "sym/cases/investigation/a37_tool_only.json",
+      "case_sha256": "7b8f60cbb869820585c1759d718cbbadba90054fa16865d8df94811c4bc29f81",
+      "entry": {
+        "id": "a37_tool_only",
+        "paper": "allouti2012",
+        "specimen": "3_percent_OD",
+        "vessel": null,
+        "case_file": "sym/cases/investigation/a37_tool_only.json",
+        "case_sha256": "7b8f60cbb869820585c1759d718cbbadba90054fa16865d8df94811c4bc29f81",
+        "reference_file": "data/figures/allouti2012/fig10_load_displacement.csv",
+        "panel": "a",
+        "experimental_series": "dent_3_percent_OD_experimental",
+        "numerical_series": "dent_3_percent_OD_numerical",
+        "material": {
+          "source": "data/figures/allouti2012/fig09_material_curve.csv",
+          "source_sha256": "6739a65c86e70da1c282be752a593e97d2485b6374808f3ebf80f1ebbb79e8d3",
+          "interpretation": "true total strain; plastic strain = total - stress/E",
+          "interpretation_confirmed": false,
+          "initial_yield_anchor_mpa": 355.0,
+          "source_supported_plastic_strain_max": 0.1977982020291358,
+          "processing": "Yield anchored to material table; lower-stress, decreasing-stress and non-increasing-plastic-strain samples omitted in original order.",
+          "constant_tail_to_plastic_strain": 0.8,
+          "burst_criterion_calibrated": false
+        },
+        "assumptions": [
+          "Preliminary literature comparison; mesh/contact convergence and fixture verification outstanding.",
+          "5 MPa pressure ramp exercises the same three-stage workflow; it is not a burst validation.",
+          "Bottom-line bilateral support and friction 0.3 are modelling assumptions requiring verification.",
+          "Material constant tail is an explicit extrapolation; data-supported strain extent is audited.",
+          "Allouti Figure 9 stress/strain treated as true stress/total strain, which the figure does not explicitly confirm.",
+          "355 MPa initial yield anchored to the table despite the digitized curve extending below it.",
+          "Maximum imposed travel taken from experimental loading-loop maximum; this is a prescribed boundary condition, not a fitted prediction.",
+          "Figure percent-OD labels describe residual dents; they are not substituted for loaded tool travel.",
+          "PEEQ 0.8 is only a software placeholder here; Allouti uses different failure criteria. No Allouti burst error is computed.",
+          "Controlled investigation: Indenter surface resolution only: 4 to 2 mm."
+        ],
+        "validation_status": "preliminary_unvalidated",
+        "sources": {
+          "data/tables/allouti2012/text_geometry_and_intact_test.csv": "88e3a8858ade4df336f3e0f6886f69c2898c08f67d6b75b0bf9b3b314dbf9d2b",
+          "data/tables/allouti2012/table02_material.csv": "5526abfa2423f00ccfee6c10c38248e2a33231f3b800735e9a627b109e4ae259",
+          "data/figures/allouti2012/fig10_load_displacement.csv": "2a23586f869bc66a46003200761464a50e06fcc36314c6a648edc5727f4dcd9b"
+        }
+      },
+      "run": "sym/runs/investigation/a37_tool_only",
+      "changes": {
+        "mesh": {
+          "indenter_size": 2.0
+        }
+      },
+      "curve_material": false
+    },
+    {
+      "id": "a37_support_only",
+      "base_id": "allouti2012_3_percent_od",
+      "description": "Support sensitivity only: central bottom span = one OD; finite support visible in Allouti 2014 Fig.5, actual span unknown.",
+      "case_file": "sym/cases/investigation/a37_support_only.json",
+      "case_sha256": "0b871df786aa2d3b8c491985963c3ea733fe8dedfb867a19ed3086b8b3e10eb5",
+      "entry": {
+        "id": "a37_support_only",
+        "paper": "allouti2012",
+        "specimen": "3_percent_OD",
+        "vessel": null,
+        "case_file": "sym/cases/investigation/a37_support_only.json",
+        "case_sha256": "0b871df786aa2d3b8c491985963c3ea733fe8dedfb867a19ed3086b8b3e10eb5",
+        "reference_file": "data/figures/allouti2012/fig10_load_displacement.csv",
+        "panel": "a",
+        "experimental_series": "dent_3_percent_OD_experimental",
+        "numerical_series": "dent_3_percent_OD_numerical",
+        "material": {
+          "source": "data/figures/allouti2012/fig09_material_curve.csv",
+          "source_sha256": "6739a65c86e70da1c282be752a593e97d2485b6374808f3ebf80f1ebbb79e8d3",
+          "interpretation": "true total strain; plastic strain = total - stress/E",
+          "interpretation_confirmed": false,
+          "initial_yield_anchor_mpa": 355.0,
+          "source_supported_plastic_strain_max": 0.1977982020291358,
+          "processing": "Yield anchored to material table; lower-stress, decreasing-stress and non-increasing-plastic-strain samples omitted in original order.",
+          "constant_tail_to_plastic_strain": 0.8,
+          "burst_criterion_calibrated": false
+        },
+        "assumptions": [
+          "Preliminary literature comparison; mesh/contact convergence and fixture verification outstanding.",
+          "5 MPa pressure ramp exercises the same three-stage workflow; it is not a burst validation.",
+          "Bottom-line bilateral support and friction 0.3 are modelling assumptions requiring verification.",
+          "Material constant tail is an explicit extrapolation; data-supported strain extent is audited.",
+          "Allouti Figure 9 stress/strain treated as true stress/total strain, which the figure does not explicitly confirm.",
+          "355 MPa initial yield anchored to the table despite the digitized curve extending below it.",
+          "Maximum imposed travel taken from experimental loading-loop maximum; this is a prescribed boundary condition, not a fitted prediction.",
+          "Figure percent-OD labels describe residual dents; they are not substituted for loaded tool travel.",
+          "PEEQ 0.8 is only a software placeholder here; Allouti uses different failure criteria. No Allouti burst error is computed.",
+          "Controlled investigation: Support sensitivity only: central bottom span = one OD; finite support visible in Allouti 2014 Fig.5, actual span unknown."
+        ],
+        "validation_status": "preliminary_unvalidated",
+        "sources": {
+          "data/tables/allouti2012/text_geometry_and_intact_test.csv": "88e3a8858ade4df336f3e0f6886f69c2898c08f67d6b75b0bf9b3b314dbf9d2b",
+          "data/tables/allouti2012/table02_material.csv": "5526abfa2423f00ccfee6c10c38248e2a33231f3b800735e9a627b109e4ae259",
+          "data/figures/allouti2012/fig10_load_displacement.csv": "2a23586f869bc66a46003200761464a50e06fcc36314c6a648edc5727f4dcd9b"
+        }
+      },
+      "run": "sym/runs/investigation/a37_support_only",
+      "changes": {
+        "analysis": {
+          "support": "bottom_patch",
+          "support_length": 88.9
+        }
+      },
+      "curve_material": false
+    },
+    {
+      "id": "a37_curve_8pct",
+      "base_id": "allouti2012_8_percent_od",
+      "description": "Transfer check: identical Figure 9 material treatment at the deeper 8%-OD condition, without fitting to its force response.",
+      "case_file": "sym/cases/investigation/a37_curve_8pct.json",
+      "case_sha256": "fd05ce8b98163e23741d5ebfb7a36aaaef3c310c09a529afcebca43c7840a6cd",
+      "entry": {
+        "id": "a37_curve_8pct",
+        "paper": "allouti2012",
+        "specimen": "8_percent_OD",
+        "vessel": null,
+        "case_file": "sym/cases/investigation/a37_curve_8pct.json",
+        "case_sha256": "fd05ce8b98163e23741d5ebfb7a36aaaef3c310c09a529afcebca43c7840a6cd",
+        "reference_file": "data/figures/allouti2012/fig10_load_displacement.csv",
+        "panel": "a",
+        "experimental_series": "dent_8_percent_OD_experimental",
+        "numerical_series": "dent_8_percent_OD_numerical",
+        "material": {
+          "source": "data/figures/allouti2012/fig09_material_curve.csv",
+          "source_sha256": "6739a65c86e70da1c282be752a593e97d2485b6374808f3ebf80f1ebbb79e8d3",
+          "interpretation": "true total strain; plastic strain = total - stress/E",
+          "interpretation_confirmed": false,
+          "initial_yield_anchor_mpa": 249.05299258691358,
+          "source_supported_plastic_strain_max": 0.1977982020291358,
+          "processing": "Curve-preserving elastic intersection; no table-yield splice.",
+          "constant_tail_to_plastic_strain": 0.8,
+          "burst_criterion_calibrated": false
+        },
+        "assumptions": [
+          "Preliminary literature comparison; mesh/contact convergence and fixture verification outstanding.",
+          "5 MPa pressure ramp exercises the same three-stage workflow; it is not a burst validation.",
+          "Bottom-line bilateral support and friction 0.3 are modelling assumptions requiring verification.",
+          "Material constant tail is an explicit extrapolation; data-supported strain extent is audited.",
+          "Allouti Figure 9 stress/strain treated as true stress/total strain, which the figure does not explicitly confirm.",
+          "355 MPa initial yield anchored to the table despite the digitized curve extending below it.",
+          "Maximum imposed travel taken from experimental loading-loop maximum; this is a prescribed boundary condition, not a fitted prediction.",
+          "Figure percent-OD labels describe residual dents; they are not substituted for loaded tool travel.",
+          "PEEQ 0.8 is only a software placeholder here; Allouti uses different failure criteria. No Allouti burst error is computed.",
+          "Controlled investigation: Transfer check: identical Figure 9 material treatment at the deeper 8%-OD condition, without fitting to its force response.",
+          "The earlier table-yield note describes the archived baseline only. This case follows Figure 9."
+        ],
+        "validation_status": "preliminary_unvalidated",
+        "sources": {
+          "data/tables/allouti2012/text_geometry_and_intact_test.csv": "88e3a8858ade4df336f3e0f6886f69c2898c08f67d6b75b0bf9b3b314dbf9d2b",
+          "data/tables/allouti2012/table02_material.csv": "5526abfa2423f00ccfee6c10c38248e2a33231f3b800735e9a627b109e4ae259",
+          "data/figures/allouti2012/fig10_load_displacement.csv": "2a23586f869bc66a46003200761464a50e06fcc36314c6a648edc5727f4dcd9b"
+        }
+      },
+      "run": "sym/runs/investigation/a37_curve_8pct",
+      "changes": {},
+      "curve_material": true
+    },
+    {
+      "id": "a37_curve_compression_only",
+      "base_id": "allouti2012_3_percent_od",
+      "description": "Figure 9 material + compression-only contact; unchanged compressive stiffness",
+      "case_file": "sym/cases/investigation/a37_curve_compression_only.json",
+      "case_sha256": "971fe7ecc211e15e32c4da610623f65612e07fd85f0c9392c2b3b95ea9e3a89f",
+      "entry": {
+        "id": "a37_curve_compression_only",
+        "paper": "allouti2012",
+        "specimen": "3_percent_OD",
+        "vessel": null,
+        "case_file": "sym/cases/investigation/a37_curve_compression_only.json",
+        "case_sha256": "971fe7ecc211e15e32c4da610623f65612e07fd85f0c9392c2b3b95ea9e3a89f",
+        "reference_file": "data/figures/allouti2012/fig10_load_displacement.csv",
+        "panel": "a",
+        "experimental_series": "dent_3_percent_OD_experimental",
+        "numerical_series": "dent_3_percent_OD_numerical",
+        "material": {
+          "source": "data/figures/allouti2012/fig09_material_curve.csv",
+          "source_sha256": "6739a65c86e70da1c282be752a593e97d2485b6374808f3ebf80f1ebbb79e8d3",
+          "interpretation": "true total strain; plastic strain = total - stress/E",
+          "interpretation_confirmed": false,
+          "initial_yield_anchor_mpa": 249.05299258691358,
+          "source_supported_plastic_strain_max": 0.1977982020291358,
+          "processing": "Curve-preserving elastic intersection; no table-yield splice.",
+          "constant_tail_to_plastic_strain": 0.8,
+          "burst_criterion_calibrated": false
+        },
+        "assumptions": [
+          "Preliminary literature comparison; mesh/contact convergence and fixture verification outstanding.",
+          "5 MPa pressure ramp exercises the same three-stage workflow; it is not a burst validation.",
+          "Bottom-line bilateral support and friction 0.3 are modelling assumptions requiring verification.",
+          "Material constant tail is an explicit extrapolation; data-supported strain extent is audited.",
+          "Allouti Figure 9 stress/strain treated as true stress/total strain, which the figure does not explicitly confirm.",
+          "355 MPa initial yield anchored to the table despite the digitized curve extending below it.",
+          "Maximum imposed travel taken from experimental loading-loop maximum; this is a prescribed boundary condition, not a fitted prediction.",
+          "Figure percent-OD labels describe residual dents; they are not substituted for loaded tool travel.",
+          "PEEQ 0.8 is only a software placeholder here; Allouti uses different failure criteria. No Allouti burst error is computed.",
+          "Controlled investigation: Material only: preserve Figure 9 and use its elastic intersection.",
+          "The earlier table-yield note describes the archived baseline only. This case follows Figure 9.",
+          "Compression-only TABULAR contact: unchanged compressive stiffness, zero pressure on opening."
+        ],
+        "validation_status": "preliminary_unvalidated",
+        "sources": {
+          "data/tables/allouti2012/text_geometry_and_intact_test.csv": "88e3a8858ade4df336f3e0f6886f69c2898c08f67d6b75b0bf9b3b314dbf9d2b",
+          "data/tables/allouti2012/table02_material.csv": "5526abfa2423f00ccfee6c10c38248e2a33231f3b800735e9a627b109e4ae259",
+          "data/figures/allouti2012/fig10_load_displacement.csv": "2a23586f869bc66a46003200761464a50e06fcc36314c6a648edc5727f4dcd9b"
+        }
+      },
+      "run": "sym/runs/investigation/a37_curve_compression_only",
+      "changes": {
+        "dent": {
+          "normal_law": "compression_only"
+        }
+      },
+      "curve_material": true
+    },
+    {
+      "id": "a37_curve_8pct_compression_only",
+      "base_id": "allouti2012_8_percent_od",
+      "description": "Deeper dent: same Figure 9 material + compression-only contact",
+      "case_file": "sym/cases/investigation/a37_curve_8pct_compression_only.json",
+      "case_sha256": "7858cda9c0857dce6966def2138cea1f3e3c93dacd423e6895df8661a23a9cd1",
+      "entry": {
+        "id": "a37_curve_8pct_compression_only",
+        "paper": "allouti2012",
+        "specimen": "8_percent_OD",
+        "vessel": null,
+        "case_file": "sym/cases/investigation/a37_curve_8pct_compression_only.json",
+        "case_sha256": "7858cda9c0857dce6966def2138cea1f3e3c93dacd423e6895df8661a23a9cd1",
+        "reference_file": "data/figures/allouti2012/fig10_load_displacement.csv",
+        "panel": "a",
+        "experimental_series": "dent_8_percent_OD_experimental",
+        "numerical_series": "dent_8_percent_OD_numerical",
+        "material": {
+          "source": "data/figures/allouti2012/fig09_material_curve.csv",
+          "source_sha256": "6739a65c86e70da1c282be752a593e97d2485b6374808f3ebf80f1ebbb79e8d3",
+          "interpretation": "true total strain; plastic strain = total - stress/E",
+          "interpretation_confirmed": false,
+          "initial_yield_anchor_mpa": 249.05299258691358,
+          "source_supported_plastic_strain_max": 0.1977982020291358,
+          "processing": "Curve-preserving elastic intersection; no table-yield splice.",
+          "constant_tail_to_plastic_strain": 0.8,
+          "burst_criterion_calibrated": false
+        },
+        "assumptions": [
+          "Preliminary literature comparison; mesh/contact convergence and fixture verification outstanding.",
+          "5 MPa pressure ramp exercises the same three-stage workflow; it is not a burst validation.",
+          "Bottom-line bilateral support and friction 0.3 are modelling assumptions requiring verification.",
+          "Material constant tail is an explicit extrapolation; data-supported strain extent is audited.",
+          "Allouti Figure 9 stress/strain treated as true stress/total strain, which the figure does not explicitly confirm.",
+          "355 MPa initial yield anchored to the table despite the digitized curve extending below it.",
+          "Maximum imposed travel taken from experimental loading-loop maximum; this is a prescribed boundary condition, not a fitted prediction.",
+          "Figure percent-OD labels describe residual dents; they are not substituted for loaded tool travel.",
+          "PEEQ 0.8 is only a software placeholder here; Allouti uses different failure criteria. No Allouti burst error is computed.",
+          "Controlled investigation: Transfer check: identical Figure 9 material treatment at the deeper 8%-OD condition, without fitting to its force response.",
+          "The earlier table-yield note describes the archived baseline only. This case follows Figure 9.",
+          "Transfer test of curve-preserving material plus compression-only contact, with no fit to indentation forces."
+        ],
+        "validation_status": "preliminary_unvalidated",
+        "sources": {
+          "data/tables/allouti2012/text_geometry_and_intact_test.csv": "88e3a8858ade4df336f3e0f6886f69c2898c08f67d6b75b0bf9b3b314dbf9d2b",
+          "data/tables/allouti2012/table02_material.csv": "5526abfa2423f00ccfee6c10c38248e2a33231f3b800735e9a627b109e4ae259",
+          "data/figures/allouti2012/fig10_load_displacement.csv": "2a23586f869bc66a46003200761464a50e06fcc36314c6a648edc5727f4dcd9b"
+        }
+      },
+      "run": "sym/runs/investigation/a37_curve_8pct_compression_only",
+      "changes": {
+        "dent": {
+          "normal_law": "compression_only"
+        }
+      },
+      "curve_material": true
+    },
+    {
+      "id": "a37_contact_fixed",
+      "base_id": "allouti2012_3_percent_od",
+      "description": "Shallow dent: Figure 9 + compression-only contact (patched CCX)",
+      "case_file": "sym/cases/investigation/a37_contact_fixed.json",
+      "case_sha256": "c89012ef9ca8b67e11bef24a7d5ceef4abeaa19f3eb30ae77a189be57ed01aec",
+      "entry": {
+        "id": "a37_contact_fixed",
+        "paper": "allouti2012",
+        "specimen": "3_percent_OD",
+        "vessel": null,
+        "case_file": "sym/cases/investigation/a37_contact_fixed.json",
+        "case_sha256": "c89012ef9ca8b67e11bef24a7d5ceef4abeaa19f3eb30ae77a189be57ed01aec",
+        "reference_file": "data/figures/allouti2012/fig10_load_displacement.csv",
+        "panel": "a",
+        "experimental_series": "dent_3_percent_OD_experimental",
+        "numerical_series": "dent_3_percent_OD_numerical",
+        "material": {
+          "source": "data/figures/allouti2012/fig09_material_curve.csv",
+          "source_sha256": "6739a65c86e70da1c282be752a593e97d2485b6374808f3ebf80f1ebbb79e8d3",
+          "interpretation": "true total strain; plastic strain = total - stress/E",
+          "interpretation_confirmed": false,
+          "initial_yield_anchor_mpa": 249.05299258691358,
+          "source_supported_plastic_strain_max": 0.1977982020291358,
+          "processing": "Curve-preserving elastic intersection; no table-yield splice.",
+          "constant_tail_to_plastic_strain": 0.8,
+          "burst_criterion_calibrated": false
+        },
+        "assumptions": [
+          "Preliminary literature comparison; mesh/contact convergence and fixture verification outstanding.",
+          "5 MPa pressure ramp exercises the same three-stage workflow; it is not a burst validation.",
+          "Bottom-line bilateral support and friction 0.3 are modelling assumptions requiring verification.",
+          "Material constant tail is an explicit extrapolation; data-supported strain extent is audited.",
+          "Allouti Figure 9 stress/strain treated as true stress/total strain, which the figure does not explicitly confirm.",
+          "355 MPa initial yield anchored to the table despite the digitized curve extending below it.",
+          "Maximum imposed travel taken from experimental loading-loop maximum; this is a prescribed boundary condition, not a fitted prediction.",
+          "Figure percent-OD labels describe residual dents; they are not substituted for loaded tool travel.",
+          "PEEQ 0.8 is only a software placeholder here; Allouti uses different failure criteria. No Allouti burst error is computed.",
+          "Controlled investigation: Material only: preserve Figure 9 and use its elastic intersection.",
+          "The earlier table-yield note describes the archived baseline only. This case follows Figure 9.",
+          "Compression-only TABULAR contact: unchanged compressive stiffness, zero pressure on opening.",
+          "Uses isolated CCX 2.23 TABULAR face-to-face array fix; see sym/docs/contact-fix.md and solver hash."
+        ],
+        "validation_status": "preliminary_unvalidated",
+        "sources": {
+          "data/tables/allouti2012/text_geometry_and_intact_test.csv": "88e3a8858ade4df336f3e0f6886f69c2898c08f67d6b75b0bf9b3b314dbf9d2b",
+          "data/tables/allouti2012/table02_material.csv": "5526abfa2423f00ccfee6c10c38248e2a33231f3b800735e9a627b109e4ae259",
+          "data/figures/allouti2012/fig10_load_displacement.csv": "2a23586f869bc66a46003200761464a50e06fcc36314c6a648edc5727f4dcd9b"
+        }
+      },
+      "run": "sym/runs/investigation/a37_contact_fixed",
+      "changes": {
+        "dent": {
+          "normal_law": "compression_only"
+        }
+      },
+      "curve_material": true,
+      "solver_executable": "sym/vendor/ccx_tabular_fix/ccx_2.23_tabularfix",
+      "solver_sha256": "da09ec22796a0f0640d77b04e98e7716aa030f730a34fe15f752fbbeb599d794"
+    },
+    {
+      "id": "a37_8pct_contact_fixed",
+      "base_id": "allouti2012_8_percent_od",
+      "description": "Deeper dent: Figure 9 + compression-only contact (patched CCX)",
+      "case_file": "sym/cases/investigation/a37_8pct_contact_fixed.json",
+      "case_sha256": "d8c76c0bab36561d436e87242874aaeaa9a5b262b4980d94ce90591a64ccc8d6",
+      "entry": {
+        "id": "a37_8pct_contact_fixed",
+        "paper": "allouti2012",
+        "specimen": "8_percent_OD",
+        "vessel": null,
+        "case_file": "sym/cases/investigation/a37_8pct_contact_fixed.json",
+        "case_sha256": "d8c76c0bab36561d436e87242874aaeaa9a5b262b4980d94ce90591a64ccc8d6",
+        "reference_file": "data/figures/allouti2012/fig10_load_displacement.csv",
+        "panel": "a",
+        "experimental_series": "dent_8_percent_OD_experimental",
+        "numerical_series": "dent_8_percent_OD_numerical",
+        "material": {
+          "source": "data/figures/allouti2012/fig09_material_curve.csv",
+          "source_sha256": "6739a65c86e70da1c282be752a593e97d2485b6374808f3ebf80f1ebbb79e8d3",
+          "interpretation": "true total strain; plastic strain = total - stress/E",
+          "interpretation_confirmed": false,
+          "initial_yield_anchor_mpa": 249.05299258691358,
+          "source_supported_plastic_strain_max": 0.1977982020291358,
+          "processing": "Curve-preserving elastic intersection; no table-yield splice.",
+          "constant_tail_to_plastic_strain": 0.8,
+          "burst_criterion_calibrated": false
+        },
+        "assumptions": [
+          "Preliminary literature comparison; mesh/contact convergence and fixture verification outstanding.",
+          "5 MPa pressure ramp exercises the same three-stage workflow; it is not a burst validation.",
+          "Bottom-line bilateral support and friction 0.3 are modelling assumptions requiring verification.",
+          "Material constant tail is an explicit extrapolation; data-supported strain extent is audited.",
+          "Allouti Figure 9 stress/strain treated as true stress/total strain, which the figure does not explicitly confirm.",
+          "355 MPa initial yield anchored to the table despite the digitized curve extending below it.",
+          "Maximum imposed travel taken from experimental loading-loop maximum; this is a prescribed boundary condition, not a fitted prediction.",
+          "Figure percent-OD labels describe residual dents; they are not substituted for loaded tool travel.",
+          "PEEQ 0.8 is only a software placeholder here; Allouti uses different failure criteria. No Allouti burst error is computed.",
+          "Controlled investigation: Transfer check: identical Figure 9 material treatment at the deeper 8%-OD condition, without fitting to its force response.",
+          "The earlier table-yield note describes the archived baseline only. This case follows Figure 9.",
+          "Transfer test of curve-preserving material plus compression-only contact, with no fit to indentation forces.",
+          "Uses isolated CCX 2.23 TABULAR face-to-face array fix; see sym/docs/contact-fix.md and solver hash."
+        ],
+        "validation_status": "preliminary_unvalidated",
+        "sources": {
+          "data/tables/allouti2012/text_geometry_and_intact_test.csv": "88e3a8858ade4df336f3e0f6886f69c2898c08f67d6b75b0bf9b3b314dbf9d2b",
+          "data/tables/allouti2012/table02_material.csv": "5526abfa2423f00ccfee6c10c38248e2a33231f3b800735e9a627b109e4ae259",
+          "data/figures/allouti2012/fig10_load_displacement.csv": "2a23586f869bc66a46003200761464a50e06fcc36314c6a648edc5727f4dcd9b"
+        }
+      },
+      "run": "sym/runs/investigation/a37_8pct_contact_fixed",
+      "changes": {
+        "dent": {
+          "normal_law": "compression_only"
+        }
+      },
+      "curve_material": true,
+      "solver_executable": "sym/vendor/ccx_tabular_fix/ccx_2.23_tabularfix",
+      "solver_sha256": "da09ec22796a0f0640d77b04e98e7716aa030f730a34fe15f752fbbeb599d794"
+    },
+    {
+      "id": "a37_frictionless_contact_check",
+      "base_id": "allouti2012_3_percent_od",
+      "description": "Contact sensitivity: Figure 9, patched compression-only law, zero friction",
+      "case_file": "sym/cases/investigation/a37_frictionless_contact_check.json",
+      "case_sha256": "8ddeb5210ef02a2d591882419a3c083e245d6708fbbe832f8df73263c0f7bffc",
+      "entry": {
+        "id": "a37_frictionless_contact_check",
+        "paper": "allouti2012",
+        "specimen": "3_percent_OD",
+        "vessel": null,
+        "case_file": "sym/cases/investigation/a37_frictionless_contact_check.json",
+        "case_sha256": "8ddeb5210ef02a2d591882419a3c083e245d6708fbbe832f8df73263c0f7bffc",
+        "reference_file": "data/figures/allouti2012/fig10_load_displacement.csv",
+        "panel": "a",
+        "experimental_series": "dent_3_percent_OD_experimental",
+        "numerical_series": "dent_3_percent_OD_numerical",
+        "material": {
+          "source": "data/figures/allouti2012/fig09_material_curve.csv",
+          "source_sha256": "6739a65c86e70da1c282be752a593e97d2485b6374808f3ebf80f1ebbb79e8d3",
+          "interpretation": "true total strain; plastic strain = total - stress/E",
+          "interpretation_confirmed": false,
+          "initial_yield_anchor_mpa": 249.05299258691358,
+          "source_supported_plastic_strain_max": 0.1977982020291358,
+          "processing": "Curve-preserving elastic intersection; no table-yield splice.",
+          "constant_tail_to_plastic_strain": 0.8,
+          "burst_criterion_calibrated": false
+        },
+        "assumptions": [
+          "Preliminary literature comparison; mesh/contact convergence and fixture verification outstanding.",
+          "5 MPa pressure ramp exercises the same three-stage workflow; it is not a burst validation.",
+          "Bottom-line bilateral support and friction 0.3 are modelling assumptions requiring verification.",
+          "Material constant tail is an explicit extrapolation; data-supported strain extent is audited.",
+          "Allouti Figure 9 stress/strain treated as true stress/total strain, which the figure does not explicitly confirm.",
+          "355 MPa initial yield anchored to the table despite the digitized curve extending below it.",
+          "Maximum imposed travel taken from experimental loading-loop maximum; this is a prescribed boundary condition, not a fitted prediction.",
+          "Figure percent-OD labels describe residual dents; they are not substituted for loaded tool travel.",
+          "PEEQ 0.8 is only a software placeholder here; Allouti uses different failure criteria. No Allouti burst error is computed.",
+          "Controlled investigation: Material only: preserve Figure 9 and use its elastic intersection.",
+          "The earlier table-yield note describes the archived baseline only. This case follows Figure 9.",
+          "Compression-only TABULAR contact: unchanged compressive stiffness, zero pressure on opening.",
+          "Uses isolated CCX 2.23 TABULAR face-to-face array fix; see sym/docs/contact-fix.md and solver hash.",
+          "Diagnostic only: friction set to zero to isolate contact separation convergence; not a measured friction coefficient."
+        ],
+        "validation_status": "preliminary_unvalidated",
+        "sources": {
+          "data/tables/allouti2012/text_geometry_and_intact_test.csv": "88e3a8858ade4df336f3e0f6886f69c2898c08f67d6b75b0bf9b3b314dbf9d2b",
+          "data/tables/allouti2012/table02_material.csv": "5526abfa2423f00ccfee6c10c38248e2a33231f3b800735e9a627b109e4ae259",
+          "data/figures/allouti2012/fig10_load_displacement.csv": "2a23586f869bc66a46003200761464a50e06fcc36314c6a648edc5727f4dcd9b"
+        }
+      },
+      "run": "sym/runs/investigation/a37_frictionless_contact_check",
+      "changes": {
+        "dent": {
+          "normal_law": "compression_only",
+          "friction": 0.0
+        }
+      },
+      "curve_material": true,
+      "solver_executable": "sym/vendor/ccx_tabular_fix/ccx_2.23_tabularfix",
+      "solver_sha256": "da09ec22796a0f0640d77b04e98e7716aa030f730a34fe15f752fbbeb599d794"
+    },
+    {
+      "id": "a37_contact_fixed_wall3_20261018",
+      "base_id": "allouti2012_3_percent_od",
+      "description": "Wall refinement only: a37_contact_fixed (2 to 3 layers)",
+      "case_file": "sym/cases/investigation/a37_contact_fixed_wall3_20261018.json",
+      "case_sha256": "54b558e0dc1db9fcc71242e51ede4647154f5714a5f68555a6bc401d0a6e45ac",
+      "entry": {
+        "id": "a37_contact_fixed_wall3_20261018",
+        "paper": "allouti2012",
+        "specimen": "3_percent_OD",
+        "vessel": null,
+        "case_file": "sym/cases/investigation/a37_contact_fixed_wall3_20261018.json",
+        "case_sha256": "54b558e0dc1db9fcc71242e51ede4647154f5714a5f68555a6bc401d0a6e45ac",
+        "reference_file": "data/figures/allouti2012/fig10_load_displacement.csv",
+        "panel": "a",
+        "experimental_series": "dent_3_percent_OD_experimental",
+        "numerical_series": "dent_3_percent_OD_numerical",
+        "material": {
+          "source": "data/figures/allouti2012/fig09_material_curve.csv",
+          "source_sha256": "6739a65c86e70da1c282be752a593e97d2485b6374808f3ebf80f1ebbb79e8d3",
+          "interpretation": "true total strain; plastic strain = total - stress/E",
+          "interpretation_confirmed": false,
+          "initial_yield_anchor_mpa": 249.05299258691358,
+          "source_supported_plastic_strain_max": 0.1977982020291358,
+          "processing": "Curve-preserving elastic intersection; no table-yield splice.",
+          "constant_tail_to_plastic_strain": 0.8,
+          "burst_criterion_calibrated": false
+        },
+        "assumptions": [
+          "Preliminary literature comparison; mesh/contact convergence and fixture verification outstanding.",
+          "5 MPa pressure ramp exercises the same three-stage workflow; it is not a burst validation.",
+          "Bottom-line bilateral support and friction 0.3 are modelling assumptions requiring verification.",
+          "Material constant tail is an explicit extrapolation; data-supported strain extent is audited.",
+          "Allouti Figure 9 stress/strain treated as true stress/total strain, which the figure does not explicitly confirm.",
+          "355 MPa initial yield anchored to the table despite the digitized curve extending below it.",
+          "Maximum imposed travel taken from experimental loading-loop maximum; this is a prescribed boundary condition, not a fitted prediction.",
+          "Figure percent-OD labels describe residual dents; they are not substituted for loaded tool travel.",
+          "PEEQ 0.8 is only a software placeholder here; Allouti uses different failure criteria. No Allouti burst error is computed.",
+          "Controlled investigation: Material only: preserve Figure 9 and use its elastic intersection.",
+          "The earlier table-yield note describes the archived baseline only. This case follows Figure 9.",
+          "Compression-only TABULAR contact: unchanged compressive stiffness, zero pressure on opening.",
+          "Uses isolated CCX 2.23 TABULAR face-to-face array fix; see sym/docs/contact-fix.md and solver hash.",
+          "Deadline validation: wall layers 2 to 3 only; same material, contact, geometry, loading, solver and surface mesh. One-hour operational limit. Compare loading/unloading, residual dent and PEEQ with retained parent; not a burst prediction."
+        ],
+        "validation_status": "preliminary_unvalidated",
+        "sources": {
+          "data/tables/allouti2012/text_geometry_and_intact_test.csv": "88e3a8858ade4df336f3e0f6886f69c2898c08f67d6b75b0bf9b3b314dbf9d2b",
+          "data/tables/allouti2012/table02_material.csv": "5526abfa2423f00ccfee6c10c38248e2a33231f3b800735e9a627b109e4ae259",
+          "data/figures/allouti2012/fig10_load_displacement.csv": "2a23586f869bc66a46003200761464a50e06fcc36314c6a648edc5727f4dcd9b"
+        }
+      },
+      "run": "sym/runs/investigation/a37_contact_fixed_wall3_20261018",
+      "changes": {
+        "mesh": {
+          "wall_layers": 3
+        }
+      },
+      "curve_material": true,
+      "solver_executable": "sym/vendor/ccx_tabular_fix/ccx_2.23_tabularfix",
+      "solver_sha256": "da09ec22796a0f0640d77b04e98e7716aa030f730a34fe15f752fbbeb599d794",
+      "parent_attempt": "a37_contact_fixed"
+    },
+    {
+      "id": "a37_8pct_contact_fixed_wall3_20261018",
+      "base_id": "allouti2012_8_percent_od",
+      "description": "Wall refinement only: a37_8pct_contact_fixed (2 to 3 layers)",
+      "case_file": "sym/cases/investigation/a37_8pct_contact_fixed_wall3_20261018.json",
+      "case_sha256": "bcbb2fd79a53f2cf6d28b4de46520c4764bdeff1ae3446df281737c11fd3c06e",
+      "entry": {
+        "id": "a37_8pct_contact_fixed_wall3_20261018",
+        "paper": "allouti2012",
+        "specimen": "8_percent_OD",
+        "vessel": null,
+        "case_file": "sym/cases/investigation/a37_8pct_contact_fixed_wall3_20261018.json",
+        "case_sha256": "bcbb2fd79a53f2cf6d28b4de46520c4764bdeff1ae3446df281737c11fd3c06e",
+        "reference_file": "data/figures/allouti2012/fig10_load_displacement.csv",
+        "panel": "a",
+        "experimental_series": "dent_8_percent_OD_experimental",
+        "numerical_series": "dent_8_percent_OD_numerical",
+        "material": {
+          "source": "data/figures/allouti2012/fig09_material_curve.csv",
+          "source_sha256": "6739a65c86e70da1c282be752a593e97d2485b6374808f3ebf80f1ebbb79e8d3",
+          "interpretation": "true total strain; plastic strain = total - stress/E",
+          "interpretation_confirmed": false,
+          "initial_yield_anchor_mpa": 249.05299258691358,
+          "source_supported_plastic_strain_max": 0.1977982020291358,
+          "processing": "Curve-preserving elastic intersection; no table-yield splice.",
+          "constant_tail_to_plastic_strain": 0.8,
+          "burst_criterion_calibrated": false
+        },
+        "assumptions": [
+          "Preliminary literature comparison; mesh/contact convergence and fixture verification outstanding.",
+          "5 MPa pressure ramp exercises the same three-stage workflow; it is not a burst validation.",
+          "Bottom-line bilateral support and friction 0.3 are modelling assumptions requiring verification.",
+          "Material constant tail is an explicit extrapolation; data-supported strain extent is audited.",
+          "Allouti Figure 9 stress/strain treated as true stress/total strain, which the figure does not explicitly confirm.",
+          "355 MPa initial yield anchored to the table despite the digitized curve extending below it.",
+          "Maximum imposed travel taken from experimental loading-loop maximum; this is a prescribed boundary condition, not a fitted prediction.",
+          "Figure percent-OD labels describe residual dents; they are not substituted for loaded tool travel.",
+          "PEEQ 0.8 is only a software placeholder here; Allouti uses different failure criteria. No Allouti burst error is computed.",
+          "Controlled investigation: Transfer check: identical Figure 9 material treatment at the deeper 8%-OD condition, without fitting to its force response.",
+          "The earlier table-yield note describes the archived baseline only. This case follows Figure 9.",
+          "Transfer test of curve-preserving material plus compression-only contact, with no fit to indentation forces.",
+          "Uses isolated CCX 2.23 TABULAR face-to-face array fix; see sym/docs/contact-fix.md and solver hash.",
+          "Deadline validation: wall layers 2 to 3 only; same material, contact, geometry, loading, solver and surface mesh. One-hour operational limit. Compare loading/unloading, residual dent and PEEQ with retained parent; not a burst prediction."
+        ],
+        "validation_status": "preliminary_unvalidated",
+        "sources": {
+          "data/tables/allouti2012/text_geometry_and_intact_test.csv": "88e3a8858ade4df336f3e0f6886f69c2898c08f67d6b75b0bf9b3b314dbf9d2b",
+          "data/tables/allouti2012/table02_material.csv": "5526abfa2423f00ccfee6c10c38248e2a33231f3b800735e9a627b109e4ae259",
+          "data/figures/allouti2012/fig10_load_displacement.csv": "2a23586f869bc66a46003200761464a50e06fcc36314c6a648edc5727f4dcd9b"
+        }
+      },
+      "run": "sym/runs/investigation/a37_8pct_contact_fixed_wall3_20261018",
+      "changes": {
+        "mesh": {
+          "wall_layers": 3
+        }
+      },
+      "curve_material": true,
+      "solver_executable": "sym/vendor/ccx_tabular_fix/ccx_2.23_tabularfix",
+      "solver_sha256": "da09ec22796a0f0640d77b04e98e7716aa030f730a34fe15f752fbbeb599d794",
+      "parent_attempt": "a37_8pct_contact_fixed"
+    }
+  ]
+}

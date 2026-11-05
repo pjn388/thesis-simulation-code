@@ -1,0 +1,128 @@
+{
+  "name": "zhao_p4_provisional",
+  "pipe": {
+    "od": 406,
+    "thickness": 10,
+    "length": 4000
+  },
+  "gouge": {
+    "enabled": true,
+    "depth": 2,
+    "length": 600,
+    "width": 20,
+    "angle_deg": 0.0,
+    "profile": "cosine"
+  },
+  "dent": {
+    "enabled": true,
+    "indenter_diameter": 100,
+    "travel": 30,
+    "clearance": 0.1,
+    "friction": 0.3,
+    "normal_stiffness": 2000000.0,
+    "stick_stiffness": 200000.0
+  },
+  "material": {
+    "name": "PROVISIONAL_STEEL",
+    "young": 209000.0,
+    "poisson": 0.3,
+    "plastic": [
+      [
+        365.0,
+        0.0
+      ],
+      [
+        420.0,
+        0.02
+      ],
+      [
+        480.0,
+        0.08
+      ],
+      [
+        540.0,
+        0.2
+      ],
+      [
+        620.0,
+        0.5
+      ],
+      [
+        700.0,
+        0.8
+      ],
+      [
+        750.0,
+        1.0
+      ]
+    ],
+    "source": "Demonstration curve only; not a calibrated X52 material."
+  },
+  "mesh": {
+    "fine_size": 5,
+    "far_size": 100,
+    "wall_layers": 4,
+    "order": 2,
+    "indenter_size": 6.25,
+    "refinement_padding": 10.0,
+    "max_elements": 150000
+  },
+  "analysis": {
+    "max_pressure": 30,
+    "failure_peeq": 0.8,
+    "initial_increment": 0.025,
+    "max_increment": 0.1,
+    "min_increment": 1e-06,
+    "max_increments": 1000,
+    "output_frequency": 1,
+    "threads": 2,
+    "timeout_seconds": 7200,
+    "support": "bottom_line",
+    "closed_ends": true
+  },
+  "purpose": "development",
+  "probe_positions": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      25
+    ],
+    [
+      0,
+      -25
+    ],
+    [
+      25,
+      0
+    ],
+    [
+      -25,
+      0
+    ],
+    [
+      25,
+      25
+    ],
+    [
+      -25,
+      -25
+    ],
+    [
+      0,
+      50
+    ],
+    [
+      50,
+      0
+    ]
+  ],
+  "notes": [
+    "Provisional gouge cross-section, material curve and fixture; not validated thesis data.",
+    "Gouge exists before indentation. Travel is measured from the nominal outside surface, not residual dent depth.",
+    "Indentation is unpressurised; pressure is applied after full indenter withdrawal.",
+    "Zhao P4 reported primary dimensions; unreported gouge width/profile, fixture and plastic curve remain provisional."
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "authorized": false,
+  "created_utc": "2026-10-31T08:42:16.406280+00:00",
+  "reason": "User explicitly requested these seven new trials, likely successes first;60 last.",
+  "lanes": {
+    "a": [
+      45,
+      30,
+      75
+    ],
+    "b": [
+      15,
+      0,
+      90
+    ]
+  },
+  "pause_sha256_at_authorization": "6b8f35321024ac5342e859528fec138b1525a318f9cd1fda49d2ff137adad301",
+  "scope": "These new cases only. Historical queues and review timers remain paused.",
+  "stop": "Set authorized=false to prevent successors. To stop current monitoring and solves, stop both minute-supervisor services and both legacy services while adopted workers are still active. Global pause changes prevent successor launches.",
+  "services": [
+    "thesis-gouge-minute-20261031-a.service",
+    "thesis-gouge-minute-20261031-b.service"
+  ],
+  "legacy_services": [
+    "thesis-gouge-pressure005-20261031-a.service",
+    "thesis-gouge-pressure005-20261031-b.service"
+  ],
+  "notification_poll_interval_seconds": 60,
+  "supervisor_script": "results/scripts/gouge_minute_supervisor.py",
+  "cancelled_cases": [
+    "orientation_gouge_60_adaptive_pressure005_20261031"
+  ],
+  "cancellation_note": "60-degree rerun cancelled by user before launch; existing in-memory queue recognizes terminal status and skips it. Original60 criterion crossing retained.",
+  "stopped_by_user_utc": "2026-10-31T13:16:14.131310+00:00",
+  "stop_reason": "User explicitly requests stop: simulations no longer needed. No successors or automatic restart."
+}
